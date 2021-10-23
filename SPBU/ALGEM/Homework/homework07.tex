@@ -1,0 +1,247 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[T2A]{fontenc}% Внутренняя T2A кодировка TeX
+\usepackage[utf8]{inputenc}% кодировка файла
+\usepackage[russian]{babel}% поддержка переносов в русском языке
+\usepackage{comment}% enables the use of multi-line comments (\ifx \fi) 
+\usepackage{fullpage}% changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Задача]
+{ \begin{mdframed}[backgroundcolor=gray!10] \textbf{#1 #2.} \\}
+	{  \end{mdframed}}
+
+\newenvironment{solution}
+{\textit{Решение:}\vspace{.1cm}\\}
+{\vspace{.1cm}\noindent\rule{7in}{1.5pt}}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+
+\begin{document}
+\noindent
+\large\textbf{Домашняя работа №7} \hfill  Дата: XX.YY.2021  \\
+\noindent\rule{7in}{2pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 1
+\begin{problem}{256(c)}
+Вычислить определитель:
+c) $\left| \begin{array}{ccccc}1 & a & a & \ldots & a\\ 0 & 2 & a & \ldots & a \\ 0 & 0 & 3 & \ldots & a \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & 0 & \ldots & n \end{array} \right|$ \\
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+
+$
+\begin{vmatrix}
+	1 & a & a & \ldots & a\\
+	0 & 2 & a & \ldots & a \\
+	0 & 0 & 3 & \ldots & a \\
+	\vdots & \vdots & \vdots & \ddots & \vdots \\
+	0 & 0 & 0 & \ldots & n\\
+\end{vmatrix} = 1 \cdot 2 \cdot 3 \cdot \ldots \cdot n = n!
+$\\
+
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 2
+\begin{problem}{276}
+$\left| \begin{array}{rrrr}1 & 1 & 1 & 1 \\ 1 & 2 & 3 & 4 \\ 1 & 3 & 6 & 10 \\ 1 & 4 & 10 & 20 \end{array} \right|$\\
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+$
+\begin{vmatrix}
+	1 & 1 & 1 & 1 \\ 
+	1 & 2 & 3 & 4 \\ 
+	1 & 3 & 6 & 10 \\ 
+	1 & 4 & 10 & 20\\
+\end{vmatrix} \:
+\underset{\begin{subarray}{l}\text{$S_2-S_1$}\\
+		\text{$S_3-S_1$}\\
+		\text{$S_4-S_1$}\end{subarray}}{=} \:
+\begin{vmatrix}
+	1 & 1 & 1 & 1\\
+	0 & 1 & 2 & 3\\
+	0 & 2 & 5 & 9\\
+	0 & 3 & 9 & 19\\
+\end{vmatrix} \:
+\underset{\begin{subarray}{l}\text{$S_3-2S_2$}\\
+		\text{$S_4-3S_2$}\\\end{subarray}}{=} \:
+\begin{vmatrix}
+	1 & 1 & 1 & 1\\
+	0 & 1 & 2 & 3\\
+	0 & 0 & 1 & 3\\
+	0 & 0 & 3 & 10\\
+\end{vmatrix}=
+\begin{vmatrix}
+	1 & 3\\
+	3 & 10\\
+\end{vmatrix}=1
+$\\
+
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 3
+\begin{problem}{295}
+$\left| \begin{array}{rrrrr}1 & 2 & 2 & \ldots & 2\\ 2 & 2 & 2 & \ldots & 2 \\ 2 & 2 & 3 & \ldots & 2 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 2 & 2 & 2 & \ldots & n \end{array} \right|$
+\end{problem}
+\newpage
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+$
+\begin{vmatrix}
+	1 & 2 & 2 & \ldots & 2\\ 
+	2 & 2 & 2 & \ldots & 2 \\ 
+	2 & 2 & 3 & \ldots & 2 \\ 
+	\vdots & \vdots & \vdots & \ddots & \vdots \\ 
+	2 & 2 & 2 & \ldots & n
+\end{vmatrix} \:
+\underset{\begin{subarray}{c}\text{$S_3-S_2$}\\
+	\text{\ldots}\\\text{$S_n-S_2$}\end{subarray}}{=} \:
+\begin{vmatrix}
+	1 & 2 & 2 & 2 & \ldots & 2 \\ 
+	2 & 2 & 2 & 2 & \ldots & 2 \\
+	0 & 0 & 1 & 0 & \ldots & 2 \\
+	0 & 0 & 0 & 2 & \ldots & 2 \\
+	\vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+	0 & 0 & 0 & 0 & \ldots & n-2\\
+\end{vmatrix} \:
+\underset{\begin{subarray}{c}\text{$S_2-2S_1$}\end{subarray}}{=} \:
+\begin{vmatrix}
+	1 & 2 & 2 & 2 & \ldots & 2 \\ 
+	0 & -2 & -2 & -2 & \ldots & -2 \\
+	0 & 0 & 1 & 0 & \ldots & 2 \\
+	0 & 0 & 0 & 2 & \ldots & 2 \\
+	\vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+	0 & 0 & 0 & 0 & \ldots & n-2\\
+\end{vmatrix} =\\= 1 \cdot (-2) \cdot 1 \cdot 2 \cdot \ldots \cdot (n-2) = -2(n-2)!
+$\\
+
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 4
+\begin{problem}{323}
+$\left| \begin{array}{rrrrr}1+a_1 & 1 & 1 & \ldots & 1\\ 1 & 1+a_2 & 1 & \ldots & 1 \\ 1 & 1 & 1+a_3 & \ldots & 1 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 1 & 1 & 1 & \ldots & 1+a_n \end{array} \right|$\\
+
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+\small{
+$\Delta=
+\begin{vmatrix}
+	1+a_1 & 1 & 1 & \ldots & 1\\ 
+	1 & 1+a_2 & 1 & \ldots & 1 \\ 
+	1 & 1 & 1+a_3 & \ldots & 1 \\ 
+	\vdots & \vdots & \vdots & \ddots & \vdots \\ 
+	1 & 1 & 1 & \ldots & 1+a_n\\
+\end{vmatrix}\:
+\underset{\begin{subarray}{c}\text{$S_2-S_1$}\\
+		\text{\ldots}\\\text{$S_{n-1}-S_n$}\end{subarray}}{=} \:
+\begin{vmatrix}
+	1+a_1 & 1 & 1 & \ldots & 1 & 1\\ 
+	0 & a_2 & 1 & \ldots & 0 & -a_n \\ 
+	0 & 0 & a_3 & \ldots & 0 & -a_n \\ 
+	\vdots & \vdots & \vdots & \ddots & \vdots \\ 
+	0 & 0 & 0 & \ldots & a_{n-1} & -a_n \\ 
+	1 & 1 & 1 & \ldots & 1 & 1+a_n\\
+\end{vmatrix} \:
+\underset{\begin{subarray}{c}\text{$S_n-S_1$}\end{subarray}}{=} \\ =
+\begin{vmatrix}
+	1+a_1 & 1 & 1 & \ldots & 1 & 1\\ 
+	0 & a_2 & 0 & \ldots & 0 & -a_n \\ 
+	0 & 0 & a_3 & \ldots & 0 & -a_n \\ 
+	\vdots & \vdots & \vdots & \ddots & \vdots \\ 
+	0 & 0 & 0 & \ldots & a_{n-1} & -a_n \\ 
+	-a_1 & 0 & 0 & \ldots & 0 & a_n\\
+\end{vmatrix} = (1+a_1) \cdot
+\underbrace{
+\begin{vmatrix}
+	a_2 & 0 & \ldots & 0 & -a_n \\ 
+	0 & a_3 & \ldots & 0 & -a_n \\ 
+	\vdots & \vdots & \ddots & \vdots \\ 
+	0 & 0 & \ldots & a_{n-1} & -a_n \\ 
+	0 & 0 & \ldots & 0 & a_n\\
+\end{vmatrix}
+}_{a_2\cdot a_3 \cdot \ldots \cdot a_n} +\\+ (-1)^{n+1} \cdot a_1 \cdot
+\begin{vmatrix}
+	1 & 1 & \ldots & 1 & 1\\
+	a_2 & 0 & \ldots & 0 & -a_n \\ 
+	0 & a_3 & \ldots & 0 & -a_n \\ 
+	\vdots & \vdots & \ddots & \vdots \\ 
+	0 & 0 & \ldots & a_{n-1} & -a_n \\ 
+\end{vmatrix}
+$\\
+$
+\begin{vmatrix}
+	1 & 1 & \ldots & 1 & 1\\
+	a_2 & 0 & \ldots & 0 & -a_n \\ 
+	0 & a_3 & \ldots & 0 & -a_n \\ 
+	\vdots & \vdots & \ddots & \vdots \\ 
+	0 & 0 & \ldots & a_{n-1} & -a_n \\ 
+\end{vmatrix} \:\underset{\begin{subarray}{c}\text{$S_2-a_2S_1$}\end{subarray}}{=} \:
+\begin{vmatrix}
+	1 & 1 & 1 & 1 & 1\\
+	0 & -a_2 & \ldots & -a_2 & -a_n-a_2 \\ 
+	0 & a_3 & \ldots & 0 & -a_n \\ 
+	\vdots & \vdots & \ddots & \vdots & -a_n\\ 
+	0 & 0 & \ldots & a_{n-1} & -a_n \\ 
+\end{vmatrix} \:\underset{\begin{subarray}{c}\text{$S_3+S_2 \frac{a_3}{a_2}$}\end{subarray}}{=} \\ =
+\begin{vmatrix}
+	1 & 1 & 1 & \ldots & 1 & 1\\
+	0 & -a_2 & -a_2 & \ldots & -a_2 & -a_n-a_2 \\ 
+	0 & 0 & -a_3 & \ldots & -a_3 & -\frac{a_n a_2 + a_n a_3 + a_2 a_3}{a_2} \\ 
+	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\ 
+	0 & 0 & 0 & \ldots & a_{n-1} & -a_n \\ 
+\end{vmatrix} \:\underset{\begin{subarray}{c}\text{$S_4+S_3 \frac{a_4}{a_3}$}\end{subarray}}{=} \: \ldots \enspace\enspace = \vspace{.1cm}\\=
+\begin{vmatrix}
+	1 & 1 & \ldots & 1 & 1\\
+	0 & -a_2 & \ldots & -a_2 & -(a_n+a_2)\\
+	\vdots & \vdots & \ddots & \vdots & \vdots\\ 
+	0 & 0 & \ldots & -a_{n-2} & -\frac{a_2\cdot a_3 \cdot \ldots \cdot a_{n-1} + \ldots + a_3 \cdot \ldots \cdot a_{n}}{a_2 \cdot a_3 \cdot \ldots \cdot a_{n-4} \cdot a_{n-3}}\\
+	0 & 0 & \ldots & a_{n-1} & -a_n\\
+\end{vmatrix}\:\underset{\begin{subarray}{c}\text{$S_n+\frac{a_{n-1}}{a_{n-2}}S_{n-1}$}\end{subarray}}{=} \\=
+\begin{vmatrix}
+	1 & 1 & \ldots & 1\\
+	0 & -a_2 & \ldots & -(a_n+a_2)\\
+	\vdots & \vdots & \ddots & \vdots\\
+	0 & 0 & \ldots & 
+	-\frac{\prod\limits_{2<=i_1<=\ldots<=i_{n-2}<=n}{a_{i_1}\cdot \ldots \cdot a_{i_{n-2}}}}{a_2 \cdot \ldots a_{n-1}}
+\end{vmatrix} = (-1)^{n-1} \cdot a_2 \cdot \ldots a_{n-2} \cdot \frac{\prod\limits_{2<=i_1<=\ldots<=i_{n-2}<=n}{a_{i_1}\cdot \ldots \cdot a_{i_{n-2}}}}{a_2 \cdot \ldots a_{n-1}} =\\= (-1)^{n-1} \cdot\prod\limits_{2<=i_1<=\ldots<=i_{n-2}<=n}{a_{i_1}\cdot \ldots \cdot a_{i_{n-2}}}
+$\vspace{.1cm}\\
+$
+\Delta = a_1 \cdot \ldots \cdot a_n + a_1 \cdot \ldots \cdot a_{n-1} + a_1 \cdot \ldots \cdot a_{n-2} \cdot a_n + \ldots + a_2 \cdot \ldots \cdot a_n\\
+$
+}
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 5
+\begin{problem}{306}
+$\left| \begin{array}{cccccc}\alpha & \alpha\beta & 0 & \ldots & 0 & 0 \\ 1 & \alpha+\beta & \alpha\beta & \ldots & 0 &  0 \\ 0 & 1 & \alpha+\beta & \ldots & 0 & 0 \\ \ldots & \ldots & \ldots & \ldots & \ldots & \ldots \\ 0 & 0 & 0 & \ldots & 1 & \alpha+\beta \end{array} \right|$
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+
+
+\end{solution} 
+\end{document}
+

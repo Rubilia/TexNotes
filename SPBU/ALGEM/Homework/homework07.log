@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.14)  23 OCT 2021 21:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.14)  24 OCT 2021 02:04
 entering extended mode
-**./HW_total.tex
-(HW_total.tex
+**./homework07.tex
+(homework07.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-08-27>
 (C:\Users\Ilia\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -702,30 +702,30 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
 \Hy@SectionHShift=\skip124
-) (HW_total.aux)
-\openout1 = `HW_total.aux'.
+) (homework07.aux)
+\openout1 = `homework07.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Info: Redefining \th on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Info: Redefining \th on input line 31.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -787,7 +787,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 g
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 49.
+Package hyperref Info: Link coloring OFF on input line 31.
  (C:\Users\Ilia\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (C:\Users\Ilia\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
@@ -799,125 +799,129 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count302
 )
-LaTeX Info: Redefining \ref on input line 49.
-LaTeX Info: Redefining \pageref on input line 49.
-LaTeX Info: Redefining \nameref on input line 49.
- (HW_total.out) (HW_total.out)
+LaTeX Info: Redefining \ref on input line 31.
+LaTeX Info: Redefining \pageref on input line 31.
+LaTeX Info: Redefining \nameref on input line 31.
+ (homework07.out) (homework07.out)
 \@outlinefile=\write4
-\openout4 = `HW_total.out'.
+\openout4 = `homework07.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 51.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
 
 
 (C:\Users\Ilia\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
 
 
 (C:\Users\Ilia\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-[1
+Underfull \hbox (badness 10000) in paragraph at lines 38--41
+
+ []
 
 
-{C:/Users/Ilia/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-(homework06.tex
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 7.
+Underfull \hbox (badness 10000) in paragraph at lines 42--45
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--55
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 54.
+(mdframed)              on input line 60.
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--95
+
+ []
+
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 93.
+(mdframed)              on input line 100.
+[1
+
+{C:/Users/Ilia/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+Overfull \hbox (2.0978pt too wide) in paragraph at lines 104--135
+[]  []  []  []  [] \OT1/cmr/m/n/14.4 =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--135
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 140.
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--142
+
+ []
+
 [2]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 114.
-Package mdframed Info: Not enough space on this page on input line 155.
+(mdframed)              on input line 237.
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--159
-
- []
-
-
-Overfull \hbox (10.74733pt too wide) in paragraph at lines 237--292
-[]\T2A/cmr/m/n/14.4 Покажем с по-мо-щью ме-то-да ма-ти-ма-ти-че-ской ин-ду-ции,
- что $[][] \OT1/cmr/m/n/14.4 = [] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 293--295
+Underfull \hbox (badness 10000) in paragraph at lines 240--243
 
  []
 
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 298.
-[3]
-Package mdframed Info: Not enough space on this page on input line 300.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 326.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 352.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 383.
- [4]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 413.
-Package mdframed Info: Not enough space on this page on input line 415.
-
-Underfull \hbox (badness 10000) in paragraph at lines 416--426
-
- []
-
-)
-Underfull \hbox (badness 10000) in paragraph at lines 427--69
-
- []
-
-[5] (HW_total.aux)
-Package rerunfilecheck Info: File `HW_total.out' has not changed.
+[3] (homework07.aux)
+Package rerunfilecheck Info: File `homework07.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 13494 strings out of 478927
- 200376 string characters out of 2853009
- 564939 words of memory out of 3000000
- 31124 multiletter control sequences out of 15000+600000
- 414374 words of font info for 51 fonts, out of 8000000 for 9000
+ 13505 strings out of 478927
+ 200474 string characters out of 2853009
+ 600691 words of memory out of 3000000
+ 31137 multiletter control sequences out of 15000+600000
+ 418937 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,15n,81p,486b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\Ilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm120
-0.pk> <C:\Users\Ilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati
-1440.pk> <C:\Users\Ilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\l
-abx1440.pk> <C:\Users\Ilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi60
-0\lati1200.pk> <C:\Users\Ilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dp
-i600\larm1440.pk> <C:\Users\Ilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a
-/dpi600\labx2074.pk><C:/Users/Ilia/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmex10.pfb><C:/Users/Ilia/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ilia/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ilia/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Ilia/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ilia/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Ilia/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Use
-rs/Ilia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm1
-0.pfb>
-Output written on HW_total.pdf (5 pages, 146886 bytes).
+ 73i,17n,81p,488b,341s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\Ilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm080
+0.pk> <C:\Users\Ilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm
+1095.pk> <C:\Users\Ilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\l
+arm1000.pk> <C:\Users\Ilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi60
+0\larm1200.pk> <C:\Users\Ilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dp
+i600\lati1440.pk> <C:\Users\Ilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a
+/dpi600\larm1440.pk> <C:\Users\Ilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-
+t2a/dpi600\labx1440.pk><C:/Users/Ilia/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmex10.pfb><C:/Users/Ilia/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/Ilia/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ilia/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ilia/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Ili
+a/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Us
+ers/Ilia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+><C:/Users/Ilia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+mi8.pfb><C:/Users/Ilia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmr10.pfb><C:/Users/Ilia/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmr12.pfb><C:/Users/Ilia/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmr5.pfb><C:/Users/Ilia/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Ilia/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Ilia/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ilia/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ilia/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Ilia/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/I
+lia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on homework07.pdf (3 pages, 200248 bytes).
 PDF statistics:
- 256 PDF objects out of 1000 (max. 8388607)
- 10 named destinations out of 1000 (max. 500000)
+ 198 PDF objects out of 1000 (max. 8388607)
+ 4 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
