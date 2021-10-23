@@ -1,0 +1,427 @@
+\noindent
+\large\textbf{Домашняя работа №6} \hfill  Дата: 23.10.2021  \\
+\noindent\rule{7in}{2pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 1
+\begin{problem}{220(d)}
+ 
+Умножить матрицы: 
+d)
+$\left(
+\begin{array}{rrr}
+1 & 2 & 3 \\
+2 & 4 & 6 \\
+3 & 6 & 9 \\
+\end{array}
+\right)
+\cdot
+\left(
+\begin{array}{rrr}
+-1 & -2 & -4 \\
+-1 & -2 & -4 \\
+1 & 2 & 4 \\
+\end{array}
+\right)
+$
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+\ensuremath{
+\begin{pmatrix}
+	1 & 2 & 3\\ 2 & 4 & 6 \\ 3 & 6 & 9\\
+\end{pmatrix} \cdot
+\begin{pmatrix}
+	-1 & -2 & -4 \\ -1 & -2 & -4 \\ 1 & 2 & 4 \\
+\end{pmatrix} = 
+\begin{pmatrix}
+	-1-2+3 \enspace & -2 -4 + 6\enspace & -4 -8 + 12\\
+	-2-4+6 \enspace & -4-8+12 \enspace  & -8-16+24\\
+	-3-6+9 \enspace & -6-12+18 \enspace & -12 -24 + 36\\
+\end{pmatrix} =\\=
+\begin{pmatrix}
+	0 & 0 & 0\\
+	0 & 0 & 0\\
+	0 & 0 & 0\\
+\end{pmatrix}
+}
+
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 2
+\begin{problem}{220(f)}
+$\left(
+\begin{array}{rrr}
+a & b & c \\
+c & b & a \\
+1 & 1 & 1 \\
+\end{array}
+\right)
+\cdot
+\left(
+\begin{array}{rrr}
+1 & a & c \\
+1 & b & b \\
+1 & c & a \\
+\end{array}
+\right)
+$
+
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+\ensuremath{
+\begin{pmatrix}
+	a & b & c \\ c & b & a \\ 1 & 1 & 1 \\
+\end{pmatrix} \cdot
+\begin{pmatrix}
+	1 & a & c \\ 1 & b & b \\ 1 & c & a \\
+\end{pmatrix} = 
+\begin{pmatrix}
+	a+b+c & a^2+b^2+c^2 & 2ac+b^2+\\
+	a+b+c & 2ac+b^2     & a^2+b^2+c^2\\
+	3     & a+b+c       & a+b+c\\
+\end{pmatrix}
+}\\
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 3
+\begin{problem}{274}
+Вычислить определитель $\left| \begin{array}{rrr}246 & 427 & 327 \\ 1014 & 543 & 443 \\ -342 & 721 & 621 \end{array} \right|$
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+\ensuremath{
+	\begin{vmatrix}
+		246 & 427 & 327 \\ 1014 & 543 & 443 \\ -342 & 721 & 621
+	\end{vmatrix} = 6 \cdot
+	\begin{vmatrix}
+		41  & 427 & 327\\
+		169 & 543 & 443\\
+		-57 & 721 & 621\\
+	\end{vmatrix} = 6 \cdot (41 \cdot 543 \cdot 621 + 427 \cdot 443 \cdot (-57) + 327 \cdot 169 \cdot 721 - (-57) \cdot 543 \cdot 327 - 169 \cdot 427 \cdot 621 - 41 \cdot 721 \cdot 443) = -29 \: 400 \: 000
+}\\
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 4
+\newpage
+\begin{problem}{221}
+Выполнить действия: \\
+\noindent
+\begin{tabular}{ll}
+a) 
+$\left(
+\begin{array}{rrr}
+2 & 1 & 1\\
+3 & 1 & 0\\
+0 & 1 & 2
+\end{array}
+\right)^2
+$ 
+& b)
+$\left(
+\begin{array}{rr}
+2 & 1 \\
+1 & 3
+\end{array}
+\right)^3
+$ \\
+ & \\
+c)
+$\left(
+\begin{array}{rr}
+3 & 2 \\
+-4 & -2 \\
+\end{array}
+\right)^5
+$
+& d)
+$\left(
+\begin{array}{rr}
+1 & 1 \\
+0 & 1 \\
+\end{array}
+\right)^n
+$
+\\
+\end{tabular}
+
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+
+\begin{enumerate}[label=\alph*)]
+	\item {
+\ensuremath{
+	\begin{pmatrix}
+		2 & 1 & 1\\
+		3 & 1 & 0\\
+		0 & 1 & 2
+	\end{pmatrix}^2 = 
+	\begin{pmatrix}
+		4+3   \enspace & 6+1   \enspace & 2+2\\
+		6+3   \enspace & 3+1   \enspace & 3\\
+		3     \enspace & 1+2   \enspace & 4\\
+	\end{pmatrix} = 
+	\begin{pmatrix}
+		7 & 7 & 4\\
+		9 & 4 & 3\\
+		3 & 3 & 4\\
+	\end{pmatrix}
+}
+}
+	\item{
+\ensuremath{
+	\begin{pmatrix}
+		2 & 1\\
+		1 & 3\\
+	\end{pmatrix}^3 =
+	\begin{pmatrix}
+		5 & 5\\
+		5 & 10\\
+	\end{pmatrix} \cdot
+	\begin{pmatrix}
+		2 & 1\\
+		1 & 3\\
+	\end{pmatrix} = 
+	\begin{pmatrix}
+		15 & 20\\
+		20 & 35\\
+	\end{pmatrix}
+}
+}
+\item{
+\ensuremath{
+	\begin{pmatrix}
+		3 & 2 \\
+		-4 & -2 \\
+	\end{pmatrix}^5 = 
+	\begin{pmatrix}
+		3 & 2 \\
+		-4 & -2 \\
+	\end{pmatrix} \cdot
+	\left(	\begin{pmatrix}
+		3 & 2 \\
+		-4 & -2 \\
+	\end{pmatrix}^2\right)^2=
+	\begin{pmatrix}
+		3 & 2 \\
+		-4 & -2 \\
+	\end{pmatrix} \cdot
+	\begin{pmatrix}
+		1  & 2\\
+		-4 & -4\\
+	\end{pmatrix}^2=\\=
+	\begin{pmatrix}
+		3 & 2 \\
+		-4 & -2 \\
+	\end{pmatrix} \cdot
+	\begin{pmatrix}
+		-7 & -6\\
+		12 & 8\\
+	\end{pmatrix} =
+	\begin{pmatrix}
+		3 & -2\\
+		4 & 8\\
+	\end{pmatrix}
+}
+}
+\item{
+Покажем с помощью метода матиматической индуции, что $
+\begin{pmatrix}
+	1 & 1\\
+	0 & 1\\
+\end{pmatrix}^n =
+\begin{pmatrix}
+	1 & n\\
+	0 & 1\\
+\end{pmatrix}\\ \forall n \in \mathbb{N}
+$\\
+\textit{База индукции}(n=1):
+$
+\begin{pmatrix}
+	1 & 1\\
+	0 & 1\\
+\end{pmatrix}^1=
+\begin{pmatrix}
+	1 & n\\
+	0 & 1\\
+\end{pmatrix}$ - выполнено\\
+\textit{Индукционный переход: } Пусть для некоторого $k=n \in \mathbb{N}$ выполнено утверждение $a_n=
+\begin{pmatrix}
+	1 & 1\\
+	0 & 1\\
+\end{pmatrix}^n =
+\begin{pmatrix}
+	1 & n\\
+	0 & 1\\
+\end{pmatrix}$\\
+Докажем его для k=n+1: $a_n+1=a_n \cdot 
+\begin{pmatrix}
+	1 & 1\\
+	0 & 1\\
+\end{pmatrix} = 
+\begin{pmatrix}
+	1 & 1\\
+	0 & 1\\
+\end{pmatrix} \cdot
+\begin{pmatrix}
+	1 & n\\
+	0 & 1\\
+\end{pmatrix}=\\=
+\begin{pmatrix}
+	1 & n+1\\
+	0 & 1\\
+\end{pmatrix}$ - Выполнено\\
+Таким образом: $\begin{pmatrix}
+	1 & 1\\
+	0 & 1\\
+\end{pmatrix}^n =
+\begin{pmatrix}
+	1 & n\\
+	0 & 1\\
+\end{pmatrix}$
+}
+\end{enumerate}
+\end{solution}
+\newline
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 5
+\begin{problem}{224}
+Вычислить $A\cdot A'$, где $A=\left( \begin{array}{cccc}3 & 2 & 1& 2\\4 & 1 & 1 & 3 \end{array} \right)$
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+\ensuremath{
+A\cdot A' = 
+\begin{pmatrix}
+	3 & 2 & 1 & 2\\
+	4 & 1 & 1 & 3\\
+\end{pmatrix} \cdot
+\begin{pmatrix}
+	3 & 4\\
+	2 & 1\\
+	1 & 1\\
+	2 & 3\\
+\end{pmatrix}=
+\begin{pmatrix}
+	18 & 21\\
+	21 & 27\\
+\end{pmatrix}
+}
+
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 6
+\begin{problem}{232(c)}
+Вычислить определитель:
+c) $\left| \begin{array}{rrr}a & a & a \\ -a & a & x\\-a & -a & x \end{array} \right|$
+
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+$
+\begin{vmatrix}
+	a & a & a\\
+	-a & a & x\\
+	-a & -a & x\\
+\end{vmatrix} \:
+\underset{\begin{subarray}{l}\text{$S_2+S_1$}\\
+		\text{$S_3+S_1$}\end{subarray}}{=} \:
+\begin{vmatrix}
+	a & a  & a\\
+	0 & 2a & a + x\\
+	0 & 0  & a + x\\
+\end{vmatrix} = a \cdot 2a \cdot (a+x) = 2a^2(a+x)
+$\vspace{.1cm}\\
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 7
+\begin{problem}{232(d)}
+Вычислить определитель:
+d) $\left| \begin{array}{rrr}1 & 1 & 1 \\ 1 & 2 & 3 \\ 1 & 3 & 6 \end{array} \right|$ 
+
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+$
+\begin{vmatrix}
+	1 & 1 & 1\\
+	1 & 2 & 3\\
+	1 & 3 & 6\\
+\end{vmatrix} \:
+\underset{\begin{subarray}{l}{\text{$S_2-S_1$}}\\
+	\text{$S_3-S_1$}\end{subarray}}{=} \:
+\begin{vmatrix}
+	1 & 1 & 1\\
+	0 & 1 & 2\\
+	0 & 2 & 5
+\end{vmatrix} =
+\begin{vmatrix}
+	1 & 2\\
+	2 & 5\\
+\end{vmatrix}=5-4=1
+$
+
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 8
+\begin{problem}{232(f)}
+Вычислить определитель:
+f) $\left| \begin{array}{rrr}1 & 1 & 1 \\ 1 & \omega & \omega\\1 & \omega^2 & \omega \end{array} \right|$
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+$
+\begin{vmatrix}
+	1 & 1 & 1 \\
+	 1 & \omega & \omega\\
+	 1 & \omega^2 & \omega\\
+\end{vmatrix} \:
+\underset{\begin{subarray}{l}{\text{$S_2-S_1$}}\\
+	\text{$S_3-S_1$}\end{subarray}}{=} \:
+\begin{vmatrix}
+	1 & 1 & 1\\
+	0 & \omega-1 & \omega-1\\
+	0 & \omega^2-1 & \omega-1
+\end{vmatrix}=
+\begin{vmatrix}
+	\omega-1 & \omega-1\\
+	\omega^2-1 & \omega-1
+\end{vmatrix}=\vspace{.1cm}\\=(\omega-1)^2-(\omega-1) \cdot (\omega^2-1) = -\omega + 2 \omega^2 - \omega^3
+$\\
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 9
+\newpage
+\begin{problem}{284}
+$\left| \begin{array}{rrr}x & y & x+y \\ y & x+y & x \\ x+y & x & y \end{array} \right|$
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+$
+\begin{vmatrix}
+	x   & y   & x+y\\
+	y   & x+y & x\\
+	x+y & x   & y\\
+\end{vmatrix}=3xy(x+y)-(x+y)^3-x^3-y^3=-2(x^3+y^3)
+$\\
+
+\end{solution} 
