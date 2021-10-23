@@ -1,0 +1,319 @@
+\documentclass[12pt]{article}
+\usepackage{mathtools}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsfonts}
+\usepackage[thinc]{esdiff}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+
+\begin{document}
+	{\centering \LARGE{Основы дискретной математики}\\\vspace{.5cm}}
+\vspace{.5cm}
+{
+	{\textbf{№ 13г} \vspace{.5cm}\\}
+	\textbf{\large{Доказать $A \subseteq (B \cup C)$ \enspace $\leftrightarrow \enspace (A \cap \overline{B}) \subseteq C$}}\vspace{.1cm} \\
+	\textbf{В одну сторону:}
+	$\forall x \in A$ => $x \in (B \cup C)$
+	\begin{enumerate}
+		\item {$x \in A \enspace \& \enspace x \in B$\\
+		$x \in A \enspace \& \enspace x \notin B \implies A \cap \overline{B} = \emptyset; \quad \emptyset \in C$
+	}
+	\item{$x \in A \enspace \& \enspace x \notin B \implies x \in A\cap \overline{B}$ 
+		=> $x \in C$\\
+	
+	}
+	\end{enumerate}
+	\textbf{В другую сторону:}
+	\begin{enumerate}
+		\item { $x \in A, x \in B \implies x \in (B \cup C)$
+		}
+		\item{$x \in A, x \notin B, x\in C \implies x \in (B \cup C)$
+	
+		}
+	\end{enumerate}
+
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 14б} \vspace{.5cm}\\}
+	\textbf{\large{Доказать: $A \triangle (B \triangle C) = (A \triangle B) \triangle C$\vspace{.2cm} \\}}
+	$A \triangle [(B \setminus C) \cap (C \setminus B)] = A \triangle [(B \cap \overline{C})
+	\cup (C \cap \overline{B})]$ = $A \triangle X$\\
+	Пусть $X = (B \cap \overline{C}) \cup (C \cap \overline{B})$\\
+	$\overline{X} = \overline{(B \cap \overline{C}) \cup (C \cap \overline{B})} = 
+	(\overline{B} \cup C ) \cap (\overline{C} \cup B)$\\
+	$A \triangle X$ = $(A \setminus X) \cup (X \setminus A)$ = $(A \cup \overline{X}) \cup 
+	(X \cup \overline{A})$ = $A \cap (\overline{B} \cup C) \cap (\overline{C} \cup B) \cup\\
+	\cup [\overline{A} \cap [(B \cap \overline{C}) \cup (C \cap \overline{B})]]$\\
+	$X = (\overline{B} \cap \overline{C}) \cup (C \cap \overline{C}) \cup (B \cap \overline{B})
+	\cup (B \cap C)$ = $(\overline{B} \cap \overline{C}) \cup (B \cap C)$\\
+	$A \triangle X = (A \cap \overline{B} \cap \overline{C}) \cup (A \cap C \cap B) \cup 
+	(\overline{A} \cap B \cap \overline{C}) \cup (\overline{A} \cap C \cap B) = 
+	[(A \cap \overline{B} \cap \overline{C}) \cup (\overline{A} \cap B \cap \overline{C})] \cup
+	(A \cap C \cap B) \cup (\overline{A} \cap C \cap B)$ = $[\overline{C} \cap ((A \cap \overline{B}) \cup (B \cap \overline{A}))] \cup [C \cap ((A \cap \overline{B}) \cup (B \cap \overline{A}))]$ = $[\overline{C} \cap (A \triangle B)] \cup [C \cap (\overline{A \triangle B})]$ = $[A \triangle B] \triangle C$
+	
+}
+
+\newpage
+{
+	{\textbf{Задача с листочка № 4} \vspace{.5cm}\\}
+	$U =$ $\{\forall$ студентов 3 курса$\}, \quad \abs{U} = 63$\\
+	$A = \{$студенты, слушающие прорицание$\}, \quad \abs{A} = 16$\\
+	$B = \{$..., магловедение$\}, \quad \abs{B} = 37$\\
+	$\abs{A \cap B} = 5$\\
+
+	$\\\abs{A \cup B} = \abs{A \setminus B} + \abs{B \setminus A} - \abs{A \cap B}$
+	
+	
+	
+}
+{\hfill \textit{04.10.2021}\\ \vspace{.2cm}\\}
+{
+Def: $A * B = \overline{A \cap B} = \overline{A} \cup \overline{B}$              
+
+\begin{tikzpicture}
+	\filldraw[fill=gray] (-2,-2) rectangle (3,2);
+	\scope % A \cap B
+	\clip (0,0) circle (1);
+	\fill[white] (1,0) circle (1);
+	\endscope
+	% outline
+	\draw (0,0) circle (1)
+	(1,0) circle (1);
+	\draw (0,0) circle (1) (0,1)  node [text=black,above] {$A$}
+	(1,0) circle (1) (1,1)  node [text=black,above] {$B$}
+	(-2,-2) rectangle (3,2) node [text=black,above] {$U$};
+\end{tikzpicture}\\
+Доказать: $(A * B) * (A * B) = A \cap B\\$
+$A * A = \overline{A} \cup \overline{A} = \overline{A} \implies = \overline{(A * B)} = 
+\overline{\overline{A} \cup \overline{B}} = A \cap B$\\
+Доказать: $(A * A) * (B * B) = A \cup B\\$
+Аналогично: $(A * A) * (B * B) = \overline{A} * \overline{B} = \overline{\overline{A}} \cup \overline{\overline{B}} = A \cup B$
+}
+
+\section{Решение уравнений и систем уравнений}
+\vspace{.5cm}
+{
+	{\textbf{№ 1} \vspace{.5cm}\\}
+	\large{ Доказать: $A \subseteq B \leftrightarrow A \cup B = B \leftrightarrow A \setminus B = \emptyset \leftrightarrow A \cap \overline{B} = \emptyset$\\}
+	\begin{itemize}
+		\item {Докажем, что $\overline{A} \cup B = U \implies A \subseteq B:\\$
+			$x \in (\overline{A} \cup B) \leftrightarrow x \in \overline{A} \text{ или } x \in B$\\
+			$A \cup \overline{A} = U$\\
+			Пусть $x \in A$. Если x $\notin B \implies x \notin \overline{A} \implies x \notin \overline{A} \cup B \leftrightarrow x \notin U$ - противоречие $\implies x \in B$ 
+		}
+	\end{itemize}
+
+	
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 2} \vspace{.5cm}\\}
+	\large{ Доказать: $A = B \leftrightarrow A \triangle B = \emptyset$\\}
+	\begin{enumerate}
+		\item {
+		$A \triangle B = (A \setminus B) \cup (B \setminus A) = (A \cap \overline{B}) \cup (B \cap \overline{A})$
+		\begin{equation*}
+			\begin{cases}
+				\forall x \in A \implies x \in B\\
+				\forall x \in B \implies x \in A
+			\end{cases}
+			\leftrightarrow
+			\begin{cases}
+				A \subseteq B \implies A \cap \overline{B} = \emptyset\\
+				B \subseteq A \implies B \cap \overline{A} = \emptyset
+			\end{cases}
+			\implies (A \cap \overline{B}) \cup (B \cap \overline{A}) = \emptyset
+		\end{equation*}
+	}
+	\item{
+		$A \triangle B = \emptyset = (A \setminus B) \cup (B \setminus B) \implies A \cap \overline{B} = \emptyset \implies\\\implies A \subseteq B. \text{ Аналогично: } B \subseteq A$\\
+	}
+	\end{enumerate}
+	
+
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 3} \vspace{.5cm}\\}
+	\large{ Решить уравнение: $A \setminus X = B$\\
+		Пусть $C = A \setminus X \implies C = B \leftrightarrow C \triangle B = \emptyset$\\
+		$(A \setminus X) \triangle B = \emptyset = [(A \setminus X) \setminus B] \cup [B \setminus (A \setminus X)] = [(A \cap	\overline{X}) \cap \overline{B}] \cup [B \cap \overline{(A \cap \overline{X})}] = [A \cap \overline{B} \cap \overline{X}] \cup [B \cap \overline{A}] \cup [B \cap X] = \emptyset \leftrightarrow$\\
+		\begin{equation*}
+			\leftrightarrow
+			\begin{cases}
+				B \cap \overline{A} = \emptyset\\
+				B \cap X = \emptyset\\
+				[A \cap \overline{B}] \cap \overline{X} = \emptyset\\
+			\end{cases}
+		\leftrightarrow
+		\begin{cases}
+			B \subseteq A \text{}\\
+		    X \subseteq \overline{B}\\
+			A \cap \overline{B} \subseteq X
+		\end{cases}
+		\end{equation*}\\
+	$A \cap \overline{B} \subseteq X \subseteq \overline{B} \leftrightarrow X = (A \cap \overline{B}) \cup Z, \quad Z \subseteq \overline{A} \cap \overline{B}$
+		
+
+	}
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 4} \vspace{.5cm}\\}
+	\large{ Решить систему:
+		\begin{equation*}
+			\begin{cases}
+				A \cap X = \emptyset\\
+				B \cap \overline{X} = \emptyset
+			\end{cases} \leftrightarrow
+		\begin{cases}
+			X \subseteq \overline{A}\\
+			B \subseteq X
+		\end{cases} \leftrightarrow
+		B \subseteq X \subseteq \overline{A} \implies\\
+		\end{equation*}\\
+	$\implies X = B \cup Y, \quad Y \subseteq \overline{A} \cap \overline{B}$
+		
+	}
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 27 Л\&В} \vspace{.5cm}\\}
+	 Решить систему:
+		\begin{equation*}
+			\begin{cases}
+				A \cap X = B\\
+				A \cup X = C
+			\end{cases} \leftrightarrow
+			\begin{cases}
+				(A \cap X) \triangle B = \emptyset\\
+				(A \cup X) \triangle C = \emptyset
+			\end{cases} \leftrightarrow
+			\begin{cases}
+				[A \cap X \cap \overline{B}] \cup [B \cap \overline{A}] \cup [B \cap \overline{X}] = \emptyset\\
+				[A \cap \overline{C}] \cup [X \cap \overline{C}] \cup [C \cap \overline{A} \overline{X}] = \emptyset
+			\end{cases} \leftrightarrow
+		\end{equation*}\\
+		\begin{equation*}
+			\leftrightarrow
+			\begin{cases}
+				B \cap \overline{A} = \emptyset\\
+				A \cap \overline{C} = \emptyset\\
+				(A \cap \overline{B} \cap X) \cup (\overline{C} \cap X) = [(A \cap \overline{B}) \cup \overline{C}]^{\Large{\text{=S}}} \cap X = \emptyset\\
+				[B \cup (C \cap \overline{A})]^{\Large{\text{=T}}} \cap \overline{X} = \emptyset\\
+				
+			\end{cases} \leftrightarrow
+		\end{equation*}
+		\begin{equation*}
+		\leftrightarrow
+		\begin{cases}
+			B \subseteq A \subseteq C\\
+			T \subseteq X \subseteq \overline{S}\\
+			\overline{S} = \overline{(A \cap \overline{B}) \cup \overline{C}} = \overline{A \cap \overline{B}} \cap C = (\overline{A} \cup B) \cap C =\\= (C \cap \overline{A}) \cup (B \cap C) = (C \cap \overline{A}) \cup B = T\\
+		\end{cases}
+		\leftrightarrow
+		\begin{cases}
+			X = B \cup (C \cap \overline{A})\\
+			B \subseteq A \subseteq C\\
+		\end{cases}
+		\end{equation*}\\
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 28 Л\&В} \vspace{.5cm}\\}
+	\begin{equation*}
+		\begin{cases}
+			A \setminus	X = B\\
+			X \setminus A = C
+		\end{cases} \leftrightarrow
+		\begin{cases}
+			(A \setminus X) \triangle B = \emptyset\\
+			(X \setminus A) \triangle C = \emptyset
+		\end{cases} \leftrightarrow
+		\begin{cases}
+			(A \cap \overline{X} \cap \overline{B}) \cup (B \cap \overline{A}) \cup (B \cap X) = \emptyset\\
+			(X \cap \overline{A} \cap \overline{C}) \cup (C \cap A) \cup (C \cap \overline{X})  = \emptyset\\
+		\end{cases}\leftrightarrow
+	\end{equation*}
+	\begin{equation*}
+		\leftrightarrow
+		\begin{cases}
+			B \subseteq A \subseteq \overline{C}\\
+			X \cap [B \cup (\overline{A} \cap \overline{C})] = \emptyset\\
+			\overline{X} \cap [C \cup (A \cap \overline{B})] = \emptyset\\
+		\end{cases}
+			\leftrightarrow
+	\begin{cases}
+		B \subseteq A \subseteq \overline{C}\\
+		[C \cup (A \cap \overline{B})] \subseteq X \subseteq \overline{[B \cup (\overline{A} \cap \overline{C})]}\\
+	\end{cases}
+	\end{equation*}
+	$\overline{[B \cup (\overline{A} \cap \overline{C})]} = \overline{B} \cap \overline{\overline{A} \cap \overline{C}} = \overline{B} \cap (A \cup C) = C \cup (A \cap \overline{B})$
+	}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 30 Л\&В} \vspace{.5cm}\\}
+	\begin{equation*}
+		\begin{cases}
+			A \setminus	X = B\\
+			A \cup X = C
+		\end{cases} \leftrightarrow
+		\begin{cases}
+			(A \setminus X) \triangle B = \emptyset\\
+			(A \cup X) \triangle C = \emptyset
+		\end{cases} \leftrightarrow
+		\begin{cases}
+			(A \cap \overline{X} \cap \overline{B}) \cup (B \cap \overline{A}) \cup (B \cap X) = \emptyset\\
+			(A \cap \overline{C}) \cup (X \cap \overline{C}) \cup (C \cap \overline{A} \cap \overline{X}) = \emptyset
+		\end{cases}\leftrightarrow
+	\end{equation*}
+	\begin{equation*}
+		\leftrightarrow
+		\begin{cases}
+			B \subseteq A \subseteq C\\
+			X \cap (B \cup \overline{C}) = \emptyset\\
+			\overline{X} \cap ((C \cap \overline{A}) \cup (A \cap \overline{B})) = \emptyset
+		\end{cases} \leftrightarrow
+		\begin{cases}
+			B \subseteq A \subseteq C\\
+			((C \cap \overline{A}) \cup (A \cap \overline{B})) \subseteq X \subseteq \overline{B} \cap C
+		\end{cases}  \leftrightarrow
+	\end{equation*}
+	\begin{equation*}
+		\leftrightarrow
+		\begin{cases}
+			X = \overline{B} \cap C\\
+			B \subseteq A \subseteq C\\
+		\end{cases}
+	\end{equation*}
+}
+\vspace{1cm}\\
+\section{Декартово произведение множеств}
+
+$A = \{a_i | ...i \in (1, n)\}$\\
+$B = \{b_j| j \in (1, m)\}$\\
+$A \times B = \{(a_i; b_j)|i \in (1,n) \& j \in (1, m)\}$\\
+$\{x, y\} \times \{1, 2, 3\} = \{(x, 1), (x, 2), (x, 3), (y, 1), (y, 2), (y, 3)\}$\\
+$\abs{A \times B} = \abs{A} \cdot \abs{B}$\\
+$A \times A = A^2$\\
+\subsection{Свойства декартого произведения}
+\begin{enumerate}
+	\item $A \times B = B \times A \leftrightarrow A = B$
+	\item $A \times B = A \times C \leftrightarrow B=C$
+\end{enumerate}
+\end{document}

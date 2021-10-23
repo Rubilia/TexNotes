@@ -1,0 +1,611 @@
+\documentclass[12pt]{article}
+\usepackage{mathtools}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsfonts}
+\usepackage[thinc]{esdiff}
+\usepackage[makeroom]{cancel}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\pgfplotsset{compat=1.14}
+
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+		\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\newcommand{\bcancelto}[3][]{\tikz[baseline=(N.base)]{
+		\node[main node](N){$#2$};
+		\node[label node,#1, anchor=north west] at (N.south east){$#3$};
+		\draw[strike out,-latex,#1]  (N.north west) -- (N.south east);
+}}
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+
+\begin{document}
+	{\hspace*{\fill} \underline{\textit{24.09.2021}}}
+	\section{Предел последовательности}
+	 \vspace{1cm}
+	{
+		{\textbf{№ 62}\\ \par}
+		
+		{\large $\lim\limits_{n \to \infty} n q^n$} = 0, \enspace $\abs{q}$ $<$ 1\\\par
+		\begin{itemize}
+			\item {
+				\textbf{Случай q = 0 очевиден}
+			}
+			\item {
+				\textbf{Разберем случай q $\neq$ 0:}\\
+				Т. к. $\abs{q}$ $\in$ (0; 1), то  $\abs{q}$ = $\frac{1}{d + 1}$, где d $>$ 0;
+				Тогда $n q^n$ = $\frac{n}{(1 + x)^n}$\vspace{.1cm}\\
+				Заметим, что $(1 + x)^n=1+nx+\frac{n(n-1)}{2}x^2+... \enspace > \enspace \frac{n(n-1)}{2}x^2$\vspace{.1cm}\\
+				Таким образом: $\abs{nq^n}$ < $\frac{n}{\frac{n(n-1)}{2}x^2}$ = $\frac{2}{(n-1)x^2}$ < $\epsilon$
+				$(\epsilon > 0)$ $\leftrightarrow$ 
+				n $>$ 1 + $\frac{2}{\epsilon x^2}$\\
+				Значит по определению предела: $\lim\limits_{n \to \infty} n q^n$ = 0
+			}
+			
+		\end{itemize}
+	}
+	
+	\vspace{1cm}
+	{
+		{\textbf{№ 63}\\ \par}
+		{\large $\lim\limits_{n \to \infty} \sqrt[n]{a}$ = 1, (a $>$ 0)\\\par}
+		По определению предела нужно доказать следующее неравенство:\\ \enspace\enspace$\abs{\sqrt[n]{a}-1}<\epsilon$
+		\begin{itemize}
+			\item { 
+				\textbf{Рассмотрим случай a > 1}\\
+				$\abs{\sqrt[n]{a}-1}<\epsilon$, \enspace\enspace $\epsilon>0$ $\leftrightarrow$ 
+				$\abs{a^{\frac{1}{n}} - 1}<\epsilon$.\\ Так как a > 1, то $a^{\frac{1}{n}}-1>0$. Опустим модуль в неравенстве.\\
+				$a^{\frac{1}{n}}<1+\epsilon \enspace \leftrightarrow \enspace (1+\epsilon)^n>a$\\
+				$(1+\epsilon)^n=1+\epsilon n + ...>\epsilon n>a \enspace \leftrightarrow \enspace n>{\large \frac{a}{\epsilon}}$\\
+				Значит при a $>$ 1 неравенство верно.
+			}
+			\item{
+				\textbf{Случай a = 1 очевиден}
+			}
+			\item{
+				\textbf{Рассмотрим случай a < 1}\\
+				{\large $\lim\limits_{n \to \infty} \sqrt[n]{a}$ = $\lim\limits_{n \to \infty} \sqrt[n]{\frac{1}{(\frac{1}{a})}}$ = 
+					$\lim\limits_{n \to \infty}$ $\frac{1}{\sqrt[n]{\frac{1}{a}}}$ = $\frac{1}{\lim\limits_{n \to \infty} \sqrt[n]{\frac{1}{a}}}$} = 1\\
+				Так как 1/a $>$ 1, то $\lim\limits_{n \to \infty} \sqrt[n]{\frac{1}{a}}$ = 1 \enspace\enspace(1 пункт)
+			}
+		\end{itemize}
+	}
+
+	\vspace{1cm}
+	{
+		{\textbf{№ 58}\\ \par}
+		{\large $\lim\limits_{n \to \infty}\frac{\log_a n}{n}=0$, a > 1\\}
+		Рассмотрим пример №61: $\lim\limits_{n \to \infty} \frac{n}{b^n}$ = 0, b > 1 => 
+		$\frac{1}{b^n} < \frac{n}{b^n}<1$ (*), в окрестночти $+\infty$\\
+		Пусть b = $a^p$, p > 0 => p$\ln a$ = $\ln b$\\
+		(*): $\frac{1}{a^{pn}}<\frac{n}{a^{pn}}<1$ $\leftrightarrow$ $\log_a( \frac{1}{a^{pn}})<\log_a(\frac{n}{a^{pn}})<1$ $\leftrightarrow$ 0 < $\log_a(\frac{a^{pn}}{n})$ < $\log_a(\frac{1}{a^{pn}})$ $\leftrightarrow$ 0 <
+		 pn (1 < n < $a ^ {pn} \enspace \leftrightarrow$ 
+		0 < $\log_an$ < $\log_a(a^{pn})$ = pn)\\ 
+		Разделим все на n: 1 < $\frac{log_a(a^{pn})}{n}$ < p\\
+		==============
+	}
+
+	\vspace{1cm}
+	{
+	{\textbf{№ 65}\\ \par}
+	{\large $\lim\limits_{n \to \infty}\sqrt[n]{n}$ = 1\\}
+	При n $\geq$ 2: $\sqrt[n]{n}$ > 1\\
+	n = $(\sqrt[n]{n})^n$ = $[1 + (\sqrt[n]{n}-1)]^n$ = 1 + n($(\sqrt[n]{n}-1)$) + ... + $(\sqrt[n]{n}-1)^n$ > $\frac{n(n-1)}{2}(\sqrt[n]{n}-1)^2$ \\
+	n > $\frac{n(n-1)}{2}(\sqrt[n]{n}-1)^2 \enspace \leftrightarrow \enspace 0$ < $(\sqrt[n]{n}-1)^2$ < $\frac{2n}{n(n-1)}$ = $\frac{2}{n-1}$ $\to$ 0 $\leftrightarrow$ \\
+	1 < $\sqrt[n]{n}$ < 1 + $\frac{2}{n-1}$ $\to$ 1\\
+	
+	}
+
+	\vspace{1.5cm}
+{
+	{\textbf{№ 66}\\ \par}
+	{\large $\lim\limits_{n \to \infty}\frac{1}{\sqrt[n]{n!}} = 0$\\}
+	Докажем, что n! > $(\frac{n}{3})^n$ (*) при n $\to$ $\infty$ методом матиматической индукции:\\
+	\textbf{База:\\}
+	n = 1: 1 > $\frac{1}{3}$\\
+	n = 2: 2! = 2 > $(\frac{2}{3})^2$\\
+	\textbf{Переход: }нредположим, что (*) верно. Тогда n! > $(\frac{n}{3})^n$\\
+	(n + 1)! = (n + 1)n! > (n + 1) $(\frac{n}{3})^n$\\
+	$\frac{(n+1)^n}{n^n}$ = $(1 + \frac{1}{n})^n$ < e < 3 $\leftrightarrow$ $(\frac{n}{3})^n$ > 
+	$\frac{(n+1)^n}{3^{n+1}}$\\
+	Таким образом: 0 < $\frac{1}{\sqrt[n]{n!}}$ < $\frac{3}{n} \enspace \to 0$\\
+}
+
+	\vspace{1cm}
+{
+	{\textbf{№ 75}\\ \par}
+	$\frac{1}{n+1}$ < $\ln (1+\frac{1}{n})$ < $\frac{1}{n}$\\
+
+}
+
+	\vspace{1cm}
+{
+	{\textbf{№ 76}\\ \par}
+	$\lim\limits_{n \to \infty}n(a^{\frac{1}{n}}-1)=\ln a$
+	
+}
+
+\vspace{2cm}
+
+\section{Предел функции}
+\subsection{Область определения}
+y = f(x), x,y $\in$ $\mathbb{R}$\\ 
+{\small \textit{ДЗ: 151 - 165}\\}
+\vspace{.5cm}
+
+{
+	{\textbf{№ 152}\\ \vspace{.2cm}}
+	y = $\sqrt{3x-x^2}$\\
+	D: $3x-x^2 \geq 0 \enspace \leftrightarrow \enspace x^2-3x \leq 0 \enspace \leftrightarrow \enspace x \in (-\infty; 0)\cup(3; +\infty)$\\
+}
+
+{
+	\newpage
+	\textbf{Определние}\\
+	Пусть x = a - внутренняя точка D(f) $\leftrightarrow$ $\exists \enspace \delta$ > 0: $(a - \delta; a + \delta) \subset D(x)$
+	Тогда A = $\lim\limits_{x \to a}f(x)$, если $\forall$ $\epsilon$ > 0 $\exists$ $\delta$ > 0 такое, что $\exists$ x $\in$ $(a - \delta; a + \delta)$ => $\abs{f(x) - A}<\epsilon$\\
+	\vspace{.5cm}\\
+	
+	\subsection{Замечательные пределы}
+
+	$\lim\limits_{x \to 0}\frac{sin(x)}{x} = 1$\\
+	$\lim\limits_{x \to \infty}(1 + \frac{1}{x})^x = +\infty$\\
+	
+	\vspace{.5cm}
+	\subsection{Свойства пределов}
+	\begin{enumerate}
+		\item {
+		$\lim\limits_{x \to a}[Af(x) + Bg(x)]$ = $A\lim\limits_{x \to a}f(x)$ + 
+		$B\lim\limits_{x \to a}g(x)$
+	}
+\item{
+		$\lim\limits_{x \to a}[Af(x)g(x)]$ = $A\lim\limits_{x \to a}f(x)$ 
+	$\lim\limits_{x \to a}g(x)$
+}
+\item{
+	$\lim\limits_{x \to a} \frac{f(x)}{g(x)}$ = $\frac{\lim\limits_{x \to a}f(x)}{\lim\limits_{x \to a}g(x)}$
+}
+	\end{enumerate}
+	\emph{Если существуют два из трех пределов, то существует и третий, и справедливы свойства 1-3}
+	
+	\vspace{.5cm}
+	\subsection{Примеры}
+
+
+	{
+		{\textbf{№ 412}\\ \vspace{.5cm}}
+		\Large{$\lim\limits_{x \to 0} \frac{(1+x)(1+2x)(1+3x) - 1}{x}$ = $\lim\limits_{x \to 0}$}
+		$\frac{6x + 11x^2 + 6x^3}{x}\\ = \lim\limits_{x \to 0}[6+11x+6x^2] = 6$	
+	}
+	\newpage
+	{
+		{\textbf{№ 413} \vspace{.5cm}\\}
+		\Large{$\lim\limits_{x \to 0} \frac{(1+x)^5-(1+5x)}{x^5+x^2}$ = $\lim\limits_{x \to 0}$
+		$\frac{x^{5}+5x^{4}+10x^{3}+10x^{2}+5x+1-5x-1}{x^5+x^2} = $
+		$\lim\limits_{x \to 0} \frac{x^3+5x^2+10x+10}{1+x^3}$ = 10}
+	
+	}
+\vspace{.5cm}
+{
+	{\textbf{№ 416} \vspace{.5cm}\\}
+	\Large{$\lim\limits_{x \to \infty}$ $\frac{(2x-3)^{20}(3x+2)^{30}}{(2x+1)^{50}}$ = 
+		$\lim\limits_{x \to \infty}\frac{x^{50}(2-\frac{3}{x})^{20}(3+\frac{2}{x})^{30}}{x^{50}(2+\frac{1}{x})}$ = $\frac{2^{20} \space 3^{30}}{2^{50}} = (\frac{3}{2})^{30}$
+	}
+
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 418} \vspace{.5cm}\\}
+	\Large{$\lim\limits_{x \to 3} \frac{x^2-5x+6}{x^2-8x+15} = \lim\limits_{x \to 3} 
+		\frac{(x-3(x-2))}{(x-3)(x-5)} = \lim\limits_{x \to 3} \frac{x-2}{x-5} = -\frac{1}{2}$
+	}
+	
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 419} \vspace{.5cm}\\}
+	\Large{$\lim\limits_{x \to 1} \frac{x^3-3x+2}{x^4-4x+3} = \lim\limits_{x \to 1}
+		\frac{(x-1)^2(x+2)}{(x-1)^2(x^2+2x-3)}$ = $\frac{1+2}{1^2+2+3} = \frac{3}{6} = \frac{1}{2}$
+	}
+	
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 422} \vspace{.5cm}\\}
+	\Large{$\lim\limits_{x \to -1} \frac{x^3-2x-1}{x^5-2x-1} = \lim\limits_{x \to -1}
+		\frac{(x+1)(x^2-x-1)}{(x+1)(x^4-x^3+x^2-x-1)} = \frac{1 - (-1)-1}{1-(-1)+1-(-1)-1}=\\=\frac{1}{3}$
+		
+	}
+}
+\vspace{.5cm}
+{
+	{\textbf{№ 424} \vspace{.5cm}\\}
+	\Large{ $\lim\limits_{x \to 1} \frac{x^{100}-2x+1}{x^{50}-2x+1}^{\enspace [\frac{0}{0}]} = \lim\limits_{x \to 1}
+		\frac{\diff{(x^{100}-2x+1)}{x}}{\diff{x^{50}-2x+1}{x}} = \lim\limits_{x \to 1}
+		\frac{100x^{99}-2}{50x^{49}-2} = \frac{98}{48}$
+	}
+}
+\newpage
+
+}
+\subsection{Иррациональные функции}
+\vspace{.5cm}
+{
+	{\textbf{№ 435} \vspace{.5cm}\\}
+	\Large{ $\lim\limits_{x \to \infty} \frac{\sqrt{x+\sqrt{x+\sqrt{x}}}}{\sqrt{x+1}}=
+		\lim\limits_{x \to \infty} \frac{\sqrt{x}\sqrt{1+ \sqrt{1 + \frac{1}{\sqrt{x}}}}}{\sqrt{x+1}} = \lim\limits_{x \to \infty} \frac{1}{\sqrt{1+\frac{1}{x}}} = 1$
+	}
+}
+\vspace{.5cm}\\
+	\hspace*{\fill} \underline{\textit{24.09.2021}} \vspace{1cm}
+
+{
+	{\textbf{№ 437} \vspace{.5cm}\\}
+	\Large{ $\lim\limits_{x \to 4} \frac{\sqrt{1+2x}-3}{\sqrt{x}-2}^{\enspace [\frac{0}{0}]}$ = 
+		$\lim\limits_{x \to 4} \frac{(\sqrt{1+2x}-3)(\sqrt{1+2x}+3)(\sqrt{x}+2)}{(\sqrt{x}-2)(\sqrt{x}+2)(\sqrt{1+2x}+3)}$ = $\lim\limits_{x \to 4} \frac{(1+2x-9)(\sqrt{x}+2)}{(x-4)((\sqrt{1+2x}+3)}$ = 
+		$2 \cdot \lim\limits_{x \to 4} \frac{(x-4)(\sqrt{x}+2)}{(x-4)(\sqrt{1+2x}+3)}$ = $\frac{2 \cdot 4}{6} = \frac{4}{3}$\\
+	}
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 440} \vspace{.5cm}\\}
+	\Large{ $\lim\limits_{x \to 3} \frac{\sqrt{x+13} - 2 \sqrt{x+1}}{x^2-9}^{\enspace [\frac{0}{0}]}$ = $\lim\limits_{x \to 3} = \frac{(\sqrt{x+13} - 2 \sqrt{x+1})(\sqrt{x+13} + 2 \sqrt{x+1})}{(x^2-9)(\sqrt{x+13} + 2 \sqrt{x+1})}$ = $\lim\limits_{x \to 3} \frac{x+13 - 4x - 4}{(x-3)(x+3)(\sqrt{x+13} + 2 \sqrt{x+1})}$ = $-3 \cdot \lim\limits_{x \to 3} \frac{x-3}{(x-3)(x+3)(\sqrt{x+13} + 2 \sqrt{x+1})} = -3 \cdot \frac{1}{6 \cdot (4 + 4)}$ =
+		-$\frac{1}{16}$\\
+	}
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 447} \vspace{.5cm}\\}
+	\large{ $\lim\limits_{x \to 0} \frac{\sqrt[3]{27+x}-\sqrt[3]{27-x}}{x+2\sqrt[3]{x^4}}^{\enspace [\frac{0}{0}]}$ = 
+		$\lim\limits_{x \to 0} \frac{(\sqrt[3]{27+x}-\sqrt[3]{27-x})((\sqrt[3]{27+x})^2 + \sqrt[3]{27+x}\sqrt[3]{27-x} + (\sqrt[3]{27-x})^2)}{x(1+2\sqrt[3]{x})((\sqrt[3]{27+x})^2 + \sqrt[3]{27+x}\sqrt[3]{27-x} + (\sqrt[3]{27-x})^2)}$ = $\lim\limits_{x \to 0} 
+		\frac{2 \cancel{x}}{\cancel{x}(1+2\sqrt[3]{x})((\sqrt[3]{27+x})^2 + \sqrt[3]{27+x}\sqrt[3]{27-x} + (\sqrt[3]{27-x})^2)}$ = $\frac{2}{3^2+3 \cdot 3 + 3^2} = \frac{2}{27}$\\
+	}
+}
+\newpage
+
+{
+	{\textbf{№ 455} \vspace{.5cm}\\}
+	\large{ $\lim\limits_{x \to 1}\frac{\sqrt[m]{x}-1}{\sqrt[n]{x}-1}$\\
+	Пусть $x = t^{n \cdot m} \implies \sqrt[m]{x}=t^n \quad \sqrt[n]{x}=t^m$\\
+	$\lim\limits_{x \to 1}\frac{\sqrt[m]{x}-1}{\sqrt[n]{x}-1}$ = $\lim\limits_{t \to 1}
+	\frac{t^n-1}{t^m-1} = \lim\limits_{t \to 1} \frac{\cancel{(t-1)}(1+t+t^2+...+t^{n-1})}
+	{\cancel{(t-1)}(1+t+t^2+...+t^{m-1})}$ = $\frac{n}{m}$\\
+	}
+}
+\vspace{.5cm}\\
+{
+	{\textbf{№ 457} \vspace{.5cm}\\}
+	\large{ $\lim\limits_{x \to +\infty}[\sqrt{(x+a)(x+b)}-x]^{\enspace [\infty - \infty]}$ = $\lim\limits_{x \to +\infty}
+		\frac{(x+a)(x+b)-x^2}{\sqrt{(x+a)(x+b)}+x} = \lim\limits_{x \to +\infty} \frac{\cancel{x}[(a+b)+\frac{ab}{x}]}{\cancel{x}(1+\sqrt{(1+\frac{a}{x})(1+\frac{b}{x})})} =\\ =\frac{a+b}{2}$
+	}
+}
+
+\vspace{1cm}
+ДЗ: 436, 455.1, 456, 458
+
+\vspace{2cm}
+{\hfill \textit{27.09.2021}\\ \vspace{.2cm}}
+
+{
+	{\textbf{№ 462} \vspace{.5cm}\\}
+	\large{ $\lim\limits_{x \to + \infty}(\sqrt[3]{x^3+3x^2}-\sqrt{x^2-2x})^{\enspace [\infty-\infty]} = \lim\limits_{x \to +\infty} \frac{(x^3+3x^2)^2-(x^2-2x)^3}{(\sqrt[3]{x^3+3x^2})^5+(\sqrt[3]{x^3+3x^2})^4\sqrt{x^2-2x}+...+(\sqrt{x^2-2x})^5} = \lim\limits_{x \to +\infty} \frac{x^{6}+6x^{5}+9x^{4}-(x^{6}-6x^{5}+12x^{4}-8x^{3})}{(\sqrt[3]{x^3+3x^2})^5+(\sqrt[3]{x^3+3x^2})^4\sqrt{x^2-2x}+...+(\sqrt{x^2-2x})^5}=\lim\limits_{x \to +\infty} \frac{\cancel{x^5}(12-\frac{3}{x}+\frac{8}{x^2})}{\cancel{x^5}((\sqrt[3]{1+\frac{3}{x}})^5 + ... + (\sqrt{1-\frac{2}{x}})^5)}=\\ = \frac{12}{6}=2$
+	}
+}
+
+\newpage
+\subsection{Тригонометрические функции}
+
+{
+	\vspace{1cm}
+	{\emph{\large{\circled{1} Замечательный предел}} \vspace{.1cm}\\
+	$\lim\limits_{x \to 0} \frac{sin(x)}{x} = \lim\limits_{x \to 0} \frac{x}{sin(x)} = 1$ \vspace{.4cm}\\
+}
+{
+	\emph{\large{\circled{2} Тригонометрические формулы}}
+	\begin{enumerate}
+		\item $sin(2x)=2sin(x)cos(x)$
+		\item $cos(2x)=cos^2(x)-sin^2(x)=2cos^2(x)-1=1-2sin^2(x)$
+		\item $1+cos(x)=2cos^2(\frac{x}{2})$
+		\item $1-cos(x)=2sin^2(\frac{x}{2})$
+		\item $sin(\alpha + \beta)=sin(\alpha)\cdot cos(\beta)+cos(\alpha)\cdot sin(\beta)$\\
+		
+	\end{enumerate}
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 471} \vspace{.5cm}\\}
+	\large{ $\lim\limits_{x \to 0}\frac{sin(5x)}{x}= |t = 5x| = 5 \cdot \lim\limits_{t \to 0} \frac{sin(t)}{t} = 5$
+	}
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 472} \vspace{.5cm}\\}
+	\large{ $\lim\limits_{x\to \infty} \frac{sin(x)}{x}$\\
+		$0 \leq \abs{\frac{sinx}{x}}=\frac{\abs{sinx}}{x} \leq \frac{1}{x} \to 0$\\
+	}
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 474} \vspace{.5cm}\\}
+	\large{ $\lim\limits_{x \to 0} \frac{1-cosx}{x^2}=2 \cdot \lim\limits_{x \to 0}  \frac{sin^2(\frac{x}{2})}{x^2} = \frac{1}{2} \cdot [\lim\limits_{x \to 0}\frac{sin(\frac{x}{2})}{\frac{x}{2}}]^2 = \frac{1}{2}$
+	}
+}
+
+\newpage
+{
+	{\textbf{№ 475} \vspace{.5cm}\\}
+	\large{ $\lim\limits_{x \to 0} \frac{tg(x)-sin(x)}{sin^2(x)}^{\enspace [\frac{0}{0}]} = \lim\limits_{x \to 0} \frac{\cancel{sin(x)}(\frac{1-cos(x)}{cos(x)})}{\cancel{sin(x)}\cdot sin^2(x)}=2\cdot \lim\limits_{x \to 0} \frac{1}{cos(x)} \cdot [\frac{1}{2}\frac{\lim\limits_{x \to 0}\frac{sin(\frac{x}{2})}{\frac{x}{2}}}{\lim\limits_{x \to 0}\frac{sin(x)}{x}}]^2=2 \cdot \frac{1}{4} = \frac{1}{2}$
+	}
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 476} \vspace{.5cm}\\}
+	\large{ $\lim\limits_{x \to 0} \frac{sin(5x)-sin(3x)}{sin(x)} = \lim\limits_{x \to 0}\frac{sin(5x)}{sin(x)} - \lim\limits_{x \to 0} \frac{sin(3x)}{sin(x)}=5-3=2$
+	}
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 480} \vspace{.5cm}\\}
+	\large{ $\lim\limits_{x \to 1}(1-x)tg(\frac{\pi x}{2})^{\enspace [0 \cdot \infty]} =
+		\lim\limits_{x \to 1} (1-x) \frac{sin(\frac{\pi x}{2})}{cos(\frac{\pi x}{2})} = \lim\limits_{x \to 1} \frac{1-x}{cos(\frac{\pi x}{2})}^{\enspace [\frac{0}{0}]}=\\ =\lim\limits_{x \to 1} \frac{1-x}{cos(\frac{\pi (x-1)}{2} + \frac{\pi}{2})} = \lim\limits_{x \to 1} \frac{x-1}{sin(\frac{\pi (x-1)}{2})}=\frac{2}{\pi} \lim\limits_{t \to 0} \frac{\frac{\pi t}{2}}{sin(\frac{\pi t}{2})} = \frac{2}{\pi}$
+	}
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 488} \vspace{.5cm}\\}
+	\large{ $\lim\limits_{x \to 0} \frac{sin(a+2x)-2sin(a+x)+sin(a)}{x^2} = \lim\limits_{x \to 0} \frac{(sin(a+2x)+sin(a))-2sin(a+x)}{x^2} =\\= \lim\limits_{x \to 0} \frac{2sin(a+x)\cdot cos(x)-2sin(a+x)}{x^2} = 2 \cdot \lim\limits_{x \to 0} \frac{sin(a+x)(cos(x)-1)}{x^2}=-2sin(a) \cdot \lim\limits_{x \to 0} \frac{2sin^2(\frac{x}{2})}{(\frac{x}{2})^2 \cdot 4} = -sin(a)$
+	}
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 493} \vspace{.5cm}\\}
+	\large{ $\lim\limits_{x \to \frac{\pi}{6}} \frac{2sin^2(x)+sin(x)-1}{2sin^2(x)-3sin(x)+1}^{\enspace [\frac{0}{0}]}=
+		\lim\limits_{x \to \frac{\pi}{6}} \frac{\cancel{(2sin(x)-1)}(sin(x)+1)}{\cancel{(2sin(x)-1)}(sin(x)-1)}=\frac{\frac{3}{2}}{-\frac{1}{2}}=-3$
+	}
+}
+
+\newpage
+{\hfill \textit{01.10.2021}\\ \vspace{.2cm}}
+{
+	{\textbf{№ 499} \vspace{.5cm}\\}
+	\large{ $\lim\limits_{x \to 0} \frac{\sqrt{1+tg(x)}-\sqrt{1+sin(x)}}{x^3}^{\enspace [\frac{0}{0}]} = \lim\limits_{x \to 0} \frac{tg(x)-sin(x)}{x^3(\sqrt{1+tg(x)}+\sqrt{1+sin(x)})} = \frac{1}{2} \cdot 
+		\lim\limits_{x \to 0}[\frac{sin(x)}{x} \cdot \frac{1-cos(x)}{x^2cos(x)}] = \frac{1}{2} \cdot \lim\limits_{x \to 0} \frac{2sin^2(\frac{x}{2})}{4 (\frac{x}{2})^2} = \frac{1}{4}$
+	}
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 502} \vspace{.5cm}\\}
+	\large{ $\lim\limits_{x \to 0} \frac{\sqrt{1-cos(x^2)}}{1-cos(x)}^{\enspace [\frac{0}{0}]} = \lim\limits_{x \to 0} 
+		\frac{\sqrt{2sin^2(\frac{x^2}{2})}}{2sin^2(\frac{x}{2})} = \frac{1}{\sqrt{2}} \cdot \lim\limits_{x \to 0} 2 \cdot \cancelto{1}{\frac{sin(\frac{x^2}{2})}{\frac{x^2}{2}}} \cdot \cancelto{1}{\frac{(\frac{x}{2})^2}{sin^2(\frac{x}{2})}} =\\= \sqrt{2}$\\
+	}
+}
+
+\vspace{2cm}
+ДЗ: 503, 504, 505, 688, 689
+
+\newpage
+\section{Непрерывность функции}
+\vspace{2cm}
+Опр. Пусть \ensuremath{f(x), x \in \mathbb{X} \subseteq R}\\
+$a \in \mathbb{X}$ - внутренняя точка, т. е $(a-x_0; a+x_0) \subset \mathbb{X}, x_0 > 0$\\
+Тогда f(x) - непрерывная в точке x = a, если $\lim\limits_{x \to a}f(x) = f(a)$\\
+
+\vspace{.5cm}
+{
+	{\textbf{№ 687} \vspace{.5cm}\\}
+	\large{ $y = \frac{x}{(x+1)^2} \qquad x \neq -1 \implies x=-1$ - точка разрыва?\\
+		$\lim\limits_{x \to -1}\frac{x}{(x+1)^2} = -\lim\limits_{x \to -1} \frac{1}{(x+1)^2} = -\infty \quad \implies \quad $ x = -1 - точка \\разрыва \RNum{2} рода\\	
+	}
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 690} \vspace{.5cm}\\}
+	\large{ $y = \frac{\frac{1}{x}-\frac{1}{x+1}}{\frac{1}{x-1}-\frac{1}{x}}$\\
+		Особые точки: $x=0, x=-1, x=1$\\
+		$y = \frac{\frac{1}{x(x+1)}}{\frac{1}{x(x-1)}}=\frac{x-1}{x+1}, \quad x \in \mathbb{D}$(y)\\
+		$\lim\limits_{x \to -1}y = \lim\limits_{x \to -1}\frac{x-1}{x+1} = -2 \lim\limits_{x \to -1} \frac{1}{x+1} = -\infty \quad \implies \quad x$ = $-1$ -\\- точка разрыва \RNum{2} рода\vspace{.2cm}\\
+		$\lim\limits_{x \to 0} y = \lim\limits_{x \to 0} \frac{x-1}{x+1}=-1 \quad \implies \quad $
+		x = 0 - точка разрыва \RNum{3} рода\vspace{.2cm}\\
+		$\lim\limits_{x \to 1} y = \lim\limits_{x \to 0} \frac{x-1}{x+1}=0 \quad \implies \quad $
+		x = 1 - точка разрыва \RNum{3} рода\\
+	}
+}
+
+\newpage
+{
+	{\textbf{№ 720} \vspace{.5cm}\\}
+	\large{ $y(x) = \lim\limits_{n \to \infty} \frac{1}{1+x^n}, \quad x \geq 0$\\
+	
+	\begin{equation*}
+		y(x) =
+		\begin{cases}
+			1, \quad 0<x<1 \implies \lim\limits_{n \to \infty}x^n=0\\
+			1, \quad x = 0\\
+			0, \quad x > 1\\
+		\end{cases}
+	\implies x = 1 - \text{точка интереса}\\
+	\end{equation*}
+	$x = 1$ - точка разрыва \RNum{1} рода, т. к. $\lim\limits_{x \to 1-}y(x)=1 \text{;}  \lim\limits_{x \to 1+}y(x)=0$
+	}
+}
+
+\subsection{Исследование функций. Построение графиков}
+{\hfill \textit{04.10.2021}\\}
+$y = f(x)$\\
+\begin{enumerate}
+	\item {Найти $D(f(x)) \qquad \& \qquad \text{найти корни} \enspace f(x) = 0$}
+	\item {Найти особые точки - $x = a: \quad \lim\limits_{x \to a+}f(x), \enspace \lim\limits_{x \to a-}f(x)$? \\ Найти асимптоты}
+	\item {Поведение функции в окрестностях $\pm \infty$}
+	\item {Монотонность $f(x)$}
+	\item {График}
+\end{enumerate}
+
+\vspace{1cm}
+{
+	{\textbf{№ 263} \vspace{.5cm}\\}
+	\large{ $y = \frac{x^2-4x+3}{x+1} = x - 5 + \frac{8}{x+1}$\\
+		$\lim\limits_{x \to -1}[x-5+\frac{8}{x+1}]=-6+8\lim\limits_{x \to -1}\frac{1}{x+1}=\infty$\\
+	}
+
+\begin{tikzpicture}[scale=2.1]
+	\begin{axis}[
+		axis lines=center,
+		xlabel=\(x\),
+		ylabel=\(f(x)\),
+		grid=major,
+		restrict y to domain=-20:10,
+		samples=500,
+		xtick={-4, -2,...,4},
+		]
+		
+		\def\ymin{\pgfkeysvalueof{/pgfplots/ymin}}
+		\def\ymax{\pgfkeysvalueof{/pgfplots/ymax}}
+		
+		\addplot[blue, thick]{x-5+8/(x+1)};
+		\addplot[red, thin]{x-5};
+		
+		\draw [red, thin, dashed] (-1, \ymin) -- (-1, \ymax);
+		\node[circle,inner sep=1pt,fill=red,label=left:{}] at (3,0) {};
+		
+	\end{axis}
+\end{tikzpicture}\\
+$\lim\lim\limits_{x \to +\infty} \frac{x^2-4x+3}{x+1}=+\infty$\\
+$\lim\lim\limits_{x \to -\infty} \frac{x^2-4x+3}{x+1}=-\infty$\\
+
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 242} \vspace{.5cm}\\}
+	\large{ $y = \sqrt{\frac{x^3}{x-10}}$
+		\begin{enumerate}
+			\item {$D(y): \frac{x^3}{x-10} \geq 0 \enspace \leftrightarrow$
+			\begin{equation*}
+				\begin{cases}
+					x \geq 0, \enspace x-10 > 0 \implies x \leq 0\\
+					x < 0, \enspace x-10 < 0 \implies x < 0
+				\end{cases}\,.
+			\end{equation*}
+		}
+	$D(y) = \text{(}-\infty; 0\text{]} \cup \text{(}10; +\infty\text{)}$\\
+			\item{$x=10 \enspace - $ вкртикальная асимптота, т. к. $\lim\limits_{x \to 10}y(x) = +\infty$\\ $\lim\limits_{x \to 0+}y(x) \enspace - \enspace \text{не существует}$\\
+			$\lim\limits_{x \to 0-}y(x)=0$
+			\begin{itemize}
+				\item {$x > 10 \enspace \implies y = \sqrt{\frac{x^3}{x-10}} = x \cdot \cancelto{1}{\sqrt{\frac{x}{x-10}}} \implies\\\implies y=x \text{ - наклонная асимптота}$}
+				\item {$x < 10 \enspace \implies y = \sqrt{\frac{x^3}{x-10}} = -x \cdot \cancelto{1}{\sqrt{\frac{x}{10-x}}} \implies\\\implies y=-x \text{ - наклонная асимптота}$}
+			\end{itemize}	
+	}
+		\end{enumerate}
+	}
+
+\begin{tikzpicture}[scale=1.5]
+	\begin{axis}[
+		axis lines=center,
+		xlabel=\(x\),
+		ylabel=\(f(x)\),
+		grid=major,
+		restrict y to domain=-40:50,
+		samples=800,
+		xtick={-40, -25,...,40},
+		]
+		
+		\def\ymin{\pgfkeysvalueof{/pgfplots/ymin}}
+		\def\ymax{\pgfkeysvalueof{/pgfplots/ymax}}
+		
+		\addplot[blue, domain=-80:40, thick]{(x^3/(x-10))^0.5};
+		\addplot[red, domain=0:40, thin]{x};
+		\addplot[red, domain=-80:0, thin]{-x};
+		
+		\draw [red, thin, dashed] (10, \ymin) -- (10, \ymax);
+		\node[circle,inner sep=1pt,fill=red,label=left:{}] at (0,0) {};
+		\node[inner sep=1pt, rotate=54,label=left:{}] at (25,20) {y=x};
+		\node[inner sep=1pt, rotate=-54,label=left:{}] at (-25,29) {y=-x};
+		
+	\end{axis}
+\end{tikzpicture}
+}
+\newpage
+
+\subsection{Производные}
+{\hfill \textit{22.10.2021}\\}
+$y = f(x)$\\
+$y' = \lim\limits_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}$\\
+
+\subsubsection{Таблица производных}
+\begin{enumerate}
+	\item $(x^n)' = n x^{n-1} \enspace \forall \enspace n \in \mathbb{R}$
+	\item $(sinx)'=cosx \qquad (cosx)'=-sinx$
+	\item $(e^x)'=e^x \qquad (a^x)'=(e^{x ln(a)})'=a^x \cdot lna$
+	\item $(lnx)'=\frac{1}{x}$
+	\item $(arcsinx)'=\frac{1}{\sqrt{1-x^2}} \qquad (arctgx)'=\frac{1}{x^2+1}$
+\end{enumerate}
+
+\subsubsection{Правила дефференцирования}
+\begin{enumerate}
+	\item $[f(x)+g(x)]'=f'(x)+g'(x)$
+	\item $[f(x) \cdot g(x)]'=f'(x)g(x)+f(x)g'(x)$
+	\item $[\frac{f(x)}{g(x)}]'=\frac{f' \cdot g - f \cdot g'}{g^2}$
+	\item $(f[g(x)])'=f'(g(x)) \cdot g'(x)$ - \emph{Производная сложной функции}
+\end{enumerate}
+\subsubsection{Примеры}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 918} \vspace{.5cm}\\}
+	\large{ $y = x + \sqrt{1-x^2} \cdot arccos(x)$\\
+		$y'=\cancel{1} + \frac{-x \cdot arccos(x)}{\sqrt{1-x^2}} - \cancel{\frac{\sqrt{1-x^2}}{\sqrt{1-x^2}}} = -\frac{x \cdot arccos(x)}{\sqrt{1-x^2}}
+		$\\
+	}
+}
+\vspace{.5cm}\\
+{
+	{\textbf{№ 919} \vspace{.5cm}\\}
+	\large{ $y = x \cdot arcsin(\sqrt{\frac{x}{1+x}}) + arctg(\sqrt{x})-\sqrt{x}$\\
+		$y'=arcsin(\sqrt{\frac{x}{1+x}}) + x\cdot \frac{1}{\sqrt{1-\frac{x}{x+1}}} \cdot \frac{\sqrt{x+1}}{2\sqrt{x}} \cdot (-\frac{1}{x^2}) + \frac{1}{2\sqrt{x}(1+x)}-\frac{1}{2\sqrt{x}} = arcsin(\sqrt{\frac{x}{1+x}}) - \frac{\sqrt{x}(x+1)}{2x^2}+\frac{1}{2\sqrt{x}(1+x)}-\frac{1}{2\sqrt{x}}$
+	}
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 961} \vspace{.5cm}\\}
+	\large{ $y=x+x^x+x^{x^x}$\\
+		$(x)'=1$\\
+		$(x^x)'=(e^{xln(x)})'=x^x(lnx+1)$\\
+		$(x^{x^x})'=(e^{x^xln(x)})'=x^{x^x}\cdot[x^{x-1}+lnx\cdot x^x \cdot (lnx+1)]$\\
+		$y'=1+x^x(lnx+1)+x^{x^x}\cdot[x^{x-1}+lnx\cdot x^x \cdot (lnx+1)]$
+	}
+}
+
+\vspace{.5cm}
+{
+	{\textbf{№ 963} \vspace{.5cm}\\}
+	\large{ $y=\sqrt[x]{x}$\\
+		$y'=(e^{\frac{lnx}{x}})'=\sqrt[x]{x} \cdot \frac{1-lnx}{x^2}$
+	}
+}
+
+
+\vspace{2cm}
+ДЗ: 901-903, 913-930
+
+
+
+
+\end{document}
