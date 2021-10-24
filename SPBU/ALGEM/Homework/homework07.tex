@@ -1,36 +1,5 @@
-\documentclass[a4paper, 12pt]{article}
-\usepackage[T2A]{fontenc}% Внутренняя T2A кодировка TeX
-\usepackage[utf8]{inputenc}% кодировка файла
-\usepackage[russian]{babel}% поддержка переносов в русском языке
-\usepackage{comment}% enables the use of multi-line comments (\ifx \fi) 
-\usepackage{fullpage}% changes the margin
-\usepackage[a4paper, total={7in, 10in}]{geometry}
-\usepackage[fleqn]{amsmath}
-\usepackage{amssymb,amsthm}  
-\usepackage{graphicx}
-\usepackage{verbatim}
-\usepackage{float}
-\usepackage{xcolor}
-\usepackage{mdframed}
-\usepackage[shortlabels]{enumitem}
-\usepackage{indentfirst}
-\usepackage{hyperref}
-
-\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
-
-\newenvironment{problem}[2][Задача]
-{ \begin{mdframed}[backgroundcolor=gray!10] \textbf{#1 #2.} \\}
-	{  \end{mdframed}}
-
-\newenvironment{solution}
-{\textit{Решение:}\vspace{.1cm}\\}
-{\vspace{.1cm}\noindent\rule{7in}{1.5pt}}
-
-\renewcommand{\qed}{\quad\qedsymbol}
-
-\begin{document}
 \noindent
-\large\textbf{Домашняя работа №7} \hfill  Дата: XX.YY.2021  \\
+\large\textbf{Домашняя работа №7} \hfill  Дата: 24.10.2021  \\
 \noindent\rule{7in}{2pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -215,7 +184,7 @@ $
 	1 & 1 & \ldots & 1 & 1\\
 	0 & -a_2 & \ldots & -a_2 & -(a_n+a_2)\\
 	\vdots & \vdots & \ddots & \vdots & \vdots\\ 
-	0 & 0 & \ldots & -a_{n-2} & -\frac{a_2\cdot a_3 \cdot \ldots \cdot a_{n-1} + \ldots + a_3 \cdot \ldots \cdot a_{n}}{a_2 \cdot a_3 \cdot \ldots \cdot a_{n-4} \cdot a_{n-3}}\\
+	0 & 0 & \ldots & -a_{n-2} & -\frac{a_2\cdot a_3 \cdot \ldots \cdot a_{n-2} + \ldots + a_3 \cdot \ldots \cdot a_{n-2} \cdot a_{n}}{a_2 \cdot a_3 \cdot \ldots \cdot a_{n-4} \cdot a_{n-3}}\\
 	0 & 0 & \ldots & a_{n-1} & -a_n\\
 \end{vmatrix}\:\underset{\begin{subarray}{c}\text{$S_n+\frac{a_{n-1}}{a_{n-2}}S_{n-1}$}\end{subarray}}{=} \\=
 \begin{vmatrix}
@@ -223,8 +192,8 @@ $
 	0 & -a_2 & \ldots & -(a_n+a_2)\\
 	\vdots & \vdots & \ddots & \vdots\\
 	0 & 0 & \ldots & 
-	-\frac{\prod\limits_{2<=i_1<=\ldots<=i_{n-2}<=n}{a_{i_1}\cdot \ldots \cdot a_{i_{n-2}}}}{a_2 \cdot \ldots a_{n-1}}
-\end{vmatrix} = (-1)^{n-1} \cdot a_2 \cdot \ldots a_{n-2} \cdot \frac{\prod\limits_{2<=i_1<=\ldots<=i_{n-2}<=n}{a_{i_1}\cdot \ldots \cdot a_{i_{n-2}}}}{a_2 \cdot \ldots a_{n-1}} =\\= (-1)^{n-1} \cdot\prod\limits_{2<=i_1<=\ldots<=i_{n-2}<=n}{a_{i_1}\cdot \ldots \cdot a_{i_{n-2}}}
+	-\frac{\sum\limits_{2<=i_1<=\ldots<=i_{n-2}<=n}{a_{i_1}\cdot \ldots \cdot a_{i_{n-2}}}}{a_2 \cdot \ldots a_{n-1}}
+\end{vmatrix} = (-1)^{n-1} \cdot a_2 \cdot \ldots a_{n-2} \cdot \frac{\sum\limits_{2<=i_1<=\ldots<=i_{n-2}<=n}{a_{i_1}\cdot \ldots \cdot a_{i_{n-2}}}}{a_2 \cdot \ldots a_{n-1}} =\\= (-1)^{n-1} \cdot\sum\limits_{2<=i_1<=\ldots<=i_{n-2}<=n}{a_{i_1}\cdot \ldots \cdot a_{i_{n-2}}}
 $\vspace{.1cm}\\
 $
 \Delta = a_1 \cdot \ldots \cdot a_n + a_1 \cdot \ldots \cdot a_{n-1} + a_1 \cdot \ldots \cdot a_{n-2} \cdot a_n + \ldots + a_2 \cdot \ldots \cdot a_n\\
@@ -235,13 +204,55 @@ $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Задача 5
 \begin{problem}{306}
-$\left| \begin{array}{cccccc}\alpha & \alpha\beta & 0 & \ldots & 0 & 0 \\ 1 & \alpha+\beta & \alpha\beta & \ldots & 0 &  0 \\ 0 & 1 & \alpha+\beta & \ldots & 0 & 0 \\ \ldots & \ldots & \ldots & \ldots & \ldots & \ldots \\ 0 & 0 & 0 & \ldots & 1 & \alpha+\beta \end{array} \right|$
+$\left| \begin{array}{cccccc}\alpha & \alpha\beta & 0 & \ldots & 0 & 0 \\ 1 & \alpha+\beta & \alpha\beta & \ldots & 0 &  0 \\ 0 & 1 & \alpha+\beta & \ldots & 0 & 0 \\ \ldots & \ldots & \ldots & \ldots & \ldots & \ldots \\ 0 & 0 & 0 & \ldots & 1 & \alpha+\beta \end{array} \right|$\\
 \end{problem}
 \begin{solution}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Ваше решение задачи здесь
-
+$
+\begin{vmatrix}
+	\alpha & \alpha\beta & 0 & \ldots & 0 & 0 \\ 
+	1 & \alpha+\beta & \alpha\beta & \ldots & 0 &  0 \\ 
+	0 & 1 & \alpha+\beta & \ldots & 0 & 0 \\ 
+	\ldots & \ldots & \ldots & \ldots & \ldots & \ldots \\
+	0 & 0 & 0 & \ldots & 1 & \alpha+\beta \\
+\end{vmatrix}\:\underset{\begin{subarray}{c}\text{$S_1-\alpha S_2$}\end{subarray}}{=} \: -\alpha \cdot
+\begin{vmatrix}
+	0 & \alpha & \alpha \beta & \ldots & 0 & 0\\
+	1 & \alpha+\beta & \alpha\beta & \ldots & 0 &  0 \\ 
+	0 & 1 & \alpha+\beta & \ldots & 0 & 0 \\ 
+	\ldots & \ldots & \ldots & \ldots & \ldots & \ldots \\
+	0 & 0 & 0 & \ldots & 1 & \alpha+\beta \\
+\end{vmatrix}\:\underset{\begin{subarray}{c}\text{$S_1-\alpha S_3$}\end{subarray}}{=} \\= (-\alpha)^2 \cdot
+\begin{vmatrix}
+	0 & 0 & \alpha & \alpha \beta & \ldots & 0 & 0\\
+	1 & \alpha+\beta & \alpha\beta & 0 & \ldots & 0 &  0 \\ 
+	0 & 1 & \alpha+\beta &  \alpha \beta & \ldots & 0 & 0 \\ 
+	\ldots & \ldots & \ldots & \ldots & \ldots & \ldots \\
+	0 & 0 & 0 & 0 & \ldots & 1 & \alpha+\beta \\
+\end{vmatrix} = \ldots = 
+\begin{vmatrix}
+	0 & 0  & \ldots & \alpha & \alpha \beta\\
+	1 & \alpha+\beta & \ldots & 0 &  0 \\ 
+	0 & 1  & \ldots & 0 & 0 \\ 
+	\ldots & \ldots & \ldots & \ldots & \ldots \\
+	0 & 0 & \ldots & 1 & \alpha+\beta \\
+\end{vmatrix} \cdot \\\cdot (-\alpha) ^{n-2} \:\underset{\begin{subarray}{c}\text{$S_1-\alpha S_n$}\end{subarray}}{=} \: (-\alpha)^{n-1} \cdot 
+\begin{vmatrix}
+	0 & 0  & \ldots & 0 & \alpha\\
+	1 & \alpha+\beta & \ldots & 0 &  0 \\ 
+	0 & 1  & \ldots & 0 & 0 \\ 
+	\ldots & \ldots & \ldots & \ldots & \ldots \\
+	0 & 0 & \ldots & 1 & \alpha+\beta \\
+\end{vmatrix} = \cancel{(-1)^{n-1}} \cdot \alpha \cdot \cancel{(-1) ^ {n-1}} \cdot \alpha ^{n-1} \cdot\\\cdot
+\underbrace{
+\begin{vmatrix}
+	1 & \alpha+\beta & \ldots & 0 &  0 \\ 
+	0 & 1  & \ldots & 0 & 0 \\ 
+	\ldots & \ldots & \ldots & \ldots & \ldots \\
+	0 & 0 & \ldots & 1 & \alpha+\beta \\
+	0 & 0  & \ldots & 0 & 1\\
+\end{vmatrix}}_{1} = \alpha ^ n
+$\\
 
 \end{solution} 
-\end{document}
-
