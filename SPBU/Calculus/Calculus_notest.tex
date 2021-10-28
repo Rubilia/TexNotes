@@ -21,9 +21,11 @@
 }}
 \newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
 
+\newenvironment{task}[1][0]{\vspace{.5cm} {\textbf{№ #1} \vspace{.5cm}\\ }\large}{\\}
+
 
 \begin{document}
-	{\hspace*{\fill} \underline{\textit{24.09.2021}}}
+	{\hspace*{\fill} {\textit{24.09.2021}}}
 	\section{Предел последовательности}
 	 \vspace{1cm}
 	{
@@ -605,7 +607,36 @@ $y' = \lim\limits_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}$\\
 \vspace{2cm}
 ДЗ: 901-903, 913-930
 
+\vspace{2cm}
+
+\subsection{Самостоятельная работа}
+{\hfill \textit{25.10.2021}\\}
+
+\begin{task}[858]
+$y = \sqrt[3]{\frac{1+x^3}{1-x^3}}=-\frac{\sqrt[3]{1+x^3}}{\sqrt[3]{x^3-1}}\\
+y'=-\frac{\frac{x^2}{\sqrt[3]{(x^3+1)^2}}\cdot \sqrt[3]{x^3-1}- \frac{x^2}{\sqrt[3]{(x^3-1)^2}}\cdot \sqrt[3]{x^3+1}}{\sqrt[3]{(x^3-1)^2}}=\frac{2x^2}{\sqrt[3]{(x^2-1)^4}\sqrt[3]{(x^3+1)^2}}$
+\end{task}
 
 
+\begin{task}[873]
+$y = 4\sqrt[3]{ctg^2x}+\sqrt[3]{ctg^8x}\\
+y'=4 \cdot \frac{2}{3} \cdot \frac{1}{\sqrt[3]{ctgx}}\cdot(-\frac{1}{sin^2x}) + \frac{8}{3} \sqrt[3]{ctg^5x}\cdot (-\frac{1}{sin^2x}) =\\= -\frac{8}{3sin^2x \sqrt[3]{ctgx}}(1+ctg^2x)= 
+-\frac{8 \sqrt[3]{tgx}}{3sin^4x}
+$
+\end{task}
+
+
+\begin{task}[896]
+$y = xln(x +\sqrt{x^2+1})-\sqrt{1+x^2}\\
+y'=ln(x +\sqrt{x^2+1}) + \cancel{x \cdot \frac{1}{x +\sqrt{x^2+1}} \cdot (1 + \frac{x}{\sqrt{x^2+1}})} - \cancel{\frac{x}{\sqrt{x^2+1}}}=\\=ln(x +\sqrt{x^2+1})
+$
+\end{task}
+
+
+\begin{task}[940]
+$y = \frac{arcsinx}{\sqrt{1-x^2}}+\frac{1}{2}ln(\frac{1-x}{1+x})\\
+y'=\frac{\frac{1}{\cancel{\sqrt{1-x^2}}} \cdot \cancel{\sqrt{1-x^2}} + \frac{x arcsinx}{\sqrt{1-x^2}}}{1-x^2} + \frac{1}{2} \cdot \frac{\cancel{1+x}}{1-x} \cdot \frac{-(1+x)-(1-x)}{(1+x)^{\cancel{2}}} = \frac{xarcsinx}{(1-x^2)\sqrt{1-x^2}}
+$
+\end{task}
 
 \end{document}

@@ -11,21 +11,20 @@
 
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
 \newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+\newenvironment{task}[1][0]{\vspace{.5cm} {\textbf{№ #1} \vspace{.5cm}\\ }}{\\}
 \begin{document}
-	\section{Комплексные числа и полиномы}
-		{\centering {\LARGE{Классная работа}}\\ 
-		\hfill \textit{17.09.2021}\\ \vspace{1cm}}
-	
-{
-{\textbf{№ 137}\\ \vspace{.25cm}\\}
-\textit{\large{Вычислить $(1-\frac{\sqrt{3}-i}{2})^{24}$}}\vspace{.25cm}\\
+\section{Комплексные числа и полиномы}
+	{\centering {\LARGE{Классная работа}}\\ 
+	\hfill \textit{17.09.2021}\\ \vspace{1cm}}
 
-z = {$(1-\frac{\sqrt{3}-i}{2})^{24}$ = $[1 - (\frac{\sqrt{3}-i}{2})]^{24}$ = $[cos(0)+isin(0)-cos(-\frac{\pi}{6})-isin(-\frac{\pi}{6})]^{24}$ = $[cos(0)-cos(-\frac{\pi}{6}) + i(sin(0) - sin(-\frac{\pi}{6}))]^{24}$ =\\= $[-2sin(-\frac{\pi}{12})sin(\frac{\pi}{12}) + 2isin(\frac{\pi}{12})cos(-\frac{\pi}{12})]^{24}$}\\
-z = $[-2sin(\frac{\pi}{12})(sin(-\frac{\pi}{12})-icos(-\frac{\pi}{12}))]^{24}$\\\\
-$sin(-\frac{\pi}{12})-icos(-\frac{\pi}{12})$ = $-cos(\frac{5\pi}{12})$ - $isin(\frac{5\pi}{12})$\\\\
-z = $[2sin(\frac{\pi}{12})(cos(\frac{5\pi}{12}) + isin(\frac{5\pi}{12}))]^{24}=2^{24}*sin(\frac{\pi}{12})^{24}(cos(10\pi)+isin(10\pi))$ = $2\sqrt{\frac{1-\frac{\sqrt{3}}{2}}{2}}^{24}$ = $(2-\sqrt{3})^{12}$\\
+\begin{task}[137]
+	{\large Вычислить $(1-\frac{\sqrt{3}-i}{2})^{24}$}\\
+	z = {$(1-\frac{\sqrt{3}-i}{2})^{24}$ = $[1 - (\frac{\sqrt{3}-i}{2})]^{24}$ = $[cos(0)+isin(0)-cos(-\frac{\pi}{6})-isin(-\frac{\pi}{6})]^{24}$ = $[cos(0)-cos(-\frac{\pi}{6}) + i(sin(0) - sin(-\frac{\pi}{6}))]^{24}$ =\\= $[-2sin(-\frac{\pi}{12})sin(\frac{\pi}{12}) + 2isin(\frac{\pi}{12})cos(-\frac{\pi}{12})]^{24}$}\\
+	z = $[-2sin(\frac{\pi}{12})(sin(-\frac{\pi}{12})-icos(-\frac{\pi}{12}))]^{24}$\\\\
+	$sin(-\frac{\pi}{12})-icos(-\frac{\pi}{12})$ = $-cos(\frac{5\pi}{12})$ - $isin(\frac{5\pi}{12})$\\\\
+	z = $[2sin(\frac{\pi}{12})(cos(\frac{5\pi}{12}) + isin(\frac{5\pi}{12}))]^{24}=2^{24}*sin(\frac{\pi}{12})^{24}(cos(10\pi)+isin(10\pi))$ = $2\sqrt{\frac{1-\frac{\sqrt{3}}{2}}{2}}^{24}$ = $(2-\sqrt{3})^{12}$
+\end{task}
 
-}
 \vspace{1cm}
 {
 {\textbf{№ 554 b}\\ \vspace{.25cm}\\}
@@ -400,7 +399,7 @@ $f_n=x^n+a_1x^{n-1}+a_2x^{n-2}+..+a_n$\\
 }
 ДЗ: 220df, 274, 221, 224, 232cdf
 \vspace{1.4cm}\\
-	\subsection{Свойства определителей}
+	\subsubsection{Свойства определителей}
 	\begin{enumerate}
 		\item $det(A \cdot B) = det(A) \cdot det(B) \qquad \implies \qquad det(A^n)=det(A)^n$
 		\item $det(A^T) = det(A)$
@@ -555,7 +554,7 @@ $
 
 
 \newpage
-\section{Собственные числа матрицы}
+\subsection{Собственные числа матрицы}
 {\hfill \textit{22.10.2021}\\}
 \large{
 $\Delta_n=\alpha \cdot \Delta_{n-1}+\beta \cdot \Delta_{n-2}$\\
@@ -591,7 +590,7 @@ $\lambda = 2cos(\frac{\pi k}{n+1}), \qquad k \in \mathbb{Z}$
 
 }
 \newpage}
-\section{Системы линейных алгебрарических уравнений}
+\subsection{Системы линейных алгебрарических уравнений}
 \begin{equation*}
 	\begin{cases*}
 		a_{11}x_1+a_{12}x_2+ ... + a_{1n}x_n=b_1\\
@@ -714,4 +713,188 @@ $	\begin{pmatrix}
 \end{pmatrix}$ - \emph{фундаментальная система решений (только при параметрах)}\\
 Вектор без параметра - частное решение\\
 }
+
+
+
+
+\newpage
+
+\subsection{Собственный вектор матрицы}
+{\hfill \textit{22.10.2021}\\}
+$Ax=\lambda X$\\
+$(A-\lambda E)X=0$
+
+\begin{task}[1032 e]
+	$
+	\begin{pmatrix}
+		5 & 6 & -3\\
+		-1 & 0 & 1\\
+		1 & 2 & 1\\
+	\end{pmatrix}\\
+	f(\lambda) = 
+	\begin{vmatrix}
+		5 - \lambda & 6 & -3\\
+		-1 & -\lambda & 1\\
+		1 & 2 & 1-\lambda\\
+	\end{vmatrix} = \lambda(\lambda-1)(5-\lambda) + 6+6-(-3\lambda)-2(5-\lambda)-\\-6(\lambda-1)=
+	-\lambda^3 +6\lambda^2-12\lambda+8=0\\
+	\lambda_{1,2,3}=2\\
+	$\\
+	$\lambda = 2$:\\
+	$
+\begin{vmatrix}
+	3 & 6 & -3\\
+	-1 & -2 & 1\\
+	1 & 2 & -1\\
+\end{vmatrix} \cdot X = 0\\
+$
+
+\begin{equation*}
+	\begin{pmatrix}
+		1 & 2 & -1 & | & 0\\
+		-1 & -2 & 1 & | & 0\\
+		1 & 2 & -1 & | & 0\\
+	\end{pmatrix} \rightarrow 
+	\begin{pmatrix}
+		1 & 2 & -1 & | & 0\\
+		0 & 0 & 0 & | & 0\\
+		0 & 0 & 0 & | & 0\\
+	\end{pmatrix} \rightarrow
+	\begin{cases}
+		x_1+2x_2-x_3=0\\
+		x_1=c_1\\
+		x_2=c_2\\
+	\end{cases} \leftrightarrow
+	\begin{cases}
+	x_1=-2c_2-c_3\\
+	x_1=c_1\\
+	x_2=c_2\\
+\end{cases}
+\end{equation*}\\
+\ensuremath{
+X=c_1\cdot
+\begin{pmatrix}
+	-2\\
+	1\\
+	0\\
+\end{pmatrix} + c_3 \cdot
+\begin{pmatrix}
+	1\\
+	0\\
+	1\\
+\end{pmatrix}\\
+\begin{pmatrix}
+	-2 & 1 & 0\\
+\end{pmatrix}^T, \qquad
+\begin{pmatrix}
+	1 & 0 & 1
+\end{pmatrix}^T - \text{ФСР, собственные векторы}
+}
+\end{task}
+
+\begin{task}[1032 j]
+$
+	\begin{pmatrix}
+		0 & 0 & 1\\
+		0 & 1 & 0\\
+		1 & 0 & 0\\
+	\end{pmatrix}\\
+f(\lambda) = 
+\begin{vmatrix}
+	-\lambda & 0 & 1\\
+	0 & 1-\lambda & 0\\
+	1 & 0 & -\lambda\\
+\end{vmatrix} = -\lambda^3+\lambda^2+\lambda-1=0\\
+\lambda = \pm1\\$
+\begin{itemize}
+	\item {
+	$\lambda = 1:\\
+	\begin{pmatrix}
+		-1 & 0 & 1\\
+		0 & 0 & 0\\
+		1 & 0 & -1
+	\end{pmatrix} \cdot X = 0\\
+	X = c_2 \cdot
+	\begin{pmatrix}
+		0 \\ 1 \\ 0\\
+	\end{pmatrix} + c_3 \cdot
+	\begin{pmatrix}
+		1\\0\\1\\
+	\end{pmatrix}\\$
+}
+\item{$\lambda = -1:$
+}
+\end{itemize}
+
+{
+\begin{equation*}
+	\begin{cases}
+		x_1+x_3=0\\
+		x_2=0\\
+	\end{cases} \leftrightarrow
+\begin{cases}
+	x_1=-c_3\\
+	x_2=0\\
+	x_3=c_3\\
+\end{cases}
+\end{equation*}\\
+$X = c_3 \cdot
+\begin{pmatrix}
+	-1\\0\\1
+\end{pmatrix}$}\\
+Собственные векторы:
+$\lambda=1:$
+\end{task}
+
+\newpage
+\section{Геометрия}
+\subsection{Векторы}
+Вектор: $\vec{AB}, \quad \abs{\vec{AB}} -$ длина вектора\\
+$\vec{a}$, $\vec{b}$ - коллинеарны, если лежат на одной или параллельных прямых\\
+$\vec{a}$, $\vec{b}$ - компланарны, если лежат в одной или параллельных плоскостях\\
+
+\begin{task}[9]
+\begin{tikzpicture}
+	\draw (0,0) node[anchor=north]{$A$}
+	-- (4,-1) node[anchor=north]{$C$}
+	-- (3,2) node[anchor=south]{$B$}
+	-- cycle;
+	\draw[->, thick] (7/3, 1/3) node[anchor=north]{$M$}
+	-- (4, -1);
+	\draw[->, thick] (7/3, 1/3)
+	-- (0, 0);
+	\draw[->, thick] (7/3, 1/3)
+	-- (3, 2);
+\end{tikzpicture}\\
+Найти точку M: $\vec{MA}+\vec{MB}+\vec{MC}=\vec{0}$\\
+$\vec{MA}=\vec{AB}-\vec{MB}$\\
+$\vec{MC}=\vec{CB}-\vec{MB}$\\
+Тогда: $\vec{AB}+\vec{CB}-3\vec{MB}=\vec{0}$\\
+$\vec{MB} = \frac{\vec{AB}+\vec{CB}}{3}$
+\end{task}
+
+\begin{task}[23]
+\begin{tikzpicture}[scale=2]
+	\draw (0, -1) node[anchor=north]{$A$}
+	-- (0.8666,-0.5) node[anchor=west]{$F$}
+	-- (0.8666,0.5) node[anchor=west]{$E$}
+	-- (0,1) node[anchor=south]{$D$}
+	-- (-0.8666,0.5) node[anchor=east]{$C$}
+	-- (-0.8666,-0.5) node[anchor=east]{$B$}
+	-- cycle;
+	\draw[->, thick] (0, -1) -- (-0.8666,-0.5);
+	\draw[->, thick] (0, -1) -- (-0.8666,0.5);
+	\draw (-0.4333, -0.75) node[anchor=north]{$\vec{e_1}$};
+	\draw (-0.4333, -0.25) node[anchor=east]{$\vec{e_2}$};
+\end{tikzpicture}\\
+$\vec{AB}=e_1=(1,0)$\\
+$\vec{AC}=e_2=(0, 1)$\\
+\ensuremath{
+\vec{BC}=\vec{e_2}-\vec{e_1}=(-1, 1)\\
+\vec{CD}=\vec{AD}-\vec{AC}=2\vec{BC}-\vec{AC}=(-2, 1)\\
+\vec{DE}=-\vec{e_1}=(-1, 0)\\
+\vec{EF}=-\vec{BC}=(1, -1)\\
+\vec{FA}=-\vec{CD}
+}
+\end{task}
 \end{document}

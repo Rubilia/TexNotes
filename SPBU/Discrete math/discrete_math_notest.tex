@@ -13,6 +13,11 @@
 
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
 
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+		\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+\newenvironment{task}[1][0]{\vspace{.5cm} {\textbf{№ #1} \vspace{.5cm}\\ }}{}
+
 \begin{document}
 	{\centering \LARGE{Основы дискретной математики}\\\vspace{.5cm}}
 \vspace{.5cm}
@@ -316,4 +321,86 @@ $A \times A = A^2$\\
 	\item $A \times B = B \times A \leftrightarrow A = B$
 	\item $A \times B = A \times C \leftrightarrow B=C$
 \end{enumerate}
+
+\newpage
+\subsection{Отношения}
+{\hfill \textit{25.10.2021}\\}
+
+\begin{task}[8e]
+{(1, 2), (2, 1), (2, 3), (3, 4), (4, 1)}\\
+\begin{enumerate}
+	\item Рефлективность - нет (нет пар вида (x, x))
+	\item Симметричность - нет
+	\item Антисимметричность - нет (есть (2, 1), (1, 2))
+	\item{Транзитивность - Да\\
+\begin{tabular}{c|c|c|c|c}
+	& 1 & 2 & 3 & 4\\
+	\hline
+	1 & 1 & 1 & 1 & 1\\
+	\hline
+	2 & 1 & 1 & 1 & 1\\
+	\hline
+	3 & 1 & 1 & 1 & 1\\
+	\hline
+	4 & 1 & 1 & 1 & 1\\
+\end{tabular}	
+}
+\end{enumerate}
+\end{task}
+
+\begin{task}[2]
+$\Phi$ = \{(a, a), (b, b), (c, c), (a, c), (a, d), (b, d), (c, a), (d, a)\}\\
+\begin{enumerate}
+\item Рефлективность - нет (нет пары (d, d))
+\item Симметричность - нет (нет пары (a, c))  $\rightarrow$ +(a, b); (c, b); (d, b)
+\item Антисимметричность - нет (есть (a, d), (d, a))
+\item{Транзитивность - Да\\
+	\begin{tabular}{c|c|c|c|c}
+		& a & b & c & d\\
+		\hline
+		a & 1 & 1 & 1 & 1\\
+		\hline
+		b & \circled{1} & 1 & \circled{1} & 1\\
+		\hline
+		c & 1 & 1 & 1 & \circled{1}\\
+		\hline
+		d & 1 & 1 & 1 & \circled{1}\\
+	\end{tabular}	
+}
+\end{enumerate}
+{
+\enspace\:\: a\\
+\begin{tabular}{c|c}
+	a & a\\
+	c & c\\
+	d & d\\
+\end{tabular} $\rightarrow$ +(c, d); (d, c); (d, d)
+}\\
+
+{
+ b\\
+	\begin{tabular}{c|c}
+		b & d\\
+	\end{tabular}
+}\\
+
+{
+c\\
+	\begin{tabular}{c|c}
+		a & a\\
+		c & c\\
+		d & d\\
+	\end{tabular}
+}\\
+
+{
+d\\
+	\begin{tabular}{c|c}
+		a & a\\
+		b & c\\
+		c & d\\
+		d &
+	\end{tabular} $\rightarrow$ +(b, a); (b, c)
+}\\
+\end{task}
 \end{document}
