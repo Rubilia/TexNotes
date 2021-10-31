@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.17)  31 OCT 2021 08:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.17)  28 OCT 2021 23:42
 entering extended mode
-**./HW_total.tex
-(HW_total.tex
+**./homework08.tex
+(homework08.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-08-27>
 (C:\Users\rubilia\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -719,30 +719,30 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 (C:\Users\rubilia\AppData\Local\Programs\MiKTeX\tex/latex/cancel\cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
 )
-(HW_total.aux)
-\openout1 = `HW_total.aux'.
+(homework08.aux)
+\openout1 = `homework08.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Info: Redefining \th on input line 50.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Info: Redefining \th on input line 32.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -804,7 +804,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 .cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 50.
+Package hyperref Info: Link coloring OFF on input line 32.
 
 (C:\Users\rubilia\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -818,225 +818,142 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count302
 )
-LaTeX Info: Redefining \ref on input line 50.
-LaTeX Info: Redefining \pageref on input line 50.
-LaTeX Info: Redefining \nameref on input line 50.
- (HW_total.out) (HW_total.out)
+LaTeX Info: Redefining \ref on input line 32.
+LaTeX Info: Redefining \pageref on input line 32.
+LaTeX Info: Redefining \nameref on input line 32.
+ (homework08.out) (homework08.out)
 \@outlinefile=\write4
-\openout4 = `HW_total.out'.
+\openout4 = `homework08.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 39.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
 
 
 (C:\Users\rubilia\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
 
 
 (C:\Users\rubilia\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-[1
+Underfull \hbox (badness 10000) in paragraph at lines 39--42
+
+ []
 
 
-{C:/Users/rubilia/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-(homework06.tex
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 7.
+Underfull \hbox (badness 10000) in paragraph at lines 44--47
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
+ []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--81
+
+ []
+
+
+Overfull \hbox (258.38878pt too wide) in paragraph at lines 82--84
+[]\T2A/cmr/m/n/14.4 Таким об-ра-зом $\OT1/cmr/m/n/14.4 [] = (\OML/cmm/m/it/14.
+4 a \OMS/cmsy/m/n/14.4   \OML/cmm/m/it/14.4 b\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/
+14.4  \OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 a \OT1/cmr/m/n/14.4 + \OML/cmm/m/i
+t/14.4 b\OT1/cmr/m/n/14.4 )[]$ [] 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 54.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 93.
+(mdframed)              on input line 87.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 91.
+
+[1
+
+{C:/Users/rubilia/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 112.
+
+
+Overfull \hbox (9.22179pt too wide) in paragraph at lines 92--174
+\OT1/cmr/m/n/14.4 [] = [] = (\OMS/cmsy/m/n/14.4  \OT1/cmr/m/n/14.4 1)[] \OMS/c
+msy/m/n/14.4  \OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 n \OMS/cmsy/m/n/14.4   \OT
+1/cmr/m/n/14.4 1) \OMS/cmsy/m/n/14.4  [][] \OT1/cmr/m/n/14.4 +
+ []
+
 [2]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 114.
-Package mdframed Info: Not enough space on this page on input line 155.
+(mdframed)              on input line 215.
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--159
-
- []
-
-
-Overfull \hbox (10.74733pt too wide) in paragraph at lines 237--292
-[]\T2A/cmr/m/n/14.4 Покажем с по-мо-щью ме-то-да ма-ти-ма-ти-че-ской ин-ду-ции,
- что $[][] \OT1/cmr/m/n/14.4 = [] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 293--295
+Underfull \hbox (badness 10000) in paragraph at lines 220--223
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 298.
+(mdframed)              on input line 229.
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--238
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 244.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 248.
+
 [3]
-Package mdframed Info: Not enough space on this page on input line 300.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 326.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 352.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 383.
- [4]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 413.
-Package mdframed Info: Not enough space on this page on input line 415.
-
-Underfull \hbox (badness 10000) in paragraph at lines 416--426
+Underfull \hbox (badness 10000) in paragraph at lines 249--252
 
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 427--60
-
- []
-
-[5] (homework07.tex
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 7.
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--10
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--14
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--24
-
- []
-
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 29.
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--31
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--64
-
- []
-
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 69.
-[6]
-Overfull \hbox (2.0978pt too wide) in paragraph at lines 73--104
-[]  []  []  []  [] \OT1/cmr/m/n/14.4 =
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--104
-
- []
-
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 109.
-
-Underfull \hbox (badness 10000) in paragraph at lines 109--111
-
- []
-
-[7]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 206.
-
-Underfull \hbox (badness 10000) in paragraph at lines 206--208
-
- []
-
-
-Overfull \hbox (39.76047pt too wide) in paragraph at lines 209--257
-[]  []  \OMS/cmsy/m/n/14.4  \OML/cmm/m/it/14.4  \OMS/cmsy/m/n/14.4  []  []
- []
-
-
-Overfull \hbox (20.52518pt too wide) in paragraph at lines 209--257
-\OT1/cmr/m/n/14.4 = (\OMS/cmsy/m/n/14.4  \OML/cmm/m/it/14.4 \OT1/cmr/m/n/14.4 
-)[] \OMS/cmsy/m/n/14.4  [] \OT1/cmr/m/n/14.4 = [] = [] \OMS/cmsy/m/n/14.4 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 209--257
-
- []
-
-[8])
-Underfull \hbox (badness 10000) in paragraph at lines 258--70
-
- []
-
-[9] (HW_total.aux)
-Package rerunfilecheck Info: File `HW_total.out' has not changed.
+[4] (homework08.aux)
+Package rerunfilecheck Info: File `homework08.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 13569 strings out of 478927
- 202225 string characters out of 2851587
- 600765 words of memory out of 3000000
- 31178 multiletter control sequences out of 15000+600000
- 421436 words of font info for 72 fonts, out of 8000000 for 9000
+ 13517 strings out of 478927
+ 201531 string characters out of 2851587
+ 581517 words of memory out of 3000000
+ 31152 multiletter control sequences out of 15000+600000
+ 411875 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,17n,81p,486b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,18n,81p,488b,488s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\rubilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm
-0800.pk> <C:\Users\rubilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi60
-0\larm1095.pk> <C:\Users\rubilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a
-/dpi600\larm1000.pk> <C:\Users\rubilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/
-lh-t2a/dpi600\larm1200.pk> <C:\Users\rubilia\AppData\Local\MiKTeX\fonts/pk/ljfo
-ur/lh/lh-t2a/dpi600\lati1440.pk> <C:\Users\rubilia\AppData\Local\MiKTeX\fonts/p
-k/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\rubilia\AppData\Local\MiKTeX\f
-onts/pk/ljfour/lh/lh-t2a/dpi600\lati1200.pk> <C:\Users\rubilia\AppData\Local\Mi
-KTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk> <C:\Users\rubilia\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx2074.pk><C:/Users/rubilia/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ru
-bilia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.p
-fb><C:/Users/rubilia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmmi10.pfb><C:/Users/rubilia/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmmi12.pfb><C:/Users/rubilia/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/rubilia/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/rubilia/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/rubilia/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/rubi
-lia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+1000.pk> <C:\Users\rubilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi60
+0\larm1200.pk> <C:\Users\rubilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a
+/dpi600\lati1440.pk> <C:\Users\rubilia\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/
+lh-t2a/dpi600\larm1440.pk> <C:\Users\rubilia\AppData\Local\MiKTeX\fonts/pk/ljfo
+ur/lh/lh-t2a/dpi600\labx1440.pk><C:/Users/rubilia/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/rubilia/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/rubilia/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/rubi
+lia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/
 Users/rubilia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr1
-2.pfb><C:/Users/rubilia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmr5.pfb><C:/Users/rubilia/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmr6.pfb><C:/Users/rubilia/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmr7.pfb><C:/Users/rubilia/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/rubilia/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/rubilia/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/rubili
-a/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Us
-ers/rubilia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.
-pfb><C:/Users/rubilia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/latxfont/line10.pfb><C:/Users/rubilia/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/symbols/msbm10.pfb>
-Output written on HW_total.pdf (9 pages, 265744 bytes).
+0.pfb><C:/Users/rubilia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb><C:/Users/rubilia/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmr7.pfb><C:/Users/rubilia/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/rubilia/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/rubilia/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on homework08.pdf (4 pages, 143848 bytes).
 PDF statistics:
- 357 PDF objects out of 1000 (max. 8388607)
- 14 named destinations out of 1000 (max. 500000)
+ 193 PDF objects out of 1000 (max. 8388607)
+ 7 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

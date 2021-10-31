@@ -1,0 +1,256 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[T2A]{fontenc}% Внутренняя T2A кодировка TeX
+\usepackage[utf8]{inputenc}% кодировка файла
+\usepackage[russian]{babel}% поддержка переносов в русском языке
+\usepackage{comment}% enables the use of multi-line comments (\ifx \fi) 
+\usepackage{fullpage}% changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{cancel}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Задача]
+{ \begin{mdframed}[backgroundcolor=gray!10] \textbf{#1 #2.} \\}
+	{  \end{mdframed}}
+
+\newenvironment{solution}
+{\textit{Решение:}\vspace{.2cm}\\}
+{\vspace{.1cm}\noindent\rule{7in}{1.5pt}}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+
+\begin{document}
+\noindent
+\large\textbf{Домашняя работа №8} \hfill  Дата: 28.10.2021  \\
+\noindent\rule{7in}{2pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 1
+\begin{problem}{293}
+Вычислить определитель порядка $2n$
+$\left| \begin{array}{rrrrrrr}a & 0 & 0 & \ldots & 0 & 0 & b\\ 0 & a & 0 & \ldots & 0 & b & 0 \\ 0 & 0 & a & \ldots & b & 0 & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\ 0 & 0 & b & \ldots & a & 0 & 0 \\ 0 & b & 0 & \ldots & 0 & a & 0 \\ b & 0 & 0 & \ldots & 0 & 0 & a \end{array} \right|$\\
+
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+
+Докажем с помощью метода матиматической индукции, что\\ (1){$\Delta_{2n} = (a-b)\cdot(a+b)^{2n-1}$}\\
+\emph{База:} $\Delta_2 = 
+\begin{vmatrix}
+	a & b\\
+	b & a\\
+\end{vmatrix} = a^2-b^2 = (a-b) \cdot (a+b)^{2 - 1}\\
+$
+\emph{Индукционный переход:} Пусть для некоторого $k=2n$ верно утверждение (1). Докажем его для $k=2n+2:$\vspace{.2cm}\\
+$\Delta_k = a \cdot
+\underbrace{
+	\begin{vmatrix}
+		a & 0 & 0 & \ldots & 0 & 0 & b\\ 
+		0 & a & 0 & \ldots & 0 & b & 0 \\ 
+		0 & 0 & a & \ldots & b & 0 & 0 \\ 
+		\vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\ 
+		0 & 0 & b & \ldots & a & 0 & 0 \\ 
+		0 & b & 0 & \ldots & 0 & a & 0 \\ 
+		b & 0 & 0 & \ldots & 0 & 0 & a\\
+	\end{vmatrix}
+}_{(k-1) \times (k-1)} + b \cdot (-1)^{(2n)} \cdot
+\underbrace{
+	\begin{vmatrix}
+		a & 0 & 0 & \ldots & 0 & 0 & b\\ 
+		0 & a & 0 & \ldots & 0 & b & 0 \\ 
+		0 & 0 & a & \ldots & b & 0 & 0 \\ 
+		\vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\ 
+		0 & 0 & b & \ldots & a & 0 & 0 \\ 
+		0 & b & 0 & \ldots & 0 & a & 0 \\ 
+		b & 0 & 0 & \ldots & 0 & 0 & a\\
+\end{vmatrix}}_{(k-1) \times (k-1)} = \Delta_{k-1} \cdot (a+b)\vspace{.2cm}\\$
+
+Тогда: $\Delta_{2n+2} = (a+b) \cdot \Delta_{2n+1} = (a+b)^2 \cdot \Delta_{2n} 
+= (a+b)^2 \cdot (a+b)^{2n-1} \cdot (a-b) =\\= (a+b)^{2(n+1)-1} \cdot (a-b)$\\
+
+Таким образом $\Delta_{2n}= (a-b)\cdot(a+b)^{2n-1}$
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 2
+\begin{problem}{296}
+Вычислить определитель 
+$\left| \begin{array}{cccccc}1 & 2 & 3 & \ldots & n-1 & n \\ 1 & 1 & 1 & \ldots & 1 & 1-n\\ 1 & 1 & 1 & \ldots & 1-n & 1 \\ \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\ 1 & 1-n & 1 & \ldots & 1 & 1 \end{array} \right|$
+
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+$\begin{vmatrix}
+	1 & 2 & 3 & \ldots & n-1 & n \\ 
+	1 & 1 & 1 & \ldots & 1 & 1-n\\ 
+	1 & 1 & 1 & \ldots & 1-n & 1 \\ 
+	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\ 
+	1 & 1-n & 1 & \ldots & 1 & 1\\
+\end{vmatrix} \:
+\underset{\begin{subarray}{c}\text{$V_n-V_1$}\\
+	\text{\ldots}\\\text{$V_2-V_1$}\end{subarray}}{=} \:
+\underbrace{
+\begin{vmatrix}
+	1 & 1 & 2 & \ldots & n-2 & n-1\\
+	1 & 0 & 0 & \ldots & 0 & -n\\
+	1 & 0 & 0 & \ldots & -n & 0\\
+	\vdots & \vdots & \vdots & \ddots & \ldots & \ldots\\
+	1 & -n & 0 & \ldots & 0 & 0\\
+\end{vmatrix}
+}_{\large{\Delta_n}}\\
+$
+Чтобы не запутаться, заменим $-n$ на $-a$:\\
+$
+\Delta_n = 
+\begin{vmatrix}
+	1 & 1 & 2 & \ldots & n-2 & n-1\\
+	1 & 0 & 0 & \ldots & 0 & -a\\
+	1 & 0 & 0 & \ldots & -a & 0\\
+	\vdots & \vdots & \vdots & \ddots & \ldots & \ldots\\
+	1 & -a & 0 & \ldots & 0 & 0\\
+\end{vmatrix} = (-1)^{n-1} \cdot (n-1) \cdot
+{\underbrace{
+\begin{vmatrix}
+	1 & 0 & 0 & \ldots & 0\\
+	1 & 0 & 0 & \ldots & -a\\
+	\vdots & \vdots & \vdots & \ddots & \vdots\\
+	1 & -a & 0 & \ldots & 0\\
+\end{vmatrix}}_{\alpha_{n-1}}}_{(n-1) \times (n-1)} + \\ +
+(-1)^{n+1} \cdot a \cdot 
+\underbrace{
+	\begin{vmatrix}
+		1 & 1 & 2 & \ldots & n-2\\
+		1 & 0 & 0 & \ldots & -a\\
+		\vdots & \vdots & \vdots & \ddots & \vdots\\
+		1 & 0 & -a & \ldots & 0\\
+		1 & -a & 0 & \ldots & 0
+	\end{vmatrix}
+}_{\Delta_{n-1}}\\
+\alpha_n = 
+\begin{vmatrix}
+	1 & 0 & 0 & \ldots & 0\\
+	1 & 0 & 0 & \ldots & -a\\
+	\vdots & \vdots & \vdots & \ddots & \vdots\\
+	1 & -a & 0 & \ldots & 0\\
+\end{vmatrix}_{n \times n} = 
+\underbrace{
+	\begin{vmatrix}
+		0 & 0 & \ldots & -a\\
+		0 & 0 & \ldots & 0\\
+		\vdots & \vdots & \ddots & \vdots\\
+		0 & -a & \ldots & 0\\
+		-a & 0 & \ldots & 0
+	\end{vmatrix}
+}_{(-a)^{n-1}} + \\ +
+\underbrace{
+	\begin{vmatrix}
+		0 & 0 & \ldots & 0\\
+		0 & 0 & \ldots & 0\\
+		\vdots & \vdots & \ddots & \vdots\\
+		0 & -a & \ldots & 0\\
+		-a & 0 & \ldots & 0
+	\end{vmatrix} + \ldots +
+	\begin{vmatrix}
+		0 & 0 & \ldots & -a\\
+		0 & 0 & \ldots & 0\\
+		\vdots & \vdots & \ddots & \vdots\\
+		0 & -a & \ldots & 0\\
+		0 & 0 & \ldots & 0
+	\end{vmatrix}
+}_{0} = (-a)^{n-1} \quad \implies
+$
+\newpage
+$
+\implies \: \Delta_n = (-1)^{n+1} \cdot a \cdot \Delta_{n-1} + (-1)^{n-1} \cdot (-1)^{n-2} \cdot (n-1) \cdot a^{n-2} = (-1)^{n+1} \cdot a \cdot \Delta_{n-1} -\\-(n-1) \cdot a^{n-2} = 
+(-1)^{n+1} \cdot a \cdot ((-1)^{n} \cdot a \cdot \Delta_{n-2} - (n-2) \cdot a^{n-3}) - (n-1) \cdot a^{n-2} =\\= -a^2 \cdot \Delta_{n-2} -a^{n-2} \cdot (n-1 + (-1)^{n+1} \cdot (n-2))
+$
+\vspace{.1cm}
+\begin{enumerate}
+	\item { $n \mod 4 = 0 \implies n=4k, \quad k \in \mathbb{N}$\\
+$
+\Delta_{4k} = -a^2 \cdot \Delta_{4k-2} - a^{4k-2} = -a^2 \cdot (-a^2 \cdot \Delta_{4k-4} - a^{4k-4}) - a^{4k-2} = a^4 \cdot \Delta_{4k-4}\\
+\Delta_{4k} = a^4 \cdot \Delta_{4(k-1)} = a^8 \cdot \Delta_{4(k-2)} = \ldots = a^{k-1} \cdot \Delta_4\\
+\Delta_3 = 
+\begin{vmatrix}
+	1 & 1 & 2\\
+	1 & 0 & -a\\
+	1 & -a & 0\\
+\end{vmatrix} = 
+\begin{vmatrix}
+	0 & -a\\
+	-a & 0\\
+\end{vmatrix} - 
+\begin{vmatrix}
+	1 & 2\\
+	-a & 0\\
+\end{vmatrix} +
+\begin{vmatrix}
+	1 & 2\\
+	0 & -a\\
+\end{vmatrix} = -a^2 + 2a -a = -a^2+a\\
+\Delta_4 = (-1)^5 \cdot a \cdot (a-a^2) - 3 a^{2} = a^3 - 4a^2\\
+\Delta_{4k} = (a)^{k-1} \cdot (a^3-4a^2)=a^{k+1} \cdot (a-4) = n^{\frac{n}{4}+1} \cdot (n-4)
+$
+}
+	\item { $n \mod 2 = 1$
+}
+\end{enumerate}
+
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 3
+\begin{problem}{297}
+Вычислить определитель 
+$\left| \begin{array}{ccccc}1 & 2 & 3 & \ldots & n \\ 2 & 3 & 4 & \ldots & 1 \\ 3 & 4 & 5 & \ldots & 2 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ n & 1 & 2 & \ldots & n-1 \end{array} \right|$
+
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+
+
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 4
+\begin{problem}{374(b)}
+Вычислить определитель $\Delta$ посредством умножения на определитель $\delta$\\
+$\Delta=\left| \begin{array}{rrrr} -1 & -9 & -2 & 3\\ -5 & 5 & 3 & -2\\ -12 & -6 & 1 & 1 \\ 9 & 0 & -2 & 1\end{array}\right|$;
+$\delta=\left| \begin{array}{rrrr} 1 & 0 & 0 & 0\\ -2 & 1 & 0 & 0\\ 3 & 2 & 1 & 0 \\ -3 & 4 & 2 & 1\end{array}\right|$
+
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+
+
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 5
+\begin{problem}{391}
+Доказать, что $\det\left(\begin{array}{cc}E_m & B\\C & D\end{array}\right)=\det(D-CB)$.
+Здесь $B$ и $C$~-- произвольные $m\times n$- и $n\times m$-матрицы, $D$~-- квадратная матрица порядка $n$.
+
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+
+
+\end{solution} 
+
+\end{document}

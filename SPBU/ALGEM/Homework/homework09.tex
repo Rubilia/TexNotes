@@ -1,0 +1,445 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[T2A]{fontenc}% Внутренняя T2A кодировка TeX
+\usepackage[utf8]{inputenc}% кодировка файла
+\usepackage[russian]{babel}% поддержка переносов в русском языке
+\usepackage{comment}% enables the use of multi-line comments (\ifx \fi) 
+\usepackage{fullpage}% changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{cancel}
+
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Задача]
+{ \begin{mdframed}[backgroundcolor=gray!10] \textbf{#1 #2.} \\}
+	{  \end{mdframed}}
+
+\newenvironment{solution}
+{\textit{Решение:}\vspace{.1cm}\\}
+{\vspace{.1cm}\noindent\rule{7in}{1.5pt}}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+
+\begin{document}
+\noindent
+\large\textbf{Домашняя работа №9} \hfill  Дата: 28.10.2021  \\
+\noindent\rule{7in}{2pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 1
+\begin{problem}{410(d)}
+Обратить матрицу:
+$\left(\begin{array}{rrrr}1 & 3 & -5 & 7\\0 & 1 & 2 & -3\\ 0 & 0 & 1 & 2 \\ 0 & 0 & 0 & 1\end{array}\right)$
+
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+$
+\left(
+\begin{array}{cccc|cccc}
+	1 & 3 & -5 & 7 & 1 & 0 & 0 & 0\\
+	0 & 1 & 2 & -3 & 0 & 1 & 0 & 0\\ 
+	0 & 0 & 1 & 2  & 0 & 0 & 1 & 0\\ 
+	0 & 0 & 0 & 1  & 0 & 0 & 0 & 1\\
+\end{array}
+\right) \: 
+\underset{
+\begin{subarray}{c}
+	\text{$R_1: R_1-3R_2$}\\
+	\text{$R_2: R_2-3R_3$}\\
+	\text{$R_3: R_3-2R_4$}\\
+\end{subarray}
+}{\longrightarrow} \:
+\left(
+\begin{array}{cccc|cccc}
+	1 & 0 & -11 & 16 & 1 & -3 & 0 & 0\\
+	0 & 1 & 0 & -7   & 0 & 1 & -2 & 0\\ 
+	0 & 0 & 1 & 0    & 0 & 0 & 1 & -2\\ 
+	0 & 0 & 0 & 1    & 0 & 0 & 0 & 1\\
+\end{array}
+\right)  \rightarrow \\
+\underset{
+	\begin{subarray}{c}
+		\text{$R_1: R_1+11R_3$}\\
+		\text{$R_2: R_2+7R_4$}\\
+	\end{subarray}
+}{\longrightarrow} \:
+\left(
+\begin{array}{cccc|cccc}
+	1 & 0 & 0 & 16 & 1 & -3 & 11 & -22\\
+	0 & 1 & 0 & 0   & 0 & 1 & -2 & 7\\ 
+	0 & 0 & 1 & 0    & 0 & 0 & 1 & -2\\ 
+	0 & 0 & 0 & 1    & 0 & 0 & 0 & 1\\
+\end{array}
+\right) \: 
+\underset{R_1: R_1-16R_4
+}{\longrightarrow} \:
+\left(
+\begin{array}{cccc|cccc}
+	1 & 0 & 0 & 0   & 1 & -3 & 11 & -38\\
+	0 & 1 & 0 & 0   & 0 & 1 & -2 & 7\\ 
+	0 & 0 & 1 & 0   & 0 & 0 & 1 & -2\\ 
+	0 & 0 & 0 & 1   & 0 & 0 & 0 & 1\\
+\end{array}
+\right) 
+$\\
+$
+\begin{pmatrix}
+	1 & 3 & -5 & 7\\
+	0 & 1 & 2 & -3\\ 
+	0 & 0 & 1 & 2 \\ 
+	0 & 0 & 0 & 1
+\end{pmatrix}^{-1} =
+\begin{pmatrix}
+	1 & -3 & 11 & -38\\
+	0 & 1 & -2 & 7\\
+	0 & 0 & 1 & -2\\
+	0 & 0 & 0 & 1\\
+\end{pmatrix}
+$\vspace{.2cm}\\
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 2
+\begin{problem}{410(f)}
+Обратить матрицу:
+$\left(\begin{array}{rrrr}1 & 1 & 1 & 1\\1 & 1 & -1 & -1\\ 1 & -1 & 1 & -1 \\ 1 & -1 & -1 & 1\end{array}\right)$
+
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+\small
+$
+\left(
+\begin{array}{cccc|cccc}
+	1 & 1 & 1 & 1 &    1 & 0 & 0 & 0\\
+	1 & 1 & -1 & -1&   0 & 1 & 0 & 0\\
+	1 & -1 & 1 & -1&   0 & 0 & 1 & 0\\
+	1 & -1 & -1 & 1&   0 & 0 & 0 & 1\\
+\end{array}
+\right)  \: 
+\underset{
+	\begin{subarray}{c}
+		\text{$R_2: R_2-R_3$}\\
+		\text{$R_3: R_3-R_4$}\\
+		\text{$R_4: R_4-R_1$}\\
+	\end{subarray}
+}{\longrightarrow} \:
+\left(
+\begin{array}{cccc|cccc}
+	1 & 1 & 1 & 1 &    1 & 0 & 0 & 0\\
+	0 & 2 & -2 & 0 &   0 & 1 & -1 & 0\\
+	0 & 0 & 2 & -2 &   0 & 0 & 1 & -1\\
+	0 & -2 & -2 & 0&   -1 & 0 & 0 & 1\\
+\end{array}
+\right) \rightarrow\\
+\underset{R_4: R_4+R_2+2R_3
+}{\longrightarrow} \:
+\left(
+\begin{array}{cccc|cccc}
+	1 & 1 & 1 & 1 &    1 & 0 & 0 & 0\\
+	0 & 2 & -2 & 0 &   0 & 1 & -1 & 0\\
+	0 & 0 & 2 & -2 &   0 & 0 & 1 & -1\\
+	0 & 0 & 0 & -4 &   -1 & 1 & 1 & -1\\
+\end{array}
+\right)  \: 
+\underset{
+	\begin{subarray}{c}
+		\text{$R_2: \frac{R_2}{2}$}\\
+		\text{$R_3: \frac{R_3}{2}$}\\
+		\text{$R_4: -\frac{R_4}{4}$}\\
+	\end{subarray}
+}{\longrightarrow} \:
+\left(
+\begin{array}{cccc|cccc}
+	1 & 1 & 1 & 1 &    1 & 0 & 0 & 0\\
+	0 & 1 & -1 & 0 &   0 & \frac{1}{2} & -\frac{1}{2} & 0\\
+	0 & 0 & 1 & -1 &   0 & 0 & \frac{1}{2} & -\frac{1}{2}\\
+	0 & 0 & 0 & 1 &   \frac{1}{4} & -\frac{1}{4} & -\frac{1}{4} & \frac{1}{4}\\
+\end{array}
+\right) \rightarrow\\
+\underset{
+	\begin{subarray}{c}
+		\text{$R_1: R_1-R_2-2R_3-R_4$}\\
+		\text{$R_2: R_2+R_3+R_4$}\\
+		\text{$R_3: R_3+R_4$}\\
+	\end{subarray}
+}{\longrightarrow} \:
+\left(
+\begin{array}{cccc|cccc}
+	1 & 0 & 0 & 0 &   \frac{1}{4} & \frac{1}{4} & \frac{1}{4} & \frac{1}{4}\\
+	0 & 1 & 0 & 0 &   \frac{1}{4} & \frac{1}{4} & -\frac{1}{4} & -\frac{1}{4}\\
+	0 & 0 & 1 & 0 &   \frac{1}{4} & -\frac{1}{4} & \frac{1}{4} & -\frac{1}{4}\\
+	0 & 0 & 0 & 1 &   \frac{1}{4} & -\frac{1}{4} & -\frac{1}{4} & \frac{1}{4}\\
+\end{array}
+\right)\\
+\left(
+\begin{array}{cccc}
+	1 & 1 & 1 & 1\\
+	1 & 1 & -1 & -1\\
+	1 & -1 & 1 & -1\\
+	1 & -1 & -1 & 1\\
+\end{array}
+\right)^{-1} = \frac{1}{4} \cdot
+\left(
+\begin{array}{cccc}
+	1 & 1 & 1 & 1\\
+	1 & 1 & -1 & -1\\
+	1 & -1 & 1 & -1\\
+	1 & -1 & -1 & 1\\
+\end{array}
+\right)\vspace{.2cm}\\
+$
+
+
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 3
+\begin{problem}{416}
+$\left( \begin{array}{ccccc}2 & -1 & 0 & \ldots & 0 \\ -1 & 2 & -1 & \ldots & 0 \\ 0 & -1 & 2 & \ldots & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & 0 & \ldots & -2 \end{array} \right)^{-1}$
+
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+
+
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 4
+\begin{problem}{442(b)}
+Найти ранг матрицы:
+$\left(\begin{array}{rrrr}2 & 1 & 11 & 2\\1 & 0 & 4 & -1\\ 11 & 4 & 56 & 5 \\ 2 & -1 & 5 & -6\end{array}\right)$
+
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+$
+\begin{pmatrix}
+	2 & 1 & 11 & 2\\
+	1 & 0 & 4 & -1\\ 
+	11 & 4 & 56 & 5 \\ 
+	2 & -1 & 5 & -6
+\end{pmatrix} \:
+\underset{
+\begin{subarray}{c}
+	\text{$R_1: R_1-2R_2$}\\
+	\text{$R_3: R_3-11R_2$}\\
+	\text{$R_4: R_3-2R_2$}\\
+\end{subarray}
+}{\longrightarrow} \:
+\begin{pmatrix}
+	0 & 1 & 3 & 4\\
+	1 & 0 & 4 & -1\\
+	0 & 4 & 12 & 16\\
+	0 & -1 & -3 & -4\\
+\end{pmatrix} \:
+\underset{
+\begin{subarray}{c}
+	\text{$R_3: R_3-4R_1$}\\
+	\text{$R_4: R_4+R_1$}\\
+	\text{$R_1 \leftrightarrow R_2$}\\
+\end{subarray}
+}{\longrightarrow} \:
+\begin{pmatrix}
+	1 & 0 & 4 & -1\\
+	0 & 1 & 3 & 4\\
+	0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0\\
+\end{pmatrix}
+$\\
+
+Ранг данной маттрицы: 2\\
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 5
+\begin{problem}{442(с)}
+Найти ранг матрицы:
+$\left(\begin{array}{rrrrr}1 & 0 & 0 & 1 & 4\\0 & 1 & 0 & 2 & 5\\ 0 & 0 & 1 & 3 & 6 \\ 1 & 2 & 3 & 14 & 32\\ 4 & 5 & 6 & 32 & 77\end{array}\right)$
+
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+
+$
+\begin{pmatrix}
+	1 & 0 & 0 & 1 & 4\\
+	0 & 1 & 0 & 2 & 5\\ 
+	0 & 0 & 1 & 3 & 6 \\ 
+	1 & 2 & 3 & 14 & 32\\ 
+	4 & 5 & 6 & 32 & 77\\
+\end{pmatrix} \:
+\underset{
+	\begin{subarray}{c}
+		\text{$R_4: R_4-R_1-2R_2-3R_3$}\\
+		\text{$R_5: R_5-4R_1-5R_2-6R_3$}\\
+	\end{subarray}
+}{\longrightarrow} \:
+\begin{pmatrix}
+	1 & 0 & 0 & 1 & 4\\
+	0 & 1 & 0 & 2 & 5\\
+	0 & 0 & 1 & 3 & 6\\
+	0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0\\
+\end{pmatrix}\\
+$
+Ранг данной маттрицы: 3\\
+
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 6
+\begin{problem}{1033(b)}
+Найти собственные значения матрицы\\
+$\left( \begin{array}{rrrrrrr}0 & 1 & 0 & \ldots & 0 & 0 & 0\\ -1 & 0 & 1 & \ldots & 0 & 0 & 0 \\ 0 & -1 & 0 & \ldots & 0 & 0 & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\ 0 & 0 & 0 & \ldots & 0 & 1 & 0 \\ 0 & 0 & 0 & \ldots & -1 & 0 & 1 \\ 0 & 0 & 0 & \ldots & 0 & -1 & 0 \end{array} \right)$
+
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+$det(A-\lambda E)=0 \leftrightarrow \: \Delta_n =
+\begin{vmatrix}
+	-\lambda & 1 & 0 & \ldots & 0 & 0 & 0\\ 
+	-1 & -\lambda & 1 & \ldots & 0 & 0 & 0 \\ 
+	0 & -1 & -\lambda& \ldots & 0 & 0 & 0 \\ 
+	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\ 
+	0 & 0 & 0 & \ldots & -\lambda & 1 & 0 \\ 
+	0 & 0 & 0 & \ldots & -1 & -\lambda & 1 \\ 
+	0 & 0 & 0 & \ldots & 0 & -1 & -\lambda \\
+\end{vmatrix} =
+-\lambda \cdot
+\underbrace{
+\begin{vmatrix}
+	\lambda & 1 & \ldots & 0\\ 
+	-1 & -\lambda & \ldots & 0 \\ 
+	0 & -1 & \ldots & 0\\ 
+	\vdots & \vdots &\ddots & \vdots\\ 
+	0 & 0 & \ldots & -\lambda \\ 
+\end{vmatrix}
+}_{\Delta_{n-1}} -\\-
+\begin{vmatrix}
+		-\lambda & 1 & 0 & \ldots & 0 & 0\\ 
+	-1 & -\lambda & 1 & \ldots & 0 & 0\\ 
+	0 & -1 & -\lambda& \ldots & 0 & 0\\ 
+	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\ 
+	0 & 0 & 0 & \ldots & -\lambda & 1\\ 
+	0 & 0 & 0 & \ldots & -1 & -\lambda\\ 
+	0 & 0 & 0 & \ldots & 0 & -1\\
+\end{vmatrix} = -\lambda \cdot \Delta_{n-1} + 
+\underbrace{
+\begin{vmatrix}
+	\lambda & 1 & \ldots & 0\\ 
+	-1 & -\lambda & \ldots & 0 \\ 
+	0 & -1 & \ldots & 0\\ 
+	\vdots & \vdots &\ddots & \vdots\\ 
+	0 & 0 & \ldots & -\lambda \\ 
+\end{vmatrix}
+}_{\Delta_{n-2}} = -\lambda \cdot \Delta_{n-1} + \Delta_{n-2}\vspace{.2cm}\\
+G(z) = \Delta_0 + z \cdot \Delta_1 + z^2 \cdot \Delta_2 + \ldots \text{- производящая функция последовательности $\{\Delta_i\}$}\\
+G(z) = \frac{1+\lambda z - \lambda z}{1+\lambda z -z^2} = \frac{1}{1+\lambda z -z^2}\\
+z = cos(\phi) +isin(\phi)\\
+1 + \lambda z -z^2 = 0 \implies \lambda = z - \frac{1}{z} = cos(\phi) +isin(\phi) - (cos(\phi) -isin(\phi)) =2i sin(\phi)\\
+z_{1,2}=\frac{-\lambda \pm \sqrt{\lambda^2+4}}{-2}=cos(\phi) \pm isin(\phi)\\
+\frac{A}{z_1-z} + \frac{B}{z_2-z} = \frac{1}{1+\lambda z -z^2} \leftrightarrow
+A(z_2-z) + B(z_1-z)=1 \implies
+\begin{cases}
+	z=z_1: \: A(z_2-z_1)=1\\
+	z=z_2: \: B(z_1-z_2)=1\\
+\end{cases} \leftrightarrow\\\leftrightarrow
+\begin{cases}
+	A=\frac{1}{-2isin(\phi)}=\frac{i}{2sin(\phi)}\\
+	B = \frac{1}{2isin(\phi)}=-\frac{i}{2sin(\phi)}
+\end{cases}\\$
+
+$
+G(z) = \frac{\frac{A}{z_1}}{1-\frac{z}{z_1}} + \frac{\frac{B}{z_2}}{1-\frac{z}{z_2}}=
+\frac{i}{2sin(\phi) \cdot z_1}\cdot \sum\limits_{n=0}^{+\infty} \left[z^n \cdot (\frac{1}{z_1})^n\right] + \frac{-i}{2sin(\phi) \cdot z_2} \cdot
+\sum\limits_{n=0}^{+\infty} \left[z^n \cdot (\frac{1}{z_2})^n\right]=\\=
+\sum\limits_{n=0}^{+\infty} \left[\frac{i}{2sin(\phi)} z^n \cdot((cos(\phi) + isin(\phi))^{-(n+1)} - (cos(\phi) - isin(\phi))^{-(n+1)})\right] =\\ =
+\sum\limits_{n=0}^{+\infty} \left[z^n \cdot \frac{i}{2sin(\phi)} \cdot (\cancel{cos((n+1)\phi)} -i sin((n+1)\phi) - \cancel{cos((n+1)\phi)} -isin((n+1)\phi)) \right] =\\=
+\sum\limits_{n=0}^{+\infty} \left[z^n \cdot \frac{sin((n+1)\phi)}{sin(\phi)}\right] \implies \Delta_n = \frac{sin((n+1)\phi)}{sin(\phi)}\\
+\Delta_n = 0 \leftrightarrow sin((n+1) \phi) = 0 \leftrightarrow \phi = \frac{\pi k}{n+1}, \: k \in \mathbb{Z} \implies
+\lambda = 2 i sin(\phi) = 2i sin(\frac{\pi k}{n+1})
+$
+
+
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 7
+\begin{problem}{1034}
+Найти собственные значения матрицы\\
+$\left( \begin{array}{rrrrrr}-1 & 1 & 0 & \ldots & 0 & 0 \\ 1 & 0 & 1 & \ldots & 0 & 0 \\ 0 & 1 & 0 & \ldots & 0 & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\ 0 & 0 & 0 & \ldots & 0 & 1 \\ 0 & 0 & 0 & \ldots & 1 & 0 \end{array} \right)$
+
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+$
+det(A-\lambda E) = 0 \leftrightarrow \Delta_n =
+\begin{vmatrix}
+	-1-\lambda & 1 & 0 & \ldots & 0 & 0 \\ 
+	1 & -\lambda & 1 & \ldots & 0 & 0 \\ 
+	0 & 1 & -\lambda & \ldots & 0 & 0 \\ 
+	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots 
+	\\ 0 & 0 & 0 & \ldots & -\lambda & 1 \\ 
+	0 & 0 & 0 & \ldots & 1 & -\lambda\\
+\end{vmatrix}= 0\\
+$
+
+$
+\Delta_n = -\lambda \cdot
+\underbrace{
+\begin{vmatrix}
+	-1-\lambda & 1 & 0 & \ldots & 0 & 0 \\ 
+	1 & -\lambda & 1 & \ldots & 0 & 0 \\ 
+	0 & 1 & -\lambda & \ldots & 0 & 0 \\ 
+	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots 
+	\\ 0 & 0 & 0 & \ldots & -\lambda & 1 \\ 
+	0 & 0 & 0 & \ldots & 1 & -\lambda\\
+\end{vmatrix}
+}_{\Delta_{n-1}} -
+\begin{vmatrix}
+	-1-\lambda & 1 & 0 & \ldots & 0 & 0 & 0 \\ 
+	1 & -\lambda & 1 & \ldots & 0 & 0 & 0 \\ 
+	0 & 1 & -\lambda & \ldots & 0 & 0 & 0 \\ 
+	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots\\
+	0 & 0 & 0 & \ldots & -\lambda & 1 & 0 \\ 
+	0 & 0 & 0 & \ldots & 0 & 0 & 1\\
+\end{vmatrix}
+$
+
+\end{solution} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Задача 8
+\begin{problem}{1035}
+Найти собственные значения матрицы\\
+$\left( \begin{array}{rrrrr}0 & x & x & \ldots & x \\ y & 0 & x & \ldots & x \\ y & y & 0 & \ldots & x \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ y & y & y & \ldots & 0 \end{array} \right)$
+
+\end{problem}
+\begin{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ваше решение задачи здесь
+
+
+\end{solution} 
+
+\end{document}
