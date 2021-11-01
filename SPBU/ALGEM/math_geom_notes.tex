@@ -11,8 +11,10 @@
 
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
 \newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
-\newenvironment{task}[1][0]{\vspace{.5cm} {\textbf{№ #1} \vspace{.5cm}\\ }}{\\}
+\newenvironment{task}[1][0]{\vspace{.5cm} {\textbf{№ #1} \vspace{.5cm}\\ }}{}
+
 \begin{document}
+	
 \section{Комплексные числа и полиномы}
 	{\centering {\LARGE{Классная работа}}\\ 
 	\hfill \textit{17.09.2021}\\ \vspace{1cm}}
@@ -32,7 +34,7 @@
 
 }
 \newpage
-\section{НОД}
+\subsection{НОД}
 Даны полиномы $f(x)$, $g(x)$. Если $f(x)\mod{q(x)}$ = 0, то q(x) - делитель f(x)\\
 НОД - наибольший общий делитель $f(x)$ и $g(x)$\\
 $f(x)$ = $g(x)q_1(x)+r_1(x)$\\
@@ -98,7 +100,7 @@ $1 = 9(x^2-2x+1) - (3x-2)(3x-4) = 9(x-1)^2 -\\- (3x-2)((x-2)^3 - (x-4)(x-1)^2) =
 
 }
 \newpage
-\section{\centering{Формула Виета.\\Разложение дроби на простейшие}}
+\subsection{Формула Виета.\\Разложение дроби на простейшие}
 {\hfill \textit{20.09.2021}\\ \vspace{.2cm}}
 $f_n=x^n+a_1x^{n-1}+a_2x^{n-2}+..+a_n$\\
 \begin{equation}
@@ -561,8 +563,8 @@ $\Delta_n=\alpha \cdot \Delta_{n-1}+\beta \cdot \Delta_{n-2}$\\
 $\Delta_2=\lambda^2-1 \qquad \Delta_1 = \lambda \qquad \Delta_0=1$\\
 $G(z)=\frac{1+\lambda z - \lambda z}{1- \lambda z + z^2} = \frac{1}{1-\lambda z +z^2}$ - \emph{производящая функция}\\
 $1-\lambda z +z^2=0 \implies z_{1, 2} = \frac{\lambda \pm \sqrt{\lambda^2-4}}{2}$\\
-$\lambda + \sqrt{\lambda^2-4}=(cos(\phi) + isin(\phi)) \leftrightarrow \cancel{\lambda ^2} -4 = 4(cos(2 \phi) +isin(2 \phi)) -4 \lambda(cos(\phi) + isin(\phi)) + \cancel{\lambda^2}$\\
-$cos^2(\phi)-sin^2(\phi)+2sin(\phi)cos(\phi)-\lambda cos(\phi)-\lambda i sin(\phi)=-1 \leftrightarrow \lambda = 2cos(\phi)$\\
+$\lambda + \sqrt{\lambda^2-4}=(cos(\varphi) + isin(\varphi)) \leftrightarrow \cancel{\lambda ^2} -4 = 4(cos(2 \varphi) +isin(2 \varphi)) -4 \lambda(cos(\varphi) + isin(\varphi)) + \cancel{\lambda^2}$\\
+$cos^2(\varphi)-sin^2(\varphi)+2sin(\varphi)cos(\varphi)-\lambda cos(\varphi)-\lambda i sin(\varphi)=-1 \leftrightarrow \lambda = 2cos(\varphi)$\\
 
 $G(z) = \frac{A}{z_1-z}+\frac{B}{z_2-z}=\frac{A(z_2-z)+B(z_1-z)}{(z_1-z)(z_2-z)}$\\
 \begin{equation*}
@@ -572,20 +574,20 @@ $G(z) = \frac{A}{z_1-z}+\frac{B}{z_2-z}=\frac{A(z_2-z)+B(z_1-z)}{(z_1-z)(z_2-z)}
 	\end{cases*}
 	\leftrightarrow
 	\begin{cases*}
-		A(-2isin(\phi))=1\\
-		B(2isin(\phi))=1
+		A(-2isin(\varphi))=1\\
+		B(2isin(\varphi))=1
 	\end{cases*} \implies
 	\begin{cases*}
-		A=\frac{i}{2sin(\phi)}\\
-		B = -\frac{i}{2sin(\phi)}\\
+		A=\frac{i}{2sin(\varphi)}\\
+		B = -\frac{i}{2sin(\varphi)}\\
 	\end{cases*}
 \end{equation*}\\
 $\frac{1}{1-\alpha \cdot z} = \sum^{+\infty} (\alpha z)^n \implies$\\
 $\frac{A}{z_1}\cdot \frac{1}{1-\frac{1}{z_1}z} = \frac{A}{z_1} \cdot \sum^{+\infty} (\frac{1}{z_1})^n 
 \cdot z^n =A \cdot \sum^{+\infty} \frac{1}{z_1^{n+1}} \cdot z^n$\\
-$G(z) = \frac{\frac{A}{z_1}}{1-\frac{1}{z_1}\cdot z} + \frac{\frac{B}{z_2}}{1-\frac{1}{z_2}\cdot z}= \frac{i}{2sin(\phi)}\cdot \sum^{+\infty}[\frac{1}{(cos(\phi)+isin(\phi))^{n+1}} - \frac{1}{(cos(\phi)-isin(\phi))^{n+1}}]\cdot z^n \implies$
-$\Delta_n = \frac{i}{2sin(\phi)}\cdot[(cos(\phi)-isin(\phi))^{n+1} - (cos(\phi)+isin(\phi))^{n+1}] = \frac{i}{2sin(\phi)}\cdot(-2sin((n+1)\phi) = \frac{\sin((n+1)\phi)}{sin(\phi)}$\\
-$\Delta_n=\frac{sin((n+1)\phi)}{sin(\phi)} = 0 \leftrightarrow (n+1)\phi = \pi \cdot k, \qquad k \in \mathbb{Z}$\\
+$G(z) = \frac{\frac{A}{z_1}}{1-\frac{1}{z_1}\cdot z} + \frac{\frac{B}{z_2}}{1-\frac{1}{z_2}\cdot z}= \frac{i}{2sin(\varphi)}\cdot \sum^{+\infty}[\frac{1}{(cos(\varphi)+isin(\varphi))^{n+1}} - \frac{1}{(cos(\varphi)-isin(\varphi))^{n+1}}]\cdot z^n \implies$
+$\Delta_n = \frac{i}{2sin(\varphi)}\cdot[(cos(\varphi)-isin(\varphi))^{n+1} - (cos(\varphi)+isin(\varphi))^{n+1}] = \frac{i}{2sin(\varphi)}\cdot(-2sin((n+1)\varphi) = \frac{\sin((n+1)\varphi)}{sin(\varphi)}$\\
+$\Delta_n=\frac{sin((n+1)\varphi)}{sin(\varphi)} = 0 \leftrightarrow (n+1)\varphi = \pi \cdot k, \qquad k \in \mathbb{Z}$\\
 $\lambda = 2cos(\frac{\pi k}{n+1}), \qquad k \in \mathbb{Z}$
 
 }
@@ -894,7 +896,165 @@ $\vec{AC}=e_2=(0, 1)$\\
 \vec{CD}=\vec{AD}-\vec{AC}=2\vec{BC}-\vec{AC}=(-2, 1)\\
 \vec{DE}=-\vec{e_1}=(-1, 0)\\
 \vec{EF}=-\vec{BC}=(1, -1)\\
-\vec{FA}=-\vec{CD}
+\vec{FA}=-\vec{CD}\\
 }
 \end{task}
+
+
+{\hfill \textit{01.11.2021}\\}
+
+\begin{task}[29]
+$
+\vec{a}, \vec{b}, \vec{c} -\text{Произвольные три вектора}\\
+\alpha, \beta, \gamma\\
+\vec{v_1} = \alpha \vec{a} - \beta \vec{b}, \quad \vec{v_2} = \gamma \vec{b} -\alpha \vec{c}, \quad \vec{v_3} = \beta \vec{c}-\gamma \vec{a} - \text{Доказать компланарность}\\
+\text{Компланарность} \leftrightarrow \text{Линейная зависимость}\\
+\gamma (\alpha \vec{a} - \beta \vec{b}) + \beta (\gamma \vec{b} -\alpha \vec{c}) + \alpha (\beta \vec{c}-\gamma \vec{a})=\vec{0} \implies \vec{v_1}, \vec{v_2}, \vec{v_3} - \text{линейно зависимы} 
+\implies \\ \implies \vec{v_1}, \vec{v_2}, \vec{v_3} - \text{Компланарны}
+$
+\end{task}
+
+\begin{task}[30]
+$
+\vec{a} = (2, 5, 14), \quad \vec{b}=(14, 5, 2)\\
+$
+Проекция $\vec{a}$ на $Oxy \parallel \vec{b}$ -?\\\\
+$
+\vec{d} = \vec{a}+\lambda \vec{b}\\
+d_z=0, \text{т. к. }d \subset Oxy \implies d_z=a_z+\lambda b_z=14+2\lambda=0 \implies \lambda=-7 \implies\\ \implies \vec{d} = (-96, -30, 0)\\
+$
+\end{task}
+
+\newpage
+\begin{task}[28]
+Установить, в каком случае тройки векторов будут линейно зависимы. Если они линейно зависимы - представить третий вектор как комбинацию двух. \\
+\begin{enumerate}
+	\item {
+$\vec{a}=(5, 2, 1), \quad \vec{b}=(-1, 4, 2), \quad \vec{c}=(-1, -1, 6)\\
+\underbrace{
+	\begin{pmatrix}
+		5 & 2 & 1\\
+		-1 & 4 & 2\\
+		-1 & -1 & 6\\
+\end{pmatrix}}_{A} \cdot
+\begin{pmatrix}
+	\alpha\\
+	\beta\\
+	\gamma\\
+\end{pmatrix} = 0\\$
+Найдем ранг матрицы A:\\
+$\left(
+\begin{array}{ccc|c}
+	5 & 2 & 1 & 0\\
+	-1 & 4 & 2 & 0\\
+	-1 & -1 & 6 & 0\\
+\end{array} \right)
+\: \longrightarrow \:
+\left(\begin{array}{ccc|c}
+	5 & 2 & 1 & 0\\
+	0 & \frac{22}{5} & \frac{11}{5} & 0\\
+	0 & 0 & \frac{13}{2} & 0\\
+\end{array}\right)
+\implies \alpha = \beta = \gamma = 0 \implies\\ \implies \vec{a}, \: \vec{b}, \: \vec{c} - \text{линейно независимы}
+$
+}
+\item{
+$
+\vec{a} = (6, 4, 2), \quad \vec{b}=(-9, 6, 3), \quad \vec{c}=(-3, 6, 3)\\
+\left(
+\begin{array}{ccc|c}
+	6 & 4 & 2 & 0\\
+	-9 & 6 & 3 & 0\\
+	-3 & 6 & 3 & 0\\
+\end{array}\right) \longrightarrow
+\left(\begin{array}{ccc|c}
+	6 & 4 & 2 & 0\\
+	0 &12 & 6 & 0\\
+	0 & 0 & 0 & 0\\
+\end{array}\right)
+\implies \vec{a}, \vec{b}, \vec{c} - \text{линейно зависимы}\\
+\begin{cases}
+	\alpha = \frac{1}{2}\\
+	\beta = \frac{2}{3}\\
+	\gamma = -1\\
+\end{cases} - \text{частное решение} \implies \vec{c} = \frac{1}{2} \vec{a} +
+\frac{2}{3} \vec{b}\\
+$
+}
+\end{enumerate}
+\end{task}
+
+\newpage
+\subsubsection{Произведение векторов}
+\begin{enumerate}
+	\item {Умножение на число\\
+	$\vec{p} = \alpha \cdot \vec{a}, \qquad \alpha \in \mathbb{R}$
+}
+	\item{Скалярное произведение\\
+$\vec{a}\cdot\vec{b}=\left( \vec{a}, \vec{b}\right) = \abs{\vec{a}} \cdot \abs{\vec{b}} \cdot cos(\varphi)$\\
+\begin{tikzpicture}
+	\draw[fill=green!30] (0,0) -- (90:.75cm) arc (90:27:.75cm);
+	\draw[->,color=black] (0,0) -- node[right=2pt] {$\vec{a}$} (27:2.2cm);
+	\draw[->,color=black] (0,0) -- node[near end, right=-3pt] {$\vec{b}$} (90:2cm);
+	\draw(60:0.5cm) node {$\varphi$};
+\end{tikzpicture}\\
+В декартовой системе координат: $\vec{a}=(x_1, y_1, z_1), \: \vec{b}=(x_2, y_2, z_2) \implies \vec{a} \cdot \vec{b}=x_1x_2+y_1y_2+z_1z_2$\\
+Свойства
+\begin{itemize}
+	\item $(\vec{a}, \vec{b})=(\vec{b}, \vec{a})$
+	\item $(\vec{a}, \vec{b} + \vec{c})=(\vec{a}, \vec{b}) + (\vec{a}, \vec{c})$
+	\item $(\vec{a}, \alpha \vec{b}) = \alpha (\vec{a}, \vec{b})$
+\end{itemize}
+}
+\item{Векторное произведение\\
+$\vec{c}=\vec{a} \times \vec{b}=\left[\vec{a}, \vec{b}\right]$\\
+\begin{tikzpicture}[scale=0.9]
+	\draw[-,fill=white!95!red](0,0)--(3,0)--(4,1)--(1,1)--cycle;
+	\node at (2,0.5) {$|\textcolor{blue}{a}\times \textcolor{red}{b}|$};
+	\draw[ultra thick,-latex,blue](0,0)--(3,0)node[midway,below]{$a$};
+	\draw[ultra thick,-latex,red](0,0)--(1,1)node[midway,above]{$b$};
+	\draw[ultra thick,-latex,blue!50!red](0,0)--(0,3)node[pos=0.7,right]{$a\times b$};
+	\draw (0.6,0) arc [start angle=0,end angle=45,radius=0.6]
+	node[pos=0.7,right]{$\varphi$};
+\end{tikzpicture}
+\begin{enumerate}
+	\item[1.] $\abs{\vec{c}} = \abs{\vec{a}} \cdot \abs{\vec{b}} \cdot sin(\varphi)$
+	\item[2.] $\vec{c} \perp \vec{a}, \: \vec{c} \perp \vec{c}$
+	\item[3.] $\vec{a}, \vec{b}, \vec{c}$ - правая тройка
+\end{enumerate}
+В декартовой системе координат: 
+$\vec{a} \times \vec{b} =
+\begin{vmatrix}
+	\vec{i} & \vec{j} & \vec{k}\\
+	x_1 & y_1 & z_1\\
+	x_2 & y_2 & z_2\\
+\end{vmatrix}$
+\newpage
+Свойства
+\begin{itemize}
+	\item $[\vec{a}, \vec{b}]=-[\vec{b}, \vec{a}]$
+	\item $[\vec{a}, \vec{b} + \vec{c}]=[\vec{a}, \vec{b}] + [\vec{a}, \vec{c}]$
+	\item $[\vec{a}, \alpha \vec{b}] = \alpha [\vec{a}, \vec{b}]$
+\end{itemize}
+}
+\item {Смешанное произведение\\
+$(\vec{a} \times \vec{b}) \cdot \vec{c}=\vec{a} \times (\vec{b} \cdot \vec{c})=(\vec{a}, \vec{b}, \vec{c})$\\
+В декартовой системе координат: 
+$\begin{vmatrix}
+	x_1 & y_1 & z_1\\
+	x_2 & y_2 & z_2\\
+	x_3 & y_3 & z_3\\
+\end{vmatrix} = (\vec{a}, \vec{b}, \vec{c})$
+}
+\item{Двойное векторное произведение\\
+$\vec{a} \times \vec{b} \times \vec{c} = \vec{b}(\vec{a}, \vec{c}) - \vec{c}(\vec{a}, \vec{c})$
+}
+\end{enumerate}
+
+\begin{task}[131]
+$\triangle ABC, $ длины сторон = 1\\
+$(\vec{AB}, \vec{BC}) + (\vec{BC}, \vec{CS})+(\vec{CA}, \vec{AB}) = 1\cdot 1 \cdot \cos(120º)+ 1\cdot 1 \cdot \cos(120º)+\\+ 1\cdot 1 \cdot \cos(120º)=-\frac{3}{2}$\\
+
+\end{task}
+
 \end{document}

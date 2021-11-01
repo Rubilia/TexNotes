@@ -421,11 +421,35 @@ $
 	1 & -\lambda & 1 & \ldots & 0 & 0 & 0 \\ 
 	0 & 1 & -\lambda & \ldots & 0 & 0 & 0 \\ 
 	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots\\
-	0 & 0 & 0 & \ldots & -\lambda & 1 & 0 \\ 
+	0 & 0 & 0 & \ldots & 1 & -\lambda & 1 \\ 
 	0 & 0 & 0 & \ldots & 0 & 0 & 1\\
+\end{vmatrix} =\\= -\lambda \Delta_{n-1} -
+\underbrace{
+\begin{vmatrix}
+	-1-\lambda & 1 & 0 & \ldots & 0 & 0 \\ 
+	1 & -\lambda & 1 & \ldots & 0 & 0 \\ 
+	0 & 1 & -\lambda & \ldots & 0 & 0 \\ 
+	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots 
+	\\ 0 & 0 & 0 & \ldots & -\lambda & 1 \\ 
+	0 & 0 & 0 & \ldots & 1 & -\lambda\\
 \end{vmatrix}
+}_{\Delta_{n-2}} = -\lambda \Delta_{n-1} - \Delta_{n-2}\\
+G(z) = \Delta_0 + \Delta_1 z + \Delta_2 z^2 + \ldots$ - производящая функция последовательности $\{\Delta_i\}$\\
 $
-
+G(z) = \frac{1+z(1-\lambda+\lambda)}{1+\lambda z + z^2}=\frac{1-z}{1+\lambda z +z^2}\\
+z = cos(\phi) + isin(\phi)\\
+1+\lambda z +z^2=0 \implies \lambda = -(z+\frac{1}{z})=-(cos(\phi) + isin(\phi) + cos(\phi) -isin(\phi))=\\=-2cos(\phi)\\
+z_{1,2}=\frac{-\lambda \pm \sqrt{\lambda^2-4}}{2}=\frac{2cos(\phi) \pm 2isin(\phi)}{2}=cos(\phi) \pm sin(\phi)\\
+G(z) = \frac{A}{z_1-z} + \frac{B}{z_2-z} = \frac{1-z}{1+\lambda z + z^2} \leftrightarrow A(z_2-z)+B(z_1-z)=1-z \leftrightarrow\\ \leftrightarrow
+\begin{cases}
+	z=z_1: \: A(z_2-z_1)=1-z_1\\
+	z=z_2: \: B(z_1-z_2)=1-z_2\\
+\end{cases} \leftrightarrow
+\begin{cases}
+	A = \frac{cos(\phi)-1 + isin(\phi)}{2isin(\phi)}\\
+	B = \frac{1-cos(\phi) + isin(\phi)}{2isin(\phi)}\\
+\end{cases}
+\\$
 \end{solution} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
