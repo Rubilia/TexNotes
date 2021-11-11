@@ -1,0 +1,105 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[T2A]{fontenc}% Внутренняя T2A кодировка TeX
+\usepackage[utf8]{inputenc}% кодировка файла
+\usepackage[russian]{babel}% поддержка переносов в русском языке
+\usepackage{comment}% enables the use of multi-line comments (\ifx \fi) 
+\usepackage{fullpage}% changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{cancel}
+
+\newenvironment{task}[1][0]{\vspace{.5cm} {\textbf{№ #1} \vspace{.5cm}\\ }}{}
+
+\begin{document}
+	\begin{task}[1]
+$
+\begin{pmatrix}
+	3 & 2\\
+	5 & -2\\
+	-1 & 0\\
+\end{pmatrix} \cdot
+\begin{pmatrix}
+	2 & -3 & 5\\
+	4 & 0 & 1\\
+\end{pmatrix} \cdot
+\begin{pmatrix}
+	3 & 2\\
+	5 & -2\\
+	-1 & 0\\
+\end{pmatrix}=
+\begin{pmatrix}
+	14 & -9 & 17\\
+	2 & -15 & 23\\
+	-2 & 3 & -5\\
+\end{pmatrix} \cdot
+\begin{pmatrix}
+	3 & 2\\
+	5 & -2\\
+	-1 & 0\\
+\end{pmatrix}=
+\begin{pmatrix}
+	-20 & 46\\
+	-92 & 34\\
+	14 & -10\\
+\end{pmatrix}
+$
+\end{task}
+
+\begin{task}[1.1]
+$
+\begin{pmatrix}
+	1 & 2\\
+	3 & 4\\
+\end{pmatrix} \cdot
+\begin{pmatrix}
+	0 & -1\\
+	1 & 2\\
+\end{pmatrix} \cdot
+\begin{pmatrix}
+	1 & 2\\
+	3 & 4\\
+\end{pmatrix} \cdot
+\begin{pmatrix}
+	0 & 1\\
+	-1 & 2\\
+\end{pmatrix}=
+\begin{pmatrix}
+	2 & 3\\
+	4 & 5\\
+\end{pmatrix} \cdot
+\begin{pmatrix}
+1 & 2\\
+3 & 4\\
+\end{pmatrix} \cdot
+\begin{pmatrix}
+0 & 1\\
+-1 & 2\\
+\end{pmatrix}=
+\begin{pmatrix}
+	11 & 16\\
+	19 & 28\\
+\end{pmatrix} \cdot
+\begin{pmatrix}
+	0 & 1\\
+	-1 & 2\\
+\end{pmatrix}=\\=
+\begin{pmatrix}
+	-16 & 43\\
+	-28 & 75\\
+\end{pmatrix}
+$\\
+\end{task}
+
+\begin{task}[3]
+	
+\end{task}
+\end{document}

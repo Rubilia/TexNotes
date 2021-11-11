@@ -8,6 +8,8 @@
 \usepackage{cancel}
 \usepackage{amsmath}
 \usepackage{xcolor}
+\usepackage{pgfplots}
+
 
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
 \newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
@@ -1053,8 +1055,115 @@ $\vec{a} \times \vec{b} \times \vec{c} = \vec{b}(\vec{a}, \vec{c}) - \vec{c}(\ve
 
 \begin{task}[131]
 $\triangle ABC, $ длины сторон = 1\\
-$(\vec{AB}, \vec{BC}) + (\vec{BC}, \vec{CS})+(\vec{CA}, \vec{AB}) = 1\cdot 1 \cdot \cos(120º)+ 1\cdot 1 \cdot \cos(120º)+\\+ 1\cdot 1 \cdot \cos(120º)=-\frac{3}{2}$\\
+$(\vec{AB}, \vec{BC}) + (\vec{BC}, \vec{CS})+(\vec{CA}, \vec{AB}) = 1\cdot 1 \cdot \cos(120) + 1\cdot 1 \cdot \cos(120º)+\\+ 1\cdot 1 \cdot \cos(120º)=-\frac{3}{2}$\\
 
 \end{task}
 
+\newpage
+\subsection{Прямые и плоскости}
+{\hfill \textit{08.11.2021}\vspace{.5cm}}
+
+\emph{Взаимное расположение плоскостей/прямых на плоскости}
+\begin{enumerate}
+	\item { $\Pi_1 \perp \Pi_2$ ($l_1 \perp l_2$ на плоскости) $\implies\\
+\implies \vec{n_1} \perp \vec{n_2} \leftrightarrow \vec{n_1} \cdot \vec{n_2} = 0\\
+A_1 A_2 + B_1 B_2 +C_1 C_2 = 0 \:\: (A_1 A_2 + B_1 B_2 = 0)$
+}
+\item{$\Pi_1 \parallel \Pi_2$ ($l_1 \parallel l_2$ на плоскости) \\
+	$\frac{A_1}{A_2} = \frac{B_1}{B_2} = \frac{C_2}{C_2}, \quad (\frac{A_1}{A_2} = \frac{B_1}{B_2})$
+}
+\item{$\Pi_1 \cap \Pi_2\\
+\vec{n_1} \neq \vec{n_2}, \quad \vec{n_1} \times \vec{n_2} \neq 0
+$
+}
+\end{enumerate}
+\emph{Взаимное расположение прямых в пространстве}
+\begin{enumerate}
+	\item{ $l_1, l_2$ в одной плоскости\\
+()
+		
+}
+	\item {$l_1 \perp l_2 \implies a_1 \perp a_2 \implies a_1 \cdot a_2 = 0$
+}
+	\item{$l_1 \parallel l_2 \implies \vec{a_1} = \lambda \vec{a_2} \implies \frac{\alpha_1}{\alpha_2}=\frac{\beta_1}{\beta_2}=\frac{\gamma_1}{\gamma_2}$
+}
+\item{$l_1, l_2$ совпадают\\
+	$\vec{a_1} \times \vec{a_2}=0 \quad (\vec{r_2} - \vec{r_1}) \times \vec{a_1}=0$
+}
+\end{enumerate}
+
+\begin{task}[367]
+$\triangle ABC: A(-2, 3), B(4, 1), C(6, -5), \quad m_a-?\\
+M_A=(\frac{4+6}{2}, \frac{1-5}{2})=(5, -2) \implies m_a = (M_A A)\\
+m_a: \frac{x+2}{7}=-\frac{y-3}{5} \leftrightarrow 5x+10+7y-21=0 \leftrightarrow 5x+7y-11=0\\
+$
+\end{task}
+
+\begin{task}[372]
+$y=ax+b \implies
+\begin{cases}
+	-3=4a+b\\
+	S=\frac{1}{2} \abs{b} \abs{\frac{b}{a}}=3
+\end{cases} \leftrightarrow 
+\begin{cases}
+	b^2=6\abs{a}\\
+	b = -3-4a
+\end{cases} \leftrightarrow
+\begin{cases}
+	b=-3-4a\\
+	16a^2+24a-6\abs{a}+9=0\\
+\end{cases}\leftrightarrow\\ \leftrightarrow
+\left[
+\begin{array}{c}
+	\begin{cases}
+		a>=0\\
+		b=-3-4a\\
+		16a^2+18a+9=0\\
+	\end{cases} \leftrightarrow \emptyset\\
+	\begin{cases}
+		a<0\\
+		b=-3-4a\\
+		16a^2+30a+9=0\\
+	\end{cases}
+\end{array}
+\right. \leftrightarrow
+\left[
+\begin{array}{l}
+	\begin{cases}
+		a=-\frac{3}{2}\\
+		b=3\\
+	\end{cases}\\
+	\begin{cases}
+		a=-\frac{3}{8}\\
+		b=-\frac{3}{2}
+	\end{cases}
+\end{array}
+\right.
+$\\
+$l_1: \: y=-\frac{3}{2}x+3 \leftrightarrow 3x+2y-6=0\\
+l_2: \: y=-\frac{3}{8}-\frac{3}{2} \leftrightarrow 3x+8y+12=0$\\
+\end{task}
+
+\begin{task}[377]
+$2x-y=0\\
+5x-y=0\\
+3x-y=0 - медиана$
+У треугольника одна из вершин находится в точке $(0, 0)$. Через эту же вершину проходит медиана. Найдем две остальные вершины:\\
+$A(0, 0), B(b, 2b), C(c, 5c)$. Тогда уравнение 3 стороны: $\frac{x-b}{c-b}=\frac{y-2b}{5c-2b} \implies\\\implies \frac{3-b}{c-b}=\frac{9-2b}{5c-2b}\\
+M(\frac{b+c}{2}, \frac{2b+5c}{2})$ лежит на медиане $\implies
+\frac{2b+5c}{2} = \frac{3b+3c}{2}\\
+\begin{cases}
+	2b+5c=3b+3c\\
+	\frac{3-b}{c-b}=\frac{9-2b}{5c-2b}\\
+\end{cases} \leftrightarrow
+\begin{cases}
+	b=2c\\
+	-\frac{3-2c}{c}=\frac{9-4c}{c}
+\end{cases} \leftrightarrow
+\begin{cases}
+	b=4\\
+	c=2\\
+\end{cases}\\$
+Т. о. $B(4, 8), C(2, 10), (BC): x+y-12=0\\$ 
+\end{task}
 \end{document}
