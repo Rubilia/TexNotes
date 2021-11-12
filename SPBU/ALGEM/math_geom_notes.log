@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.17)  8 NOV 2021 12:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.17)  12 NOV 2021 11:25
 entering extended mode
 **./math_geom_notes.tex
 (math_geom_notes.tex
@@ -1231,7 +1231,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1147--1169
 
  []
 
-[22] (math_geom_notes.aux) ) 
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 1171--1172
+
+ []
+
+[23] (math_geom_notes.aux) ) 
 Here is how much of TeX's memory you used:
  24748 strings out of 478927
  631224 string characters out of 2851587
@@ -1270,9 +1275,9 @@ a/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Us
 ers/rubilia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/
 line10.pfb><C:/Users/rubilia/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
 msfonts/symbols/msbm10.pfb>
-Output written on math_geom_notes.pdf (22 pages, 339426 bytes).
+Output written on math_geom_notes.pdf (23 pages, 339920 bytes).
 PDF statistics:
- 502 PDF objects out of 1000 (max. 8388607)
+ 505 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
