@@ -1169,4 +1169,174 @@ M(\frac{b+c}{2}, \frac{2b+5c}{2})$ лежит на медиане $\implies
 
 \newpage
 {\hfill \textit{12.11.2021}\\}
+\subsection{Система координат}
+O, $\vec{e_1}, \vec{e_2}, \ldots, \vec{e_n}$\\
+$\vec{x}=\alpha_1\vec{e_1}+\alpha_2\vec{e_2}+\ldots+\alpha_n\vec{e_n}\\
+(\alpha_1, \alpha_2, \ldots, \alpha_n) - $ координаты вектора\\
+\subsubsection{Смена систем координат}
+O, $\vec{e_1}, \vec{e_2}, \vec{e_3}$\\
+O', $\vec{e_1}', \vec{e_2'}, \vec{e_3'}$\\
+M(x, y, z) в O, $\vec{e_1}, \vec{e_2}, \vec{e_3}$\\
+M(x', y', z') в O', $\vec{e_1'}, \vec{e_2}', \vec{e_3'}$\\
+O'$(x_0, y_0, z_0)$ в O, $\vec{e_1}, \vec{e_2}, \vec{e_3}$\\
+$
+\begin{cases}
+	\vec{e_1}'=\sum \alpha_{1j}\vec{e_j}\\
+	\vec{e_2}'=\sum \alpha_{2j}\vec{e_j}\\
+	\vec{e_3}'=\sum \alpha_{3j}\vec{e_j}\\
+\end{cases} \implies
+A =
+\begin{pmatrix}
+	\alpha_{11} & \alpha_{12} & \alpha_{13}\\
+	\alpha_{21} & \alpha_{22} & \alpha_{23}\\
+	\alpha_{31} & \alpha_{32} & \alpha_{33}\\
+\end{pmatrix}
+$ - матрица преобразования\\
+$
+\vec{OM}=x\vec{e_1}+y\vec{e_2}+z\vec{e_3}\\
+\vec{OM}=\vec{OO'} + \vec{O'M}\\
+\vec{OO'}=x_0\vec{e_1}+y_0\vec{e_2}+z_0\vec{e_3}\\
+\vec{O'M}=x'\vec{e_1'}+y'\vec{e_2'}+z'\vec{e_3'}\\
+(x-x_0-x'\alpha_{11}-y'\alpha_{21}-z'\alpha_{31})\vec{e_1}+(y-y_0-x'\alpha_{12}-y'\alpha_{22}-z'\alpha_{32})\vec{e_2}+\\+(z-z_0-x'\alpha_{13}-y'\alpha_{23}-z'\alpha_{33})\vec{e_3}=0\leftrightarrow\\\leftrightarrow
+\begin{cases}
+	x=x_0+x'\alpha_{11}+y'\alpha_{21}+z'\alpha_{31}\\
+	y=y_0+x'\alpha_{12}+y'\alpha_{22}+z'\alpha_{32}\\
+	z=z_0+x'\alpha_{13}+y'\alpha_{23}+z'\alpha_{33}
+\end{cases}\\
+\begin{pmatrix}
+	x\\
+	y\\
+	z\\
+\end{pmatrix}=
+\begin{pmatrix}
+	x_0\\
+	y_0\\
+	z_0\\
+\end{pmatrix}
++A^T\cdot
+\begin{pmatrix}
+	x'\\
+	y'\\
+	z'\\
+\end{pmatrix} \implies 
+\begin{pmatrix}
+	x'\\
+	y'\\
+	z'\\
+\end{pmatrix}=
+(A^T)^{-1}\cdot
+\begin{pmatrix}
+	x-x_0\\
+	y-y_0\\
+	z-z_0\\
+\end{pmatrix}
+$
+
+\begin{task}[91 (13)]
+(2, 4), (-3, 0), (2, 1)\\
+$
+\frac{x+3}{-5}=\frac{y}{4} \leftrightarrow 5y-4x-12=0\\
+5(y-1)-4(x-2)=0 \leftrightarrow 5y-4x-12=0\text{ - сторона треугольника}\\
+$
+Аналогично:\\
+$
+x=2 \leftrightarrow x=-3\text{ - вторая сторона}\\
+\frac{x+3}{5}=y \leftrightarrow 5y-x-3=0 \leftrightarrow 5(y-2)-(x-4)=0 \leftrightarrow5y-x-3=0\text{ - третья сторона треугольника}\\
+$
+$
+\begin{cases}
+	x=-3\\
+	5y-x-3=0
+\end{cases} \leftrightarrow
+\begin{cases}
+	x=-3\\
+	y=3
+\end{cases}
+$
+ - 1 вершина\\
+ $
+ \begin{cases}
+ 	x=-3\\
+ 	5y-4x-12=0
+ \end{cases} \leftrightarrow
+\begin{cases}
+	x=-3\\
+	y=-3\\
+\end{cases}
+ $ - 2 вершина\\
+ $
+ \begin{cases}
+ 	5y-4x-12=0\\
+ 	5y-x-3=0\\
+ \end{cases} \leftrightarrow
+\begin{cases}
+	x=7\\
+	y=5
+\end{cases}
+ $ - 3 вершина
+\end{task}
+
+\begin{task}[119]
+$
+(4, \frac{\pi}{9}), (1, \frac{5\pi}{18})\\
+\varphi = \frac{5\pi}{18} - \frac{\pi}{9} = \frac{\pi}{6}
+S = \frac{1}{2} \cdot 4 \cdot 1 \cdot \frac{1}{2} = 1\\
+$
+\end{task}
+
+\begin{task}[664]
+$
+\vec{e_1'}=\frac{\vec{e_1}+\vec{e_2}}{\sqrt{2+2cos(\omega)}}=\frac{\vec{e_1} + \vec{e_2}}{2cos(\frac{\omega}{2})}\\
+\vec{e_2'}=\frac{\vec{e_1}-\vec{e_2}}{\sqrt{2-2cos(\omega)}}=\frac{\vec{e_1} - \vec{e_2}}{2sin(\frac{\omega}{2})}\\
+A = \begin{pmatrix}
+	\frac{1}{2cos(\frac{\omega}{2})} & \frac{1}{2cos(\frac{\omega}{2})}\\
+	-\frac{1}{2sin(\frac{\omega}{2})} & \frac{1}{2sin(\frac{\omega}{2})}
+\end{pmatrix}\\
+\begin{pmatrix}
+	x'\\
+	y'\\
+\end{pmatrix} = (A^T)^-1\cdot 
+\begin{pmatrix}
+	x\\
+	y\\
+\end{pmatrix}\\
+(A^T)^{-1}=
+\begin{pmatrix}
+	\frac{1}{2cos(\frac{\omega}{2})} & -\frac{1}{2sin(\frac{\omega}{2})}\\
+	\frac{1}{2cos(\frac{\omega}{2})} & \frac{1}{2sin(\frac{\omega}{2})}
+\end{pmatrix}^{-1}\\
+\left(
+\begin{array}{cc|cc}
+	\frac{1}{2cos(\frac{\omega}{2})} & -\frac{1}{2sin(\frac{\omega}{2})} & 1 & 0\\
+	\frac{1}{2cos(\frac{\omega}{2})} & \frac{1}{2sin(\frac{\omega}{2})} & 0 & 1\\
+\end{array}\right) = 
+\left(
+\begin{array}{cc|cc}
+	\frac{1}{2cos(\frac{\omega}{2})} & -\frac{1}{2sin(\frac{\omega}{2})} & 1 & 0\\
+	0 & \frac{1}{sin(\frac{\omega}{2})} & -1 & 1\\
+\end{array}\right)=\\=
+\left(\begin{array}{cc|cc}
+	1 & 0 & cos(\frac{\omega}{2}) & cos(\frac{\omega}{2})\\
+	0 & 1 & -sin(\frac{\omega}{2}) & sin(\frac{\omega}{2})\\
+\end{array}\right) \implies A^{-1} = 
+\begin{pmatrix}
+	cos(\frac{\omega}{2}) & cos(\frac{\omega}{2})\\
+	-sin(\frac{\omega}{2}) & sin(\frac{\omega}{2})\\
+\end{pmatrix}\\
+\begin{pmatrix}
+	x'\\
+	y'\\
+\end{pmatrix}=
+\begin{pmatrix}
+	cos(\frac{\omega}{2}) & cos(\frac{\omega}{2})\\
+	-sin(\frac{\omega}{2}) & sin(\frac{\omega}{2})\\
+\end{pmatrix} \cdot \begin{pmatrix}
+x\\y\\
+\end{pmatrix} \leftrightarrow\\\leftrightarrow
+\begin{cases}
+	x'= (x+y)cos(\frac{\omega}{2})\\
+	y'= (y-x)sin(\frac{\omega}{2})
+\end{cases}
+$
+\end{task}
 \end{document}
