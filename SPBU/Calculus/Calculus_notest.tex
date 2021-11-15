@@ -642,7 +642,7 @@ $
 
 
 \newpage
-\subsection{Геометрические приложения производных}
+\subsubsection{Геометрические приложения производных}
 {\hfill \textit{08.11.2021}}
 \vspace{1cm}
 
@@ -767,7 +767,7 @@ $
 \end{task}
 
 \newpage
-\subsection{Касательные кривых, заданныз параметрически или неявно}
+\subsubsection{Касательные кривых, заданныз параметрически или неявно}
 
 \large{
 $
@@ -816,6 +816,60 @@ $\frac{x}{50} + \frac{y \cdot y'}{32}=0 \implies y'(6)=-\frac{16x}{25y}=-\frac{3
 Касательная: $y=y_0+y'(x-x_0) \leftrightarrow y=10-0.6x\\$
 \end{task}
 
-\vspace{2cm}
-ДЗ: 1073, 1078\\
+\vspace{1cm}
+ДЗ: 1073, 1078
+
+\newpage
+\subsubsection{Производные высшего порядка}
+{\hfill \textit{15.11.2021}}
+
+{\hfill \textbf{Основные формулы} \hfill}
+
+\begin{enumerate}
+	\item {
+$(e^x)^{(n)}=e^x \quad \implies \quad (a^x)^{(n)}=a^x(ln(a))^n$	
+}
+	\item{
+$
+(sin(x))^{(n)}=sin(x+n \frac{\pi}{2})$\\
+$(cos(x))^{(n)}=cos(x+n \frac{\pi}{2})$
+}
+\item{
+$(x^m)^{(n)}=m(m-1)(m-2)\ldots(m-n+1)x^{m-n}$
+}
+\item{
+$(ln(x))^{(n)}=(\frac{1}{x})^{(n-1)}=(-1)^{n-1} \cdot (n-1)! x^{-n}$
+}
+\item{
+$(u \cdot v)^{(n)}=\sum\limits_{k=0}^n C_n^k u^{(k)}v^{(n-k)}$\\
+}
+\end{enumerate}
+
+\paragraph{Примеры\vspace{.5cm}\\}
+
+\begin{task}[1189]
+$y=\frac{1}{x(1-x)}=\frac{1}{x-1}-\frac{1}{x}\\
+y^{(n)}=(\frac{1}{x-1})^{(n)}-(\frac{1}{x})^{(n)}= \frac{(-1)^n \cdot n!}{x^n}-\frac{(-1)^n \cdot n!}{(x-1)^n}$
+\end{task}
+
+\begin{task}[1193]
+$y=sin^2(x)=\frac{1}{2}(1-cos(2x))\\
+y^{(n)}=-2^{n-1}cos(2x+n\frac{\pi}{2})$
+\end{task}
+
+\begin{task}[1195]
+$y=sin^3(x)=\frac{1}{2}(1-cos(2x))sin(x)=\frac{1}{2}sin(x)-\frac{1}{2}sin(x)cos(2x)=\\=\frac{1}{2}sin(x)-\frac{1}{4}sin(3x)+\frac{1}{4}sin(x)=\frac{3}{4}sin(x)-\frac{1}{4}sin(3x)\\
+y^{(n)}=\frac{3}{4}sin(x+n\frac{\pi}{2})-\frac{3^n}{4}\cdot sin(3x+n\frac{\pi}{2})$
+\end{task}
+
+\begin{task}[1202]
+$y=xcos(mx)\\
+y^{(n)}=\sum\limits_{k=0}^n C_n^k x^{(k)}(cos(mx))^{(n-k)}=m^n \cdot xcos(mx+\frac{\pi n}{2}) +\\+ nm^{n-1} \cdot cos(mx+\frac{(n-1)\pi}{2})$
+\end{task}
+
+\begin{task}[1204]
+$y=(x^2+2x+2)\cdot e^{-x}\\
+y^{(n)}=\sum\limits_{k=0}^n (x^2+2x+2)^{(k)} \cdot (e^{-x})^{(n-k)}=(-1)^n\cdot (x^2+2x+2) \cdot e^{-x} + (-1)^{n-1}\cdot n \cdot(2x+2)\cdot e^{-x} + (-1)^{n-2} \cdot n(n-1) \cdot e^{-x}$
+\end{task}
+
 \end{document}
