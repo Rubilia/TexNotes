@@ -9,6 +9,9 @@
 \usepackage{amsmath}
 \usepackage{xcolor}
 \usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
 
 
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
@@ -1284,7 +1287,29 @@ S = \frac{1}{2} \cdot 4 \cdot 1 \cdot \frac{1}{2} = 1\\
 $
 \end{task}
 
+\newpage
 \begin{task}[664]
+	
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=.8]
+	\clip(-2,-3) rectangle (12.9,6.54);
+	\draw [shift={(0,0)},line width=2pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (-18.43494882292201:0.6) arc (-18.43494882292201:29.74488129694223:0.6) -- cycle;
+	\draw [->,line width=2pt] (0,0) -- (6,-2);
+	\draw [->,line width=2pt] (0,0) -- (7,4);
+	\draw [->,line width=2pt] (0,0) -- (9.662301569804855,0.9567564016288782);
+	\draw [->,line width=2pt] (0,0) -- (-0.6045625891934577,6.105489385452906);
+	\begin{scriptsize}
+		\draw[color=black] (3.36,-0.65) node {x};
+		\draw[color=black] (3.44,2.45) node {y};
+		\draw[color=qqwuqq] (1.16,0.3) node {$\omega$};
+		\draw[color=black] (6.56,1.03) node {x'};
+		\draw[color=black] (0.04,3.75) node {y'};
+		\draw [fill=ududff] (6.28,2.12) circle (2.5pt);
+		\draw[color=ududff] (6.44,2.55) node {$M$};
+	\end{scriptsize}
+\end{tikzpicture}	
+
 $
 \vec{e_1'}=\frac{\vec{e_1}+\vec{e_2}}{\sqrt{2+2cos(\omega)}}=\frac{\vec{e_1} + \vec{e_2}}{2cos(\frac{\omega}{2})}\\
 \vec{e_2'}=\frac{\vec{e_1}-\vec{e_2}}{\sqrt{2-2cos(\omega)}}=\frac{\vec{e_1} - \vec{e_2}}{2sin(\frac{\omega}{2})}\\
@@ -1337,6 +1362,161 @@ x\\y\\
 	x'= (x+y)cos(\frac{\omega}{2})\\
 	y'= (y-x)sin(\frac{\omega}{2})
 \end{cases}
+$
+\end{task}
+
+\newpage
+{\hfill \textit{12.11.2021}\\}
+
+\begin{task}[665]
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.7]
+	\clip(-1.84551096236595832,-3.2189645516016605) rectangle (10.685017416843117,6.643749743869959);
+	\draw [shift={(0,0)},line width=2pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (3.654966237010108:1.2098080732190425) arc (-6.654966237010108:49.74488129694222:0.6098080732190425) -- cycle;
+	\draw [->,line width=1pt] (0,0) -- (6,-2);
+	\draw [->,line width=1pt] (0,0) -- (7,4);
+	\draw [->,line width=1pt] (0,0) -- (9.662301569804855,0.9567564016288782);
+	\draw [->,line width=1pt] (0,0) -- (-0.6045625891934577,6.105489385452906);
+	\draw [->,line width=1.8pt] (0,0) -- (-0.16844645405527364,1.7011440264997186);
+	\draw [->,line width=1.8pt] (0,0) -- (1.736,0.992);
+	\draw [->,line width=1.8pt] (0,0) -- (2.378463778937395,0.23551432648843781);
+	\draw [->,line width=1.8pt] (0,0) -- (2.16,-0.72);
+	\begin{scriptsize}
+		\draw[color=black] (3.294811829793051,-0.766946246841057) node {$x'$};
+		\draw[color=black] (4.401293627484465,2.8393647974865157) node {$y$};
+		\draw[color=black] (5.958564305716827,0.8859463151424138) node {$x$};
+		\draw[color=black] (-0.24319786899801593,4.301013591967767) node {$x$};
+		\draw[color=qqwuqq] (1.6604835735264023,0.5307793183525771) node {$\omega$};
+		\draw[color=black] (-0.3251594836418244,0.7113052387132082) node {$\vec{e_1'}$};
+		\draw[color=black] (0.7130209685130833,0.8313052387132082) node {$\vec{e_2}$};
+		\draw[color=black] (1.300412540127044,-0.13900963048972626) node {$\vec{e_1}$};
+		\draw[color=black] (0.9589058124445088,-0.72543951915852174) node {$\vec{e_2'}$};
+	\end{scriptsize}
+\end{tikzpicture}\\
+$Oxy \: \omega \rightarrow Ox'y', \quad\\ \abs{\vec{e_1}}=\abs{\vec{e_2}}=\abs{\vec{e_1'}}=\abs{\vec{e_2'}}=1\\
+\vec{a}=\alpha \vec{e_2}-\vec{e_1}, \quad \vec{a} \parallel \vec{e_1'} \implies \vec{a}\cdot \vec{e_1}=0 \implies \alpha = \frac{1}{cos(\omega)}\\
+\vec{a}=-\vec{e_1}+\frac{1}{cos(\omega)} \vec{e_2}\\
+\abs{\vec{a}}=\sqrt{1+\frac{1}{cos^2(\omega)}-2}=tg(\omega) \implies\\\implies
+\vec{e_1}'=\frac{\vec{a}}{\abs{\vec{a}}}=-ctg(\omega) \vec{e_1} + sin(\omega) \vec{e_2}\\$
+
+$\vec{b}=\beta \vec{e_1} - e_2, \quad \vec{b} \parallel \vec{e_2'}\\
+\implies \vec{b}\cdot \vec{e_2}=0 \leftrightarrow \beta \cdot cos(\omega) -1=0 \leftrightarrow \beta = \frac{1}{cos(\omega)}\\
+\abs{\vec{b}}=\sqrt{\frac{1}{cos^2(\omega)} + 1 - 2}=tg(\omega) \implies\\ \implies
+\vec{e_2'}=\frac{\vec{b}}{\abs{\vec{b}}}=\frac{1}{sin(\omega)} \vec{e_1} - ctg(\omega) \vec{e_2}\\\\
+A = \begin{pmatrix}
+	-ctg(\omega) & \frac{1}{sin(\omega)}\\
+	\frac{1}{sin(\omega)} & -ctg(\omega)\\
+\end{pmatrix}=A^T\\
+(A^T)^{-1}=A^{-1}=
+\left(
+\begin{array}{cc|cc}
+		-ctg(\omega) & \frac{1}{sin(\omega)} & 1 & 0\\
+	\frac{1}{sin(\omega)} & -ctg(\omega) & 0 & 1\\
+\end{array}
+\right)=\left(
+\begin{array}{cc|cc}
+	1 & 0 & ctg(\omega) & \frac{1}{sin(\omega)}\\
+	0 & 1 & \frac{1}{sin(\omega)} & ctg(\omega)\\
+\end{array}
+\right)\\
+\begin{pmatrix}
+	x'\\
+	y'\\
+\end{pmatrix}=A^{-1} \cdot 
+\begin{pmatrix}
+	x\\
+	y\\
+\end{pmatrix}\\\\
+\begin{cases}
+	x=-ctg(\omega)x'+\frac{1}{sin(\omega)}y'\\
+	y=\frac{1}{sin(\omega)}x'-ctg(\omega)y'\\
+\end{cases}\\
+\begin{cases}
+	x'=ctg(\omega)x+\frac{1}{sin(\omega)}y\\
+	y'= \frac{1}{sin(\omega)}x + ctg(\omega)y\\
+\end{cases}$
+\end{task}
+
+\vspace{2cm}
+\subsection{Прямые и плоскости в пространстве}
+Плоскости:\\
+$
+(\vec{r}-\vec{r_0}, \vec{n})=0, \: \leftrightarrow \: (\vec{r}, \vec{n})+D=0\\
+\vec{r}=\vec{r_0}+\vec{a}t, \quad \vec{r}\cdot \vec{n}'-p=0, \: \abs{\vec{n'}}=1\\
+d=\frac{\abs{\vec{r_1} \cdot \vec{n}}}{\abs{\vec{n}}}\\
+$
+Прямые:\\
+$
+\vec{r}=\vec{r_0}+\vec{a}t\\
+\frac{x-x_0}{\alpha}=\frac{y-y_0}{\beta}=\frac{z-z_0}{\gamma}\\
+\begin{cases}
+	\vec{r} \cdot \vec{n_1} + D_1 = 0\\
+	\vec{r} \cdot \vec{n_2} + D_2 = 0\\
+\end{cases}\\
+$
+Уравнение пучка плоскостей, проходящих через прямую: \\
+$\alpha (\vec{r} \cdot \vec{n_1} + D_1) + \beta (\vec{r} \cdot \vec{n_2} + D_2)=0$\\
+
+\subsubsection{Примеры}
+
+\begin{task}[513]
+$\alpha\text{ - искомая плоскость}\\
+l_1: \:\:\begin{cases}
+	x=2+3t\\
+	y=-1+6t\\
+	z=4t\\
+\end{cases}\\
+l_2: \:\: \begin{cases}
+	x=-1+2t=0\\
+	y=3t\\
+	z=-t\\
+\end{cases}\\
+Ax+By+Cz+D=0\\
+\vec{n}=(A, B, C)\\
+\vec{a_1}=(3, 6, 4)$ - напр. $l_1$\\
+$\vec{a_2}=(2, 3, -1)$ - напр. $l_2$\\
+$
+\begin{cases}
+	\vec{n} \cdot \vec{a_1}=0\\
+	\vec{n} \cdot \vec{a_2} = 0\\
+\end{cases} \leftrightarrow
+\begin{cases}
+	3A+6B+4C=0\\
+	2A+3B-C=0\\
+	C=1\\
+\end{cases} \leftrightarrow
+\begin{cases}
+	A=6\\
+	B = -\frac{11}{3}\\
+	C = 1\\
+\end{cases}\\
+(2, -1, 0) \in \alpha \implies \alpha: 6(x-2)-\frac{11}{3}(y+1)+z=0 \leftrightarrow\\
+\leftrightarrow \alpha: 18x-11y+3z-47=0\\
+$
+\end{task}
+
+\begin{task}[587]
+$
+\Pi_1: 2x+3y-4z+5=0\\
+\Pi_2: 2x-z+3=0\\
+\Pi_3: x+y-z=0\\
+\phi - ?\\
+2x+3y-4z+5+\alpha(2x-z+3) = 0\text{ - пучок плоскостей через $\Pi_1 \cap \Pi_2$}\\
+x(2+2\alpha) + 3y+z(-4-\alpha)z+5+3\alpha = 0 \implies \vec{n_{\phi}}=(2+2\alpha, 3, -4-\alpha)\\
+\vec{a}=\vec{\phi \cap \Pi_3} = \vec{n_{\phi}} \times \vec{\Pi_3} = 
+\begin{vmatrix}
+	\vec{i} & \vec{j}, & \vec{k}\\
+	2+2\alpha & 3 & -4-\alpha\\
+	1 & 1 & -1\\
+\end{vmatrix} = (1+\alpha, \alpha-2, 2\alpha-1)\\
+\vec{b} = (\vec{\Pi_1 \cap \Pi_2}) = 
+\begin{vmatrix}
+	\vec{i} & \vec{j} & \vec{k}\\
+	2 & 3 & -4\\
+	2 & 0 & -1\\
+\end{vmatrix} = (-3, -6, -6) \parallel (1, 2, 2)\\
+\vec{a} \cdot \vec{b} = 1+\alpha +2\alpha - 4 + 4\alpha - 2=7\alpha-5=0 \implies \alpha = \frac{5}{7}\\
+\phi: \frac{24}{7}+3y-\frac{33}{7}z+\frac{50}{7}=0 \leftrightarrow 24x+21y-33z+50=0\\
 $
 \end{task}
 \end{document}
