@@ -100,6 +100,124 @@ $\\
 \end{task}
 
 \begin{task}[3]
-	
+\begin{description}
+	\item[Найдем характеристический полином матрицы:]{
+$P(\lambda) = det(A-\lambda E) =\vspace{.3cm}\\=
+\begin{vmatrix}
+	3-\lambda & 1 & 4 & 4\\
+	-4 & -2-\lambda & -4 & -4\\
+	-1 & 0 & 2-\lambda & -1\\
+	0 & -1 & -4 & -1-\lambda\\
+\end{vmatrix}
+\underset{\begin{subarray}{c}
+		\text{$R_1: R_1+(3-\lambda)R_3$}\\
+		\text{$R_2: R_2 - 4 R_3$}\\
+\end{subarray}}{=}
+\begin{vmatrix}
+	0 & 1 & \lambda^2-5\lambda+10 & \lambda + 1\\
+	0 & -2-\lambda & 4\lambda -12 & 0\\
+	-1 & 0 & 2-\lambda & -1\\
+	0 & -1 & -4 & -1-\lambda\\
+\end{vmatrix}=\vspace{.3cm}\\=
+\begin{vmatrix}
+	1 & \lambda^2-5\lambda+10 & \lambda+1\\
+	-2-\lambda & 4\lambda-12 & 0\\
+	1 & 4 & 1+\lambda\\
+\end{vmatrix} = (\lambda + 1) \cdot
+\begin{vmatrix}
+	1 & \lambda^2-5\lambda + 10 & 1\\
+	-2-\lambda & 4\lambda-12 & 0\\
+	1 & 4 & 1\\
+\end{vmatrix} \: \underset{R_1:R_1-R_3}{=} \vspace{.3cm}\\=
+(\lambda+1) \cdot 
+\begin{vmatrix}
+	0 & \lambda^2-5\lambda+6 & 0\\
+	-2-\lambda & 4\lambda-12 & 0\\
+	1 & 4 & 1\\
+\end{vmatrix}=(\lambda+1) \cdot 
+\begin{vmatrix}
+	0 & \lambda^2-5\lambda+6\\
+	-2-\lambda & 4\lambda-12\\
+\end{vmatrix}=\\=(\lambda+1)(\lambda+2)(\lambda-2)(\lambda-3)\\
+$
+}
+\item[Найдем собственные числа матрицы:]{
+$\newline
+P(\lambda) = 0 \leftrightarrow
+\Large{
+\left[
+\begin{array}{lc}
+	\begin{subarray}{l}
+		\lambda_1=-2\\
+		\lambda_2=-1\\
+		\lambda_3=2\\
+		\lambda_4=3\\
+	\end{subarray} &
+	\begin{subarray}{c}
+		\text{Собственные}\\
+		\text{числа матрицы}
+	\end{subarray}
+\end{array}
+\right.}$
+}
+\item[\text{Найдем собственные вектора матрицы:}]{$\newline$
+\begin{enumerate}
+	\item[$1.\:\:\lambda=-2$]{$\newline$
+$\left(
+\begin{array}{cccc|c}
+	5 & 1 & 4 & 4 & 0\\
+	-4 & 0 & -4 & -4 & 0\\
+	-1 & 0 & 4 & -1 & 0\\
+	0 & -1 & -4 & 1 & 0\\
+\end{array}
+\right) \: \underset{
+\begin{subarray}{c}
+	\text{$R_1:R_1+R_2+R_3$}\\
+	\text{$R_2:\frac{R_2-4R_3}{-20}$}\\
+	\text{$R_3: -R_3$}\\
+\end{subarray}
+}{=} \:
+\left(
+\begin{array}{cccc|c}
+	0 & 1 & 4 & -1 & 0\\
+	0 & 0 & 1 & 0 & 0\\
+	1 & 0 & -4 & 1 & 0\\
+	0 & -1 & -4 & 1 & 0\\	
+\end{array}
+\right)\: \underset{\begin{subarray}{c}
+		\text{$R_4:R_4+R_1$}\\
+		\text{$R_3:R_3+R_1$}\\
+		\text{$R_1: R_1-4R_2$}\\
+\end{subarray}}{=} \\=
+\left(
+\begin{array}{cccc|c}
+	1 & 1 & 0 & 0 & 0\\
+	0 & 1 & 0 & -1 & 0\\
+	0 & 0 & 1 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0\\
+\end{array}
+\right) \leftrightarrow
+\begin{cases}
+	x_1+x_2=0\\
+	x_2-x_4=0\\
+	x_3=0\\
+	x_4=c_4\\
+\end{cases} \leftrightarrow
+\begin{cases}
+	x_1=-c_4\\
+	x_2=c_4\\
+	x_3=0\\
+	x_4=c_4\\
+\end{cases} \leftrightarrow
+X = c_4 \cdot
+\begin{pmatrix}
+	-1\\1\\0\\1\\
+\end{pmatrix}
+$
+}
+\item[$2.\:\:\lambda=-1$]$\newline$
+\end{enumerate}
+}
+\end{description}
 \end{task}
 \end{document}
