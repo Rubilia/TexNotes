@@ -1019,4 +1019,165 @@ X =
 \end{pmatrix}
 $
 \end{task}
+
+\newpage
+
+\begin{task}[7]
+$
+\Delta_n=
+\begin{vmatrix}
+	x+1 & x & x & \ldots & x & x\\
+	x & x+2 & x & \ldots & x & x\\
+	x & x & x+3 & \ldots & x & x\\
+	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
+	x & x & x & \ldots & x+n-1 & x\\
+	x & x & x & \ldots & x & x+n\\
+\end{vmatrix} \:
+\underset{
+\begin{subarray}{c}
+	\text{$C_n: C_n-C_{n-1}$}\\
+	\text{$C_{n-2}: C_{n-2}-C_{n-3}$}\\
+	\ldots\\
+	\text{$C_2: C_2-C_1$}\\
+\end{subarray}
+}{=} \:
+\begin{vmatrix}
+	x+1 & -1 & 0 & \ldots & 0 & 0\\
+	x & 2 & -2 & \ldots & 0 & 0\\
+	x & 0 & 3 & \ldots & 0 & 0\\
+	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
+	x & 0 & 0 & \ldots & n-1 & 1-n\\
+	x & 0 & 0 & \ldots & 0 & n\\
+\end{vmatrix} =\vspace{.3cm}\\=
+n \cdot
+\underbrace{
+\begin{vmatrix}
+	x+1 & -1 & 0 & \ldots & 0 & 0\\
+	x & 2 & -2 & \ldots & 0 & 0\\
+	x & 0 & 3 & \ldots & 0 & 0\\
+	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
+	x & 0 & 0 & \ldots & n-2 & 2-n\\
+	x & 0 & 0 & \ldots & 0 & n-1\\
+\end{vmatrix}}_{\Delta_{n-1}} + (-1)^{n-1}x \cdot 
+\underbrace{
+\begin{vmatrix}
+	-1 & 0 & 0 & \ldots & 0\\
+	2 & -2 & 0 & \ldots & 0\\
+	0 & 3 & -3 & \ldots & 0\\
+	\vdots & \vdots & \vdots & \ddots & \vdots\\
+	0 & 0 & 0 & \ldots & 1-n\\
+\end{vmatrix}}_{(-1)^{n-1}(n-1)!}=n \Delta_{n-1} + x(n-1)!\vspace{.3cm}\\
+\Delta_n=n\Delta_{n-1}+x(n-1)!=n(n-1)\Delta_{n-2}+x((n-1)!+n(n-2)!)=n(n-1)(n-2)\Delta_{n-3} +\\+ x((n-1)!+n(n-2)!+n(n-1)(n-3)!)=\ldots=
+n! \underbrace{\Delta_0}_{1} + x((n-1)!+n(n-2)!+\ldots+\\+1!\cdot n\cdot(n-1)\cdot\ldots\cdot3+0!\cdot n\cdot(n-1)\cdot(n-2)\cdot\ldots\cdot2)\vspace{.2cm}\\
+\Delta_n=n!+x \cdot n! \cdot [\frac{1}{n}+\frac{1}{n-1}+\frac{1}{n-2}+\ldots + \frac{1}{1}]\vspace{.2cm}\\
+$
+Ответ: $\Delta_n=n!+x \cdot n! \cdot [\frac{1}{n}+\frac{1}{n-1}+\frac{1}{n-2}+\ldots + \frac{1}{1}]$
+\end{task}
+
+\begin{task}[7.1]
+$
+\Delta_n=\begin{vmatrix}
+	7 & 5 & 0 & \ldots & 0 & 0\\
+	2 & 7 & 5 & \ldots & 0 & 0\\
+	0 & 2 & 7 & \ldots & 0 & 0\\
+	\vdots & \vdots & \vdots & \ddots & \vdots &\vdots\\
+	0 & 0 & 0 & \ldots & 7 & 5\\
+	0 & 0 & 0 & \ldots & 2 & 7\\
+\end{vmatrix}=7\cdot
+\underbrace{
+\begin{vmatrix}
+	7 & 5 & 0 & \ldots & 0 & 0\\
+	2 & 7 & 5 & \ldots & 0 & 0\\
+	0 & 2 & 7 & \ldots & 0 & 0\\
+	\vdots & \vdots & \vdots & \ddots & \vdots &\vdots\\
+	0 & 0 & 0 & \ldots & 7 & 5\\
+	0 & 0 & 0 & \ldots & 2 & 7\\
+\end{vmatrix}}_{\Delta_{n-1}} - 5 \cdot
+\underbrace{
+\begin{vmatrix}
+	7 & 5 & 0 & 0 & \ldots & 0 & 0 & 0\\
+	2 & 7 & 5 & 0 & \ldots & 0 & 0 & 0\\
+	0 & 2 & 7 & 5 & \ldots & 0 & 0 & 0\\
+	0 & 0 & 2 & 7 & \ldots & 0 & 0 & 0\\
+	\vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots\\
+	0 & 0 & 0 & 0 & \ldots & 7 & 5 & 0\\
+	0 & 0 & 0 & 0 & \ldots & 2 & 7 & 5\\
+	0 & 0 & 0 & 0 & \ldots & 0 & 0 & 2\\
+\end{vmatrix}}_{2\Delta_{n-2}}=\\=7\Delta_{n-1}-10\Delta_{n-2}\\
+\Delta_0=1\\
+G(z)=\Delta_0+\Delta_1\cdot z+\Delta_2\cdot z^2+\ldots \quad|\quad
+$ Согласно теории: $G(z)=\frac{1+z(7-7\cdot1)}{1-7z+10z^2}\vspace{.2cm}\\
+G(z)=\frac{1+z(7-7\cdot1)}{(1-5z)\cdot(1-2z)}=\frac{a}{1-5z}+\frac{b}{1-2z} \leftrightarrow 1=a+b-z(2a+5b) \leftrightarrow
+\begin{cases}
+	a+b=1\\
+	2a+5b=0\\
+\end{cases} \leftrightarrow
+\begin{cases}
+	a=\frac{5}{3}\\
+	b=-\frac{2}{3}\\
+\end{cases}\\
+G(z)=\frac{5}{3} \cdot \frac{1}{1-5z} - \frac{2}{3} \cdot \frac{1}{1-2z}=\frac{5}{3} \cdot \sum\limits_{n=0}^{+\infty} [z^n \cdot 5^n] -
+\frac{2}{3} \cdot \sum\limits_{n=0}^{+\infty}[z^n \cdot 2^n] = \sum\limits_{n=0}^{+\infty} z^n \cdot \frac{5^{n+1}-2^{n+1}}{3}\implies\\
+\implies \Delta_n=\frac{5^{n+1}-2^{n+1}}{3}\\
+$
+Ответ: $\Delta_n=\frac{5^{n+1}-2^{n+1}}{3}\\$
+\end{task}
+
+\newpage
+\begin{task}[7.2]
+$
+\Delta_{n+1}=
+\begin{vmatrix}
+	1 & 0 & 0 & \ldots & 0 & 1\\
+	1 & a_1 & 0 & \ldots & 0 & 0\\
+	1 & 1 & a_2 & \ldots & 0 & 0\\
+	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
+	1 & 0 & 0 & \ldots & a_{n-1} & 0\\
+	1 & 0 & 0 & \ldots & 1 & a_n\\
+\end{vmatrix} \: \underset{C_1: C_1-C_{n+1}}{=} \:
+\begin{vmatrix}
+	0 & 0 & 0 & \ldots & 0 & 1\\
+	1 & a_1 & 0 & \ldots & 0 & 0\\
+	1 & 1 & a_2 & \ldots & 0 & 0\\
+	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
+	1 & 0 & 0 & \ldots & a_{n-1} & 0\\
+	1-a_n & 0 & 0 & \ldots & 1 & a_n\\
+\end{vmatrix} =a_n \cdot
+\underbrace{
+\begin{vmatrix}
+	0 & 0 & 0 & \ldots & 0\\
+	1 & a_1 & 0 & \ldots & 0\\
+	1 & 1 & a_2 & \ldots & 0\\
+	\vdots & \vdots & \vdots & \ddots & \vdots\\
+	1 & 0 & 0 & \ldots & a_{n-1}\\
+\end{vmatrix}}_{0} +\\+ (-1)^{n} \cdot
+\begin{vmatrix}
+	1 & a_1 & 0 & 0 & \ldots & 0 & 0 & 0\\
+	1 & 1 & a_2 & 0 & \ldots & 0 & 0 & 0\\
+	1 & 0 & 1 & a_3 & \ldots & 0 & 0 & 0\\
+	\vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots &\vdots\\
+	1 & 0 & 0 & 0 & \ldots & 0 & 1 & a_{n-1}\\
+	1-a_n & 0 & 0 & 0 & \ldots & 0 & 0 & 1\\
+\end{vmatrix} \:
+\underset{
+\begin{subarray}{c}
+	\text{$R_{n-1}: R_{n-1}-a_{n-1}R_n$}\\
+	\text{$R_{n-2}: R_{n-2}-a_{n-2}R_{n-1}$}\\
+	\ldots\\
+	\text{$R_1: R_1-a_1R_2$}\\
+\end{subarray}
+}{=}\\= (-1)^{n} \cdot
+\underbrace{
+\begin{vmatrix}
+	1-a_1(1-a_2(1-\ldots(1-a_n))) & 0 & 0 & 0 & \ldots & 0 & 0 & 0\\
+	1-a_2(1-a_3(1-\ldots(1-a_n))) & 1 & 0 & 0 & \ldots & 0 & 0 & 0\\
+	\vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots &\vdots\\
+	1-a_{n-1}(1-a_n) & 0 & 0 & 0 & \ldots & 0 & 1 & 0\\
+	1-a_n & 0 & 0 & 0 & \ldots & 0 & 0 & 1\\
+\end{vmatrix}}_{\text{Диагональная матрица}} = (-1)^{n} \cdot\\\vspace{.2cm}\\\cdot (1-a_1(1-a_2(1-\ldots -a_{n-1}(1-a_n))))\\
+\Delta_{n+1}=(-1)^{n} \cdot (-1)^{n} \cdot a_1 \cdot \ldots \cdot a_n + (-1)^{n} \cdot (-1)^{n-1} \cdot a_2 \cdot \ldots a_n + \ldots +
+(-1)^{n-1}a_n +(-1)^n=\\=a_1 \cdot \ldots \cdot a_n - a_2 \cdot \ldots \cdot a_n + a_3 \cdot \ldots \cdot a_n + \ldots + (-1)^{n-1} \cdot a_n + (-1)^n\vspace{.2cm}\\
+$
+Ответ: $\Delta_{n+1}=a_1 \cdot \ldots \cdot a_n - a_2 \cdot \ldots \cdot a_n + a_3 \cdot \ldots \cdot a_n + \ldots + (-1)^{n-1} \cdot a_n + (-1)^n\\$
+\end{task}
 \end{document}
