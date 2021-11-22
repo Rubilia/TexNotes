@@ -869,7 +869,100 @@ y^{(n)}=\sum\limits_{k=0}^n C_n^k x^{(k)}(cos(mx))^{(n-k)}=m^n \cdot xcos(mx+\fr
 
 \begin{task}[1204]
 $y=(x^2+2x+2)\cdot e^{-x}\\
-y^{(n)}=\sum\limits_{k=0}^n (x^2+2x+2)^{(k)} \cdot (e^{-x})^{(n-k)}=(-1)^n\cdot (x^2+2x+2) \cdot e^{-x} + (-1)^{n-1}\cdot n \cdot(2x+2)\cdot e^{-x} + (-1)^{n-2} \cdot n(n-1) \cdot e^{-x}$
+y^{(n)}=\sum\limits_{k=0}^n (x^2+2x+2)^{(k)} \cdot (e^{-x})^{(n-k)}=(-1)^n\cdot (x^2+2x+2) \cdot e^{-x} + (-1)^{n-1}\cdot n \cdot(2x+2)\cdot e^{-x} + (-1)^{n-2} \cdot n(n-1) \cdot e^{-x}$\\
+\end{task}
+
+\vspace{2cm}
+\subsubsection{Дифференцируемость функции}
+{\hfill \textit{22.11.2021}}
+
+$f(x), a<=x<=b, f'(x)\\$
+\paragraph{Теорема Ролля}
+\begin{enumerate}
+	\item{$f(x)$ - определена на интервале $[a; b]$}
+	\item{$\exists f'(x)$ - ограниченная на $(a; b)$}
+	\item{$f(a)=f(b)$}
+\end{enumerate} $\implies \:\:\: \exists c\in(a; b) \implies f'(c)=0$
+
+\begin{task}[1235]
+$f(x)=(x-1)(x-2)(x-3) \implies [a; b]=[1;3]$
+\begin{enumerate}
+	\item 1 - выполнено
+	\item $f'(x)=(x-1)(x-2)+(x-1)(x-3)+(x-2)(x-3)$ - выполнено
+	\item Выполнено
+\end{enumerate}
+
+$? \exists c \in(1; 3) \implies f'(c)=0\\
+f'(x)=x^2-5x+6+x_2-3x+2+x^2-4x+3=3x^2-12x+11=0 \leftrightarrow x_{1, 2}=2\pm \frac{1}{\sqrt{3}}=c$
+\end{task}
+
+\begin{task}[1236]
+$f(x)=1-\sqrt[3]{x^2}, [-1; 1]\\
+f(-1)=0\\
+f(1)=0\\
+f'(x)=-\frac{2}{3\sqrt[3]{x}} \neq 0\\
+$
+Не выполнено условие 2 теоремы Ролля
+\end{task}
+
+\begin{task}[1238]
+\begin{enumerate}
+	\item {$f(x), x\in [x+0; x_1]$}
+	\item{$f^{n-1}(x)$ - непрерывная функция}
+	\item{$f^{(n)} - (x_0; x_1)$}
+	\item{$f(x_0)=f(x_1)=\ldots=f(x_n)$}
+\end{enumerate}
+Доказать, что $\exists \:\: \xi \in (x_0; x_n) \implies f^{(n)}(\xi)=0$ - ДЗ\\
+\end{task}
+
+\vspace{2cm}
+\paragraph{Теорема Лагранжа}
+\begin{enumerate}
+	\item{$f(x), x\in [a; b]$ и непрерывна на $(a; b) \implies\\\implies \lim\limits_{\Delta x \to 0}f(x_0 + \Delta x) = f(x_0)$}
+	\item{$\abs{f'(x)}<=c, \forall x \in (a; b)$}
+\end{enumerate}
+Тогда:\\
+$\exists \enspace c \in (a; b): \quad f(b)-f(a)=(b-a)f'(c)$\\
+
+\begin{task}[1244]
+$y=x^3\\ A(-1; -1), B(2; 8)\\$
+Касательная через $M(x; y)$ такая, что она параллельна прямой $(AB)$ - ?\\
+$f'(x)=3x^2\\
+k_{(AB)}=\frac{f(b)-f(a)}{b-a}=3\\
+f'(x)=3x^2=3 \implies 
+\left[
+\begin{array}{l}
+	x=1\\
+	x=-1\\
+\end{array} \right.
+$
+\begin{enumerate}
+	\item[$1. \enspace x=1:$]{
+$\newline 
+y=3(x-1)+1 \leftrightarrow y=3x-2$
+}
+\item[$2. \enspace x=-1:$] $-1 \notin (-1; 2)$
+\end{enumerate}
+\end{task}
+
+\begin{task}[1245]
+$f(x)=\frac{1}{x}, \quad x\in [a; b], \quad ab<0\\$
+\end{task}
+
+\begin{task}[1251]
+\begin{itemize}
+	\item[a)]{$\abs{sin(x)-sin(y)} \leq \abs{x-y}, \quad x, y \in \mathbb{R}$\\
+Рассмотрим $0<=x<y<=\pi:$\\
+$\abs{sin(x)-sin(y)}=2\abs{cos(\frac{x+y}{2}) \cdot sin(\frac{x-y}{2})} \leq 2 \abs{sin(\frac{x-y}{2})}\\
+y=x$ - касательная к $y=sin(x)$ в $x=0$. Т. к. $sin(x)$ выпукла вверх, то $sin(x)<x \implies \abs{sin(x)-sin(y)}=\\=2\abs{sin(\frac{x-y}{2})} \leq x-y$
+}
+\item[b)]{$\newline
+\abs{arctg(x)-arctg(y)}<= \abs{x-y}\\
+z=arctg(x)-arctg(y) \implies tg(z)=\\=tg(arctg(x)-arctg(y))=\frac{tg(arctg(x))-tg(arctg(y))}{1+tg(arctg(x)\cdot tg(arctg(y))}=\frac{x-y}{1+xy} \implies
+\abs{arctg(x)-arctg(y)} = \abs{arctg(\frac{x-y}{1+xy})} \leq \abs{x-y}$\\
+Если $xy<0 \implies \abs{\frac{x-y}{1+xy}} \leq \abs{x-y}$
+}
+\end{itemize}
 \end{task}
 
 \end{document}
