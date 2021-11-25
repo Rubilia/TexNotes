@@ -1,0 +1,90 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+
+\newenvironment{task}[1][0]{\vspace{.5cm} {\textbf{№ #1} \vspace{.5cm}\\ }}{}
+
+\begin{document}
+\begin{task}[4]
+1.\\
+Пусть $\rho=\{(a, a), (b, b), (c, c), (a, b), (a, c), (b, a), (b, c), (c, a), (c, b)\},\\
+\sigma = \{(d, d), (e, e), (f, f), (d, f), (d, e), (e, d), (e, f), (f, e), (f, d)\}\\
+\rho \Delta \sigma = \{(a, a), (b, b), (c, c), (a, b), (a, c), (b, a), (b, c), (c, a), (c, b), (d, d), (e, e),\\ (f, f), (d, f), (d, e), (e, d), (e, f), (f, e), (f, d)\}$\\
+Понятно, что $\rho$ и $\sigma$ транзитивные. Также видно, что $\rho \Delta \sigma$ обладает\\ транзитивностью:\\
+$
+\begin{array}{c}
+a\\
+\begin{array}{c|c}
+	a & a\\
+	b & b\\
+	c & c\\
+\end{array}
+\end{array} \enspace
+\begin{array}{c}
+	b\\
+	\begin{array}{c|c}
+		a & a\\
+		b & b\\
+		c & c\\
+	\end{array}
+\end{array} \enspace
+\begin{array}{c}
+	c\\
+	\begin{array}{c|c}
+		a & a\\
+		b & b\\
+		c & c\\
+	\end{array}
+\end{array} \enspace
+\begin{array}{c}
+	d\\
+	\begin{array}{c|c}
+		d & d\\
+		e & e\\
+		f & f\\
+	\end{array}
+\end{array} \enspace
+\begin{array}{c}
+	e\\
+	\begin{array}{c|c}
+		d & d\\
+		e & e\\
+		f & f\\
+	\end{array}
+\end{array} \enspace
+\begin{array}{c}
+	f\\
+	\begin{array}{c|c}
+		d & d\\
+		e & e\\
+		f & f\\
+	\end{array}
+\end{array} \enspace\\\\
+$
+2. \\
+Пусть $\rho=\{(a, a), (b, b), (c, c), (a, b), (a, c), (b, a), (b, c), (c, a), (c, b)\},\\
+\sigma = \{(d, d), (e, e), (c, c), (d, c), (d, e), (e, d), (e, c), (c, e), (c, d)\}\\
+\varphi = \rho \Delta \sigma = \{(a, a), (b, b), (a, b), (a, c), (b, a), (b, c), (c, a), (c, b), (d, d), (e, e), (d, c), (d, e), (e, d),\\ (e, c), (c, e), (c, d)\}\\$
+Заметим, что $c \varphi b, b \varphi c$, но $(c, c) \notin \varphi \implies \varphi$ не обладает транзитивностью\\
+\\\\
+\emph{Таким образом, $\rho \Delta \sigma$ может как обладать транзитивностью, так и нет.}
+\end{task}
+
+\begin{task}[4.1]
+$\text{Пусть }\varphi = \rho \cap \sigma\text{, }\{a, b, c\} \subset A$ и $a \varphi b\text{, }b \varphi c \implies
+\begin{cases}
+	(a, b) \in \rho\\
+	(a, b) \in \sigma\\
+	(b, c) \in \rho\\
+	(b, c) \in \sigma
+\end{cases} \underset{\text{$\rho$ и $\sigma$ транзитивны}}{\implies}
+\begin{cases}
+	(a, c) \in \rho\\
+	(a, c) \in \sigma
+\end{cases} \implies (a, c) \in \rho \cap \sigma\\\\
+$
+Таким образом $a \varphi b, b\varphi c \implies a \varphi c \implies \rho \cap \sigma $ транзитвивно\\
+\end{task}
+\end{document}
