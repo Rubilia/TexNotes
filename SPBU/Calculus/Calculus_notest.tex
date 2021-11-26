@@ -965,4 +965,56 @@ z=arctg(x)-arctg(y) \implies tg(z)=\\=tg(arctg(x)-arctg(y))=\frac{tg(arctg(x))-t
 \end{itemize}
 \end{task}
 
+\newpage
+\subsection{Правило Лопиталя}
+{\hfill \textit{26.11.2021}}
+
+$L = \lim\limits_{x \to a} \frac{P(x)}{Q(x)}, \left[\frac{0}{0}\right]$ или $\left[\frac{\infty}{\infty}\right]$\\
+$L = \lim\limits_{x \to a}\frac{P(x)}{Q(x)} = \lim\limits_{x \to a}\frac{P'(x)}{Q'(x)}$\\
+
+\vspace{.2cm}
+\begin{task}[1320]
+$\lim\limits_{x \to 0} \frac{tg(x)-x}{x-sin(x)}^{\left[\frac{0}{0}\right]} =
+\lim\limits_{x \to 0} \frac{\frac{1}{cos^2(x)}-1}{1-cos(x)}=\lim\limits_{x \to 0}
+\frac{\cancel{(1-cos(x))}(1+cos(x))}{\cancel{(1-cos(x))}cos^2(x)}=2$
+\end{task}
+
+\begin{task}[1321]
+$\lim\limits_{x \to 0} \frac{3 tg(4x)-12 tg(x)}{3sin(4x)-12sin(x)}^{\left[\frac{0}{0}\right]} = \lim\limits_{x \to 0} 
+\frac{\frac{12}{cos^2(4x)}-\frac{12}{cos^2(x)}}{12cos(4x)-12scos(x)}=-\lim\limits_{x \to 0}
+\frac{\cancel{(cos(4x)-cos(x))}(cos(4x)+cos(x))}{\cancel{(cos(4x)-cos(x))}cos^2(4x)cos^2(x)}=\\=-2$
+\end{task}
+
+\begin{task}[1323]
+$\lim\limits_{x \to 0} \frac{xctg(x)-1}{x^2}^{\left[\frac{0}{0}\right]}=
+\lim\limits_{x \to 0} \frac{ctg(x)-\frac{x}{sin^2(x)}}{2x}^{\left[\frac{0}{0}\right]}=
+\lim\limits_{x \to 0} f\frac{-sin^2(x)+cos^2(x)-1}{sin^2(x)+2xsin(x)cos(x)}^{\left[\frac{0}{0}\right]}=\\=
+\lim\limits_{x \to 0} \frac{-2sin(x)cos(x)-2cos(x)sin(x)}{2sin(x)cos(x)+2sin(x)cos(x)+2x(xos^2(x)-sin^2(x))}=
+-\lim\limits_{} {\frac{cos(x)sin(x)}{sin(x)cos(x)+xcos(2x)}}^{\left[\frac{0}{0}\right]}=\\=
+-\lim\limits_{x \to 0} \frac{cos(x)}{2cos(2x)-2xsin(2x)}=-\frac{1}{2}$
+\end{task}
+
+\begin{task}[1324]
+$\lim\limits_{x \to \frac{\pi}{4}} \frac{\sqrt[3]{tg(x)}-1}{2sin^2(x)-1}^{\left[\frac{0}{0}\right]} = \lim\limits_{x \to \frac{\pi}{4}} \frac{\frac{1}{3\sqrt[3]{tg^2(x)}cos^2(x)}}{4sin(x)cos(x)}=\frac{1}{3}$
+\end{task}
+
+\newpage
+\begin{task}[1325]
+$\lim\limits_{x \to 0} \frac{x(e^x+1)-2(e^x-1)}{x^3}^{\left[\frac{0}{0}\right]}=
+\lim\limits_{x \to 0} \frac{1+xe^x-e^x}{3x^2}^{\left[\frac{0}{0}\right]} = \lim\limits_{x \to 0} \frac{\cancel{x}e^x}{6\cancel{x}} = \frac{1}{6}$
+\end{task}
+
+\begin{task}[1327]
+$\lim\limits_{x \to 0} \frac{arcsin(2x)-2arcsin(x)}{x^3}^{\left[\frac{0}{0}\right]}=
+\lim\limits_{x \to 0} \frac{\frac{2}{\sqrt{1-4x^2}}-\frac{2}{\sqrt{1-x^2}}}{3x^2}=\frac{2}{3} \lim\limits_{x \to 0} \frac{\sqrt{1-x^2}-\sqrt{1-4x^2}}{x^2}=\\=\frac{2}{3}\lim\limits_{x \to 0}  \frac{3\cancel{x^2}}{\cancel{x^2}(\sqrt{1-x^2}+\sqrt{1-4x^2})} = \frac{2}{3} \cdot \frac{3}{2} = 1$
+\end{task}
+
+\begin{task}[1343]
+$\lim\limits_{x \to 0} x^{x^x-1} = \lim\limits_{e^{(x^x-1)ln(x)}}=e^{\lim\limits_{x \to 0}{(x^x-1)ln(x)}}=e^{\lim\limits_{x \to 0} \frac{ln(x)}{(x^x-1)^{-1}}}=e^{\lim\limits_{x \to 0} \frac{\frac{1}{x}}{(x^x-1)^{-2}x^x(1+ln(x))}}=\\=e^{\lim\limits_{x \to 0} \frac{(x^x-1)^2}{x(1+ln(x))}}\\
+(x^x)'=(e^{xln(x)})'=x^x(1+ln(x))\\
+\lim\limits_{x \to 0} x^x =e^{\lim\limits_{x \to 0} \frac{ln(x)}{x^{-1}}}=e^{\lim\limits_{\frac{\frac{1}{x}}{-x^{-2}}}}=1$
+\end{task}
+
+\vspace{.3cm}
+ДЗ: 1329, 1330
 \end{document}
