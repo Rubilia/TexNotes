@@ -1053,4 +1053,53 @@ $\lim\limits_{x \to 0} \frac{(1+x)^{\frac{1}{x}}-e}{x}^{\left[\frac{0}{0}\right]
 
 \vspace{.3cm}
 ДЗ: 1355, 1356
+
+\newpage
+
+\subsection{Экстремум функции}
+{\hfill \textit{06.12.2021}}
+
+$y=f(x), x\in \Omega \subset \mathbb{R}\\$
+Опредиление: Говорят, что $f(x)$ принимает в точке $x=x_0 \in \Omega$ минимальное (максисальное)  значение, если $\exists \epsilon > 0$ - такое, то в $\epsilon$ корестности:
+$\abs{x-x_0}< \epsilon$ имеет место неравенство: $f(x)>f(x_0)$\\
+
+\emph{Теорема:} Если $x=x_0$ - точка экстремума $y=f(x)$, то необходимо выполнение условия: 
+$f'(x_0) = 0$ (*)
+\vspace{.5cm}\\
+\emph{Теорема 2:} При этом если $f''(x_0)>0$, то $f(x_0)=\min\limits_{\abs{x-x_0}<\epsilon}f(x)\\ \left[f''(x_0)>0\text{, то }f(x_0)=\min\limits_{\abs{x-x_0}<\epsilon}f(x)\right]$\\
+\vspace{1cm}\\
+
+\begin{task}[1414]
+$y=2+x-x^2\\
+\left.
+\begin{array}{l}
+y'=1-2x=0 \leftrightarrow x=\frac{1}{2}\\
+y''=-2
+\end{array}
+\right\rbrace \implies x=\frac{1}{2}\text{ - точка максимума}\\
+$
+\end{task}
+
+\newpage
+\begin{task}[1474]
+$y=\frac{2-x^2}{1+x^4}\\$
+\begin{enumerate}
+	\item $D=\mathbb{R}$
+	\item Функция четна
+	\item{\text{Экстремум}\\
+$y' = \frac{-2x(1+x^4)-4x^3(2-x^2)}{(1+x^4)^2}=\frac{2x \cdot (x^4-4x^2+1)}{(1+x^4)^2}$}
+\item{
+$y'=0 \leftrightarrow \left[\begin{array}{l}
+	x=0\\
+	x = \pm \sqrt{2+\sqrt{5}}\\
+\end{array}\right.$
+}
+\item $
+y''=\frac{-2(x^2+1)(3x^6+11x^2+1)}{(1+x^4)^3}
+$
+\end{enumerate}
+$
+\lim\limits_{x \to +\infty} \frac{2-x^2}{1+x^4} = \lim\limits_{x \to -\infty} \frac{2-x^2}{1+x^4} = 0$
+\end{task}
+
 \end{document}

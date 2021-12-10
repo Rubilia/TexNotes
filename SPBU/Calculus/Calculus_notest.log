@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.17)  29 NOV 2021 11:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.17)  10 DEC 2021 09:41
 entering extended mode
 **./Calculus_notest.tex
 (Calculus_notest.tex
@@ -1363,7 +1363,32 @@ Overfull \hbox (52.22911pt too wide) in paragraph at lines 1050--1053
 [] [] =
  []
 
-[31] (Calculus_notest.aux) )
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 1062--1065
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1071
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1072--1082
+$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1072--1082
+
+ []
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 1084--1086
+
+ []
+
+[33] (Calculus_notest.aux) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 308 ({)
@@ -1409,9 +1434,9 @@ rubilia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
 cmsy8.pfb><C:/Users/rubilia/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
 sfonts/latxfont/line10.pfb><C:/Users/rubilia/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Calculus_notest.pdf (31 pages, 451093 bytes).
+Output written on Calculus_notest.pdf (33 pages, 457919 bytes).
 PDF statistics:
- 588 PDF objects out of 1000 (max. 8388607)
+ 601 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
