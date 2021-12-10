@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.17)  10 DEC 2021 09:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.17)  10 DEC 2021 10:29
 entering extended mode
 **./Calculus_notest.tex
 (Calculus_notest.tex
@@ -1388,17 +1388,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 1084--1086
 
  []
 
-[33] (Calculus_notest.aux) )
+
+Overfull \hbox (20.32733pt too wide) in paragraph at lines 1114--1122
+[]$\OML/cmm/m/it/14.4 y[] \OT1/cmr/m/n/14.4 = [] = [] =
+ []
+
+[33]
+Overfull \hbox (18.41232pt too wide) in paragraph at lines 1122--1128
+[]$\OML/cmm/m/it/14.4 y[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 x\OT1/cmr/m/n/14
+.4 ) = \OML/cmm/m/it/14.4 :::   \OT1/cmr/m/n/14.4 =[]\OMS/cmsy/m/n/14.4 )  [][]
+ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1122--1128
+
+ []
+
+[34] (Calculus_notest.aux) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 308 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 25241 strings out of 478927
- 644722 string characters out of 2851587
+ 25246 strings out of 478927
+ 644768 string characters out of 2851587
  1351099 words of memory out of 3000000
- 42692 multiletter control sequences out of 15000+600000
- 424406 words of font info for 78 fonts, out of 8000000 for 9000
+ 42695 multiletter control sequences out of 15000+600000
+ 425051 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,14n,108p,714b,2101s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\rubilia\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappe
@@ -1434,9 +1451,9 @@ rubilia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
 cmsy8.pfb><C:/Users/rubilia/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
 sfonts/latxfont/line10.pfb><C:/Users/rubilia/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Calculus_notest.pdf (33 pages, 457919 bytes).
+Output written on Calculus_notest.pdf (34 pages, 459810 bytes).
 PDF statistics:
- 601 PDF objects out of 1000 (max. 8388607)
+ 604 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
